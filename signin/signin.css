@@ -81,8 +81,8 @@ body{
     
 }
 
-/* Sign Up */
-.register-container{
+/* Sign In */
+.signin-container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,7 +90,7 @@ body{
     max-width: 1000px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.2);
 }
-.signup-form{
+.signin-form{
     background: url('../images/home/bg-sign-cont.jpeg') no-repeat center;
     background-size: cover;
     padding: 40px;
@@ -98,25 +98,25 @@ body{
     border-radius: 10px 0 0 10px;
 }
 
-.signup-form h2{
+.signin-form h2{
     text-align: center;
     margin-bottom: 20px;
     color: white;
 }
 
-.signup-form .field{
+.signin-form .field{
     margin-bottom: 20px;
 }
 
-.signup-form .field label{
+.signin-form .field label{
     display: block;
     margin-bottom: 8px;
     color: white;
     font-size: 14px;
 }
 
-.signup-form .field input,
-.signup-form .field select{
+.signin-form .field input,
+.signin-form .field select{
     width: 100%;
     padding: 12px;
     border: none;
@@ -124,7 +124,7 @@ body{
     font-size: 14px;
 }
 
-.signup-form button{
+.signin-form button{
     background: white;
     color: black;
     font-weight: bold;
@@ -135,23 +135,23 @@ body{
     transition: 0.3s;
 }
 
-.signup-form button:hover{
+.signin-form button:hover{
     background: #8a2be2;
     color: white;
 }
-.signup-form .actions{
+.signin-form .actions{
     width: 100%;
     text-align: center;
     margin-top: 20px;
 }
 
-.signup-image{
+.signin-image{
     flex: 1;
     border-radius: 0 10px 10px 0;
     overflow: hidden;
 }
 
-.signup-image img{
+.signin-image img{
     width: 100%;
     height: 100%;
     object-fit: cover;
