@@ -144,6 +144,12 @@ body{
     text-align: center;
     margin-top: 20px;
 }
+.signup-form .additional-options{
+    text-align: center;
+    margin-top: 15px;
+    color: white;
+    font-size: 20px;
+}
 
 .signup-image{
     flex: 1;
