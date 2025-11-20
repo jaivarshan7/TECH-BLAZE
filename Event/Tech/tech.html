@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECH BLAZE</title>
+    <!--CSS link-->
+    <link rel="stylesheet" href="tech.css">
+    <!--Font awesome cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--Video-Bg    -->
+    <div class="video-background" >
+        <video autoplay muted loop playsinline id="bg-video">
+          <source src="/Home/image/nebula.3840x2160.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="app-container" id="main-container">
+        <!-- Nav-bar   -->
+        <div class="nav-bar">
+                <div class="logo">
+                     <h1 >TECH BLAZE</h1>
+                </div>
+                <div class="menus">
+                    <li><a href="/Home/Home.html" style="color: #EAEAEA; " >Home</a></li>
+                    <!--    About    -->
+
+                    <li><a href="#" onclick="Showabout()">About</a></li>
+                    <div class="about-dec" id="about" onmouseleave="Hideabout()">
+                        <div class="about-univ">
+                            <li><a href="/About/About-univ/univ.html" >About University</a></li>
+                        </div>
+                        <div class="about-dept">
+                            <li><a href="/About/About-department/deparment.html" >About Department</a></li>
+                        </div>
+                        <div class="about-event">
+                            <li><a href="/About/About-event/event.html" >About Tech Blaze</a></li>
+                        </div>
+
+                    </div>
+                    <!---   Event   -->
+
+                    <li><a href="#" onclick="Showevent()" class="Current-page">Events</a></li>
+                    <div class="event-dec" id="event" onmouseleave="Hideevent()">
+                        <div class="Tech">
+                            <li><a href="/Event/Tech/tech.html" >Tech Events</a></li>
+                        </div>
+                        <div class="Non-tech">
+                            <li><a href="/Event/NonTech/nontech.html" >Non Tech Events</a></li>
+                        </div>
+                    </div>
+                    <li><a href="#">Sponsors</a></li>
+                    <li><a href="/Gallery/gallery.html ">Gallery</a></li>
+                    <li><a href="/Achievement/achievement.html">Achievement</a></li>
+
+                </div>
+                <div class="Credentail">
+                    <div class="login">
+                        <li><a href="/Reach-us/contact.html" class="login">Login</a></li>
+                    </div>
+                    
+                </div>
+                <div class="profile" onmouseover="Showprofile()" onmouseleave="hideprofile()">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <div class="profile-detail" id="profiledetail">
+                        <img src="/Home/image/dharan.jpg" alt="" height="100px"  width="150px" >
+                        <h4 style="font-size: 17px;">Welcome Dharan</h4>
+                        <h4 style="font-size: 14px;">Hindustan institute of technology and science</h4>
+                        <div class="icon">
+                            <div class="com-icon" style="background-color:#002BFF;">
+                                <i class="fa-solid fa-key"></i>
+                            </div>
+                            <div class="com-icon" style="background-color:#E50914;">
+                                <i class="fa-solid fa-power-off"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="techevent">
+            <h1>TECH EVENTS</h1>
+        </div>
+        <div class="Main-container" >
+            <div class="techevent">
+                <div class="event1 com ">
+                    <img src="/Home/image/spider.jpg" alt="1">
+                    <h1>BLIND TYPING</h1>
+                    <div class="detail">
+                        <h2>💬 BLIND TYPING</h2>
+                        <p> “Type with your brain, not your eyes.”</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur corporis vitae qui veritatis accusamus provident?</p>
+                        <a href="#">View more</a>
+                    </div>
+                </div>
+                <div class="event2 com ">
+                    <img src="/Home/image/robot.jpeg" alt="2">
+                    <h1>REVERSE CODING</h1>
+                    <div class="detail">
+                        <h2>🌀 REVERSE CODING</h2>
+                        <p>“Recreate. Redesign. Reinvent!”</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur corporis vitae qui veritatis accusamus provident?</p>
+                        <a href="#">View more</a>
+                    </div>
+                </div>
+                <div class="event3 com ">
+                    <img src="/Home/image/data-drive.jpg" alt="3">
+                    <h1>CODE MARATHON</h1>
+                    <div class="detail">
+                        <h2>🕹️  CODE MARATHON</h2>
+                        <p>“One line of code at a time — until victory.”</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur corporis vitae qui veritatis accusamus provident?</p>
+                        <a href="#">View more</a>
+                    </div>
+                </div>
+                <div class="event4 com active">
+                    <img src="/Home/image/quiz.jpg" alt="4">
+                    <h1>CODE RELAY</h1>
+                    <div class="detail">
+                        <h2><i class="fa-solid fa-code"></i>  CODE RELAY</h2>
+                        <p>"Pass the Code, Keep the Flow!"</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur corporis vitae qui veritatis accusamus provident?</p>
+                        <a href="#">View more</a>
+                    </div>
+                </div>
+                <div class="event5 com ">
+                    <img src="/Home/image/webospider.png" alt="5">
+                    <h1>RAPID FIRE</h1>
+                    <div class="detail">
+                        <h2>⚡ RAPID FIRE</h2>
+                        <p>“Think Fast, Answer Faster!”</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur corporis vitae qui veritatis accusamus provident?</p>
+                        <a href="#">View more</a>
+                    </div>
+                </div>
+                <div class="event6 com ">
+                    <img src="/Home/image/fun.jpg" alt="6">
+                    <h1>BUG BUSTER </h1>
+                    <div class="detail">
+                        <h2>🐞 BUG BUSTER </h2>
+                        <p>“Fix the Flaws. Beat the Bugs!”</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur corporis vitae qui veritatis accusamus provident?</p>
+                        <a href="#">View more</a>
+                    </div>
+                </div>
+                <div class="event7 com ">
+                    <img src="/Home/image/audience.jpg" alt="7">
+                    <h1>SQL SHOWDOW</h1>
+                    <div class="detail">
+                        <h2><i class="fa-solid fa-code"></i> 🧠 SQL SHOWDOWN</h2>
+                        <p>"Query it. Solve it. Conquer it!"</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur corporis vitae qui veritatis accusamus provident?</p>
+                        <a href="#">View more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+    <!-- Footer 
+    <Footer class="footer">
+        <div class="logo">
+            <img src="/Gallery/image/Hindustan.png" alt="" height="60px" width="250px">
+        </div>
+        <div class="address">
+            <h2>Get in touch</h2>
+            <p>Rajiv Gandhi Salai (OMR), Padur,<br>(Via) Kelambakkam,<br>Chennai - 603 103</p>
+            <p>info@hindustanuniv.ac.in</p>
+            <p>1800 425 44 38</p>
+        </div>
+        <div class="explore">
+            <h2>Explore</h2>
+            <li><a href="#"><i class="fa-brands fa-youtube"></i>Youtube</a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+            <li><a href="#"><i class="fa-brands fa-linkedin"></i>Linkdin</a></li>
+            <li><a href="#"><i class="fa-brands fa-x-twitter"></i>Twitter</a></li>
+        </div>
+    </Footer> -->
+    <Footer class="footer">
+        <div class="footerdiv">
+            <div class="map">
+                <h1>Locate us</h1><br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d67924.24208324916!2d80.14750944863282!3d12.801299400000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5250847d3353d7%3A0x6a585af1f362dadb!2sHindustan%20Institute%20of%20Technology%20%26%20Science!5e1!3m2!1sen!2sin!4v1759128184642!5m2!1sen!2sin" width="460" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
+            </div>
+            <div class="detail">
+                <h1>Connect</h1>
+                <div class="media">
+
+                    <div><i style="font-size: 25px;" class="fa-brands fa-instagram"></i></div>
+                    <div><i style="font-size: 25px;" class="fa-brands fa-youtube"></i></div>
+                </div>
+                <h1>Reach out</h1>
+                <div class="reachout">
+                    <h5><i style="color: rgb(255, 208, 0) ; font-size: 17px; " class="fa-solid fa-location-dot"></i>  Rajiv Gandhi Salai (OMR), Padur,(Via) Kelambakkam,Chennai - 603 103</h5>
+                    <h5><i style="color: rgb(255, 208, 0) ; font-size: 17px; " class="fa-regular fa-envelope"></i>  TechBlaze80@gmail.com</h5>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <h5>© 2025 TechBlaze'26 - Made by team TechBlaze </h5>
+        </div>
+    </Footer>
+
+    <!-- Scripts -->
+    <script src="tech.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECH BLAZE</title>
+    <!--Link css-->
+    <link rel="stylesheet" href="achievement.css">
+     <!--Font awesome cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <div class="video-background" >
+        <video autoplay muted loop playsinline id="bg-video">
+          <source src="/Home/image/nebula.3840x2160.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="app-container" id="app-container">
+        <div class="nav-bar" id="nav-bar">
+            <div class="logo" id=logo>
+               <h1>TECH BLAZE</h1>
+                
+            </div>
+            <div class="menus">
+                <li><a  id="menus" class="menu" href="/Home/Home.html" >Home</a></li>
+                <!--    About    -->
+
+                    <li><a href="#" onclick="Showabout()">About</a></li>
+                    <div class="about-dec" id="about" onmouseleave="Hideabout()">
+                        <div class="about-univ">
+                            <li><a href="/About/About-univ/univ.html" >About University</a></li>
+                        </div>
+                        <div class="about-dept">
+                            <li><a href="/About/About-department/department.html" >About Department</a></li>
+                        </div>
+                        <div class="about-event">
+                            <li><a href="/About/About-event/event.html" >About Tech Blaze</a></li>
+                        </div>
+
+                    </div>
+
+                <!---   Event   -->
+
+                    <li><a href="#" onclick="Showevent()">Events</a></li>
+                    <div class="event-dec" id="event" onmouseleave="Hideevent()">
+                        <div class="Tech">
+                            <li><a href="/Event/Tech/tech.html" >Tech Events</a></li>
+                        </div>
+                        <div class="Non-tech">
+                            <li><a href="/Event/NonTech/nontech.html" >Non Tech Events</a></li>
+                        </div>
+                    </div>
+                <li><a  id="menu3" class="menu" href="#">Sponsors</a></li>
+                <li><a  id="menu4" class="menu" href="/Gallery/gallery.html ">Gallery</a></li>
+                <li><a  id="menu5" class="menu Current-page" href="#" style="color: #ffffff;" >Achievement</a></li>
+                
+            </div>
+            <div class="Credentail" >
+                <li><a href="/Reach-us/contact.html">Login</a></li>
+            </div>
+            <!--<button id="darkmode" onclick="lightmode()" ondblclick="darkmode()">Darkmode</button> -->
+        </div>
+        <div class="Achievement-content" >
+            <div class="title">
+                <div>
+                    <h1 id="title">Meet the Achievers of Tech Blaze'2025</h1>
+                </div>
+                
+            </div>
+            <div class="Achievers-detail ">
+                        <div class="Achievers-detail1 common-Achievers" id="Achievers-detail1">
+                                <img src="/Home/image/spider.jpg" alt="No image Found" width="280px" height="250px">
+                                <h1>Web-O-Spider</h1>
+                                <h3><span style="font-size: 12px; color: rgb(237, 229, 229); ">(Desc: The event to evaluate the Webpage building skills of the participants. ) </span> </h3>
+                                <a href="#">View Winner</a>
+                        </div>
+                        <div class="Achievers-detail2 common-Achievers" id="Achievers-detail2">
+                            <img src="/Home/image/hacker-rank.jpg" alt="No image Found" width="280px" height="250px">
+                            <h1>Hacker Rank</h1>
+                            <h3> <span style="font-size: 12px; color: rgb(237, 229, 229); ">(Desc: The Crypt Puzzle test knowledge of Encryption Decryption skills. ) </span></h3>
+                            <a href="#">View Winner</a>
+                        </div>
+                        <div class="Achievers-detail3 common-Achievers" id="Achievers-detail3">
+                            <img src="/Home/image/logical-thinking.jpg" alt="No image Found" width="280px" height="250px">
+                            <h1>Code Craft</h1>
+                            <h3><span style="font-size: 12px; color: rgb(237, 229, 229); ">(Desc: The Code craft brings out the Logical thinking skills of the Participants. ) </span></h3>
+                            <a href="#">View Winner</a>
+                        </div>
+            </div>
+            <div class="Achievers-detail Achievers-detail12">
+                        <div class="Achievers-detail1 common-Achievers" id="Achievers-detail1">
+                                <img src="/Home/image/data-drive.jpg" alt="No image Found" width="280px" height="250px">
+                                <h1>Data Dive</h1>
+                                <h3><span style="font-size: 12px; color: rgb(237, 229, 229); ">(Desc: The Data Dive to test the data Analysing skills of the participants. ) </span> </h3>
+                                <a href="#">View Winner</a>
+                        </div>
+                        <div class="Achievers-detail2 common-Achievers" id="Achievers-detail2">
+                            <img src="/Home/image/quiz.jpg" alt="No image Found" width="280px" height="250px">
+                            <h1>QuizKwiz</h1>
+                            <h3><span style="font-size: 12px; color: rgb(237, 229, 229); ">(Desc: The QUIZ to Evaluate the Technical knowledge of the participants. ) </span></h3>
+                            <a href="#">View Winner</a>
+                        </div>
+            </div>
+        </div>
+        <!--Footer-->
+        <Footer class="footer">
+        <div class="footerdiv">
+            <div class="map">
+                <h1>Locate us</h1><br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d67924.24208324916!2d80.14750944863282!3d12.801299400000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5250847d3353d7%3A0x6a585af1f362dadb!2sHindustan%20Institute%20of%20Technology%20%26%20Science!5e1!3m2!1sen!2sin!4v1759128184642!5m2!1sen!2sin" width="460" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
+            </div>
+            <div class="detail">
+                <h1>Connect</h1>
+                <div class="media">
+
+                    <div><i style="font-size: 25px;" class="fa-brands fa-instagram"></i></div>
+                    <div><i style="font-size: 25px;" class="fa-brands fa-youtube"></i></div>
+                </div>
+                <h1>Reach out</h1>
+                <div class="reachout">
+                    <h5><i style="color: rgb(255, 208, 0) ; font-size: 17px; " class="fa-solid fa-location-dot"></i>  Rajiv Gandhi Salai (OMR), Padur,(Via) Kelambakkam,Chennai - 603 103</h5>
+                    <h5><i style="color: rgb(255, 208, 0) ; font-size: 17px; " class="fa-regular fa-envelope"></i>  TechBlaze80@gmail.com</h5>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <h5>© 2025 TechBlaze'26 - Made by team TechBlaze </h5>
+        </div>
+        </Footer>
+    </div>
+    
+    <script src="achievement.js"></script>
+</body>
+</html>

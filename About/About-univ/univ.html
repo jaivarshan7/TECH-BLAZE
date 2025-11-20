@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECH BLAZE</title>
+    <!--Link css-->
+    <link rel="stylesheet" href="univ.css">
+    <!--Font awesome cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+     <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--Video-Bg    -->
+    <div class="video-background" >
+        <video autoplay muted loop playsinline id="bg-video">
+          <source src="/Home/image/nebula.3840x2160.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="app-container" id="main-container">
+        <!-- Nav-bar   -->
+        <div class="nav-bar">
+                <div class="logo">
+                     <h1 >TECH BLAZE</h1>
+                </div>
+                <div class="menus">
+                    <li><a href="/Home/Home.html" style="color: #EAEAEA; " >Home</a></li>
+                    <!--    About    -->
+
+                    <li><a href="#" onclick="Showabout()" class="Current-page">About</a></li>
+                    <div class="about-dec" id="about" onmouseleave="Hideabout()" >
+                        <div class="about-univ">
+                            <li><a href="/About/About-univ/univ.html" >About University</a></li>
+                        </div>
+                        <div class="about-dept">
+                            <li><a href="/About/About-department/deparment.html" >About Department</a></li>
+                        </div>
+                        <div class="about-event">
+                            <li><a href="/About/About-event/event.html" >About Tech Blaze</a></li>
+                        </div>
+
+                    </div>
+                    <!---   Event   -->
+
+                    <li><a href="#" onclick="Showevent()">Events</a></li>
+                    <div class="event-dec" id="event" onmouseleave="Hideevent()">
+                        <div class="Tech">
+                            <li><a href="/Event/Tech/tech.html" >Tech Events</a></li>
+                        </div>
+                        <div class="Non-tech">
+                            <li><a href="/Event/NonTech/nontech.html" >Non Tech Events</a></li>
+                        </div>
+                    </div>
+                    <li><a href="#">Sponsors</a></li>
+                    <li><a href="/Gallery/gallery.html ">Gallery</a></li>
+                    <li><a href="/Achievement/achievement.html">Achievement</a></li>
+
+                </div>
+                <div class="Credentail">
+                    <div class="login">
+                        <li><a href="" class="login">Login</a></li>
+                    </div>
+                    
+                </div>
+                <div class="profile" onmouseover="Showprofile()" onmouseleave="hideprofile()">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <div class="profile-detail" id="profiledetail">
+                        <img src="/Home/image/dharan.jpg" alt="" height="100px"  width="150px" >
+                        <h4 style="font-size: 17px;">Welcome Dharan</h4>
+                        <h4 style="font-size: 14px;">Hindustan institute of technology and science</h4>
+                        <div class="icon">
+                            <div class="com-icon" style="background-color:#002BFF;">
+                                <i class="fa-solid fa-key"></i>
+                            </div>
+                            <div class="com-icon" style="background-color:#E50914;">
+                                <i class="fa-solid fa-power-off"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="main-img-container">
+            <div class="img-container img-container1">
+                <div class="image1 image">
+                    <img src="/Home/image/chief-guest.jpg" alt="" style="grid-column: 2;">
+                </div>
+                <div class="image2 image">
+                    <img src="/Home/image/chief-guest.jpg" alt="" style="grid-column: 4;">
+                </div>
+                <div class="image3 image">
+                    <img src="/Home/image/chief-guest.jpg" alt="" >
+                </div>
+                <div class="image4 image">
+                    <img src="/Home/image/chief-guest.jpg" alt="" >
+                </div>
+                <div class="image5 image">
+                    <img src="/Home/image/chief-guest.jpg" alt="" style="grid-column: 3;"><br>
+                </div>
+                <div class="image1 image">
+                    <img src="/Home/image/chief-guest.jpg" alt="" >
+                </div>
+                <div class="image2 image">
+                    <img src="/Home/image/chief-guest.jpg" alt="">
+                </div>
+                <div class="image3 image">
+                    <img src="/Home/image/chief-guest.jpg" alt="" >
+                </div>
+                <div class="image4 image">
+                    <img src="/Home/image/chief-guest.jpg" alt="" >
+                </div>
+                <div class="image5 image">
+                    <img src="/Home/image/chief-guest.jpg" alt="">
+                </div>
+            </div>
+          <!--  <div class="img-container img-container2">
+                <div class="image1 image">
+                    <img src="/Home/image/chief-guest.jpg" alt="" >
+                </div>
+                <div class="image2 image">
+                    <img src="/Home/image/chief-guest.jpg" alt="">
+                </div>
+                <div class="image3 image">
+                    <img src="/Home/image/chief-guest.jpg" alt="" >
+                </div>
+                <div class="image4 image">
+                    <img src="/Home/image/chief-guest.jpg" alt="" >
+                </div>            
+            </div>
+            <div class="img-container img-container3">
+                <div class="image1 image">
+                    <img src="/Home/image/chief-guest.jpg" alt="" >
+                </div>
+                <div class="image2 image">
+                    <img src="/Home/image/chief-guest.jpg" alt="">
+                </div>
+                <div class="image3 image">
+                    <img src="/Home/image/chief-guest.jpg" alt="" >
+                </div>
+                <div class="image4 image">
+                    <img src="/Home/image/chief-guest.jpg" alt="" >
+                </div>
+                <div class="image5 image">
+                    <img src="/Home/image/chief-guest.jpg" alt="">
+                </div>
+            </div>
+            <div class="img-container img-container4">
+                <div class="image1 image">
+                    <img src="/Home/image/audience-prayer.jpg" alt="" >
+                </div>
+                <div class="image2 image">
+                    <img src="/Home/image/event.jpg" alt="">
+                </div>
+                <div class="image3 image">
+                    <img src="/Home/image/stage.jpg" alt="" >
+                </div>
+                <div class="image4 image">
+                    <img src="/Home/image/chief-guest.jpg" alt="" >
+                </div>            
+            </div>
+        </div>
+        <!--Footer-->
+        <Footer class="footer">
+        <div class="footerdiv">
+            <div class="map">
+                <h1>Locate us</h1><br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d67924.24208324916!2d80.14750944863282!3d12.801299400000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5250847d3353d7%3A0x6a585af1f362dadb!2sHindustan%20Institute%20of%20Technology%20%26%20Science!5e1!3m2!1sen!2sin!4v1759128184642!5m2!1sen!2sin" width="460" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
+            </div>
+            <div class="detail">
+                <h1>Connect</h1>
+                <div class="media">
+
+                    <div><i style="font-size: 25px;" class="fa-brands fa-instagram"></i></div>
+                    <div><i style="font-size: 25px;" class="fa-brands fa-youtube"></i></div>
+                </div>
+                <h1>Reach out</h1>
+                <div class="reachout">
+                    <h5><i style="color: rgb(255, 208, 0) ; font-size: 17px; " class="fa-solid fa-location-dot"></i>  Rajiv Gandhi Salai (OMR), Padur,(Via) Kelambakkam,Chennai - 603 103</h5>
+                    <h5><i style="color: rgb(255, 208, 0) ; font-size: 17px; " class="fa-regular fa-envelope"></i>  TechBlaze80@gmail.com</h5>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <h5>© 2025 TechBlaze'26 - Made by team TechBlaze </h5>
+        </div>
+        </Footer>
+    </div>    
+    <!-- Scripts -->
+    <script src="univ.js"></script>
+</body>
+</html>

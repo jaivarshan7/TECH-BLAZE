@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECHBLAZE</title>
+    <!--Link css-->
+    <link rel="stylesheet" href="event.css">
+    <!--Font awesome cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>  
+    <div class="video-background" >
+        <video autoplay muted loop playsinline id="bg-video">
+          <source src="/Home/image/nebula.3840x2160.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="app-container" >
+        <!-- Nav-bar   -->
+            <div class="nav-bar">
+                    <div class="logo">
+                       <!--<h1 >TECH BLAZE</h1> -->
+                       <h1>TECH BLAZE</h1>
+                    </div>
+                    <div class="menus">
+                        <li><a href="/Home/Home.html" >Home</a></li>
+                        <!--    About    -->
+
+                        <li><a href="#" onclick="Showabout()" style="color: #ffffff;" class="Current-page">About</a></li>
+                        <div class="about-dec" id="about" onmouseleave="Hideabout()">
+                            <div class="about-univ">
+                                <li><a href="/About/About-univ/univ.html" >About University</a></li>
+                            </div>
+                            <div class="about-dept">
+                                <li><a href="/About/About-department/deparment.html" >About Department</a></li>
+                            </div>
+                            <div class="about-event">
+                                <li><a href="/About/About-event/event.html" >About Tech Blaze</a></li>
+                            </div>
+
+                        </div>
+                        <!---   Event   -->
+
+                        <li><a href="#" onclick="Showevent()">Events</a></li>
+                        <div class="event-dec" id="event" onmouseleave="Hideevent()">
+                            <div class="Tech">
+                                <li><a href="/Event/Tech/tech.html" >Tech Events</a></li>
+                            </div>
+                            <div class="Non-tech">
+                                <li><a href="/Event/NonTech/nontech.html" >Non Tech Events</a></li>
+                            </div>
+                        </div>
+                        <li><a href="#">Sponsors</a></li>
+                        <li><a href="/Gallery/gallery.html ">Gallery</a></li>
+                        <li><a href="/Achievement/achievement.html">Achievement</a></li>
+
+                    </div>
+                    <div class="Credentail">
+                        <li><a href="/Reach-us/contact.html">Login</a></li>
+                    </div>
+            </div>    
+        <!--Main container  
+        <div class="Container"  >   
+          <div class="Main-container ">
+              <div class="sub-main-container">
+                  <h1 class="header">“Techblaze 2026 – Where Ideas Meet Technology” <br><span style="font-size: 14px; color: tomato;">(Scroll down)</span></h1>
+                  <div class="Mid-line">   
+                  </div>
+                  <div class="overall-con ">
+                      <div class="con1 com-con com-left block" >
+                          <div class="detail">
+                              <h1><i class="fa-solid fa-fire-flame-curved" ></i> Showcase Your Talent</h1>
+                              <h6>Compete, present, and demonstrate your skills in front of judges, recruiters, and the tech community.</h6>
+                          </div>
+                          <div class="img">
+                              <img src="/Home/image/talent-participant.jpg" alt="" height="100px" width="160px">
+                          </div>
+                      </div>
+                      <div class="con2 com-con com-right block-right">
+                          <div class="detail">
+                              <h1><i class="fa-solid fa-magnifying-glass"></i>Talent Discovery</h1>
+                              <h6>Identify and connect with skilled students for internships, jobs, or training programs.</h6>
+                          </div>
+                          <div class="img">
+                              <img src="/Home/image/telentppl-recruit.jpg" alt="" height="100px" width="160px">
+                          </div>
+
+                      </div>
+                      <div class="con3 com-con com-left block">
+                          <div class="detail">
+                              <h1><i class="fa-solid fa-laptop"></i>Hands-on Experience</h1>
+                              <h6>Gain practical exposure through workshops, hackathons, and coding challenges.</h6>
+                          </div>
+                          <div class="img">
+                              <img src="/Home/image/hands -on-experience.jpg" alt="" height="100px" width="160px">
+                          </div>
+
+                      </div>
+                      <div class="con4 com-con com-right block-right">
+                          <div class="detail">
+                              <h1><i class="fa-solid fa-face-smile"></i>Brand Visibility</h1>
+                              <h6>Showcase your institute/company as a leader in technology and education.</h6>
+                          </div>
+                          <div class="img">
+                              <img src="/Home/image/brand-visibility.png" alt="" height="100px" width="160px">
+                          </div>
+
+                      </div>
+                      <div class="con5 com-con com-left block">
+                          <div class="detail">
+                              <h1><i class="fa-solid fa-network-wired"></i>Internships & Placements</h1>
+                              <h6>Network with IT companies and coaching centers offering career opportunities.</h6>
+                          </div>
+                          <div class="img">
+                              <img src="/Home/image/Internship-1.jpg" alt="" height="100px" width="160px">
+                          </div>
+
+                      </div>
+                      <div class="con6 com-con com-right block-right">
+                          <div class="detail">
+                              <h1><i class="fa-solid fa-handshake-angle"></i>Collaboration</h1>
+                              <h6>Build partnerships with colleges, student communities, and other industry players.</h6>
+                          </div>
+                          <div class="img">
+                              <img src="/Home/image/collab.jpg" alt="" height="100px" width="160px">
+                          </div>
+
+                      </div>
+                      <div class="con7 com-con com-left block">
+                          <div class="detail">
+                              <h1><i class="fa-solid fa-book"></i>Career Guidance</h1>
+                              <h6>Learn from industry experts and mentors who share real-world insights.</h6>
+                          </div>
+                          <div class="img">
+                              <img src="/Home/image/career-guidance.png" alt="" height="100px" width="160px">
+                          </div>
+
+                      </div>
+                      <div class="con8 com-con com-right block-right">
+                          <div class="detail">
+                              <h1><i class="fa-solid fa-brain"></i>Knowledge Sharing</h1>
+                              <h6>Share expertise through workshops, guest lectures, and panel discussions.</h6>
+                          </div>
+                          <div class="img">
+                              <img src="/Home/image/knowledge.webp" alt="" height="100px" width="160px">
+                          </div>
+
+                      </div>
+                      <div class="con9 com-con com-left block">
+                          <div class="detail">
+                              <h1><i class="fa-solid fa-lightbulb"></i>Fun + Innovation</h1>
+                              <h6>Not just tech — enjoy cultural events, games, and a festival-like atmosphere while learning.</h6>
+                          </div>
+                          <div class="img">
+                              <img src="/Home/image/fun.jpg" alt="" height="100px" width="160px">
+                          </div>
+
+                      </div>
+                      <div class="con10 com-con com-right block-right">
+                          <div class="detail">
+                              <h1><i class="fa-solid fa-handshake"></i>Future Workforce</h1>
+                              <h6>Contribute to shaping the next generation of tech professionals.</h6>
+                          </div>
+                          <div class="img">
+                              <img src="/Home/image/futures--ppl.jpg" alt="" height="100px" width="160px">
+                          </div>
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>    --> 
+        <!--Description-->
+        <div class="description">
+            <h1>Event Description</h1>
+            <h4>--Blaze the Trail. Break the Limit --</h4>
+            <h5>TechBlaze 2026 is the ultimate annual tech symposium for students – a launchpad for innovation, talent, and creativity. Open to participants from across colleges, it blends thrilling tech and non-tech events into a dynamic experience of learning, competing, and networking.</h5>
+        </div>
+        <!--Event-overview--> 
+        <div class="Event-overview ">
+            <div class="overview">
+                <h1>Event Overview</h1>
+                <h5>Join us for an unforgettable experience</h5>
+
+            </div>
+            <div class="detail">
+                <div class="com-detail det1"><i class="fa-solid fa-wifi"></i><h6>500+ <br>Expected Candidates </h6></div>
+                <div class="com-detail det2"><i class="fa-solid fa-land-mine-on"></i><h6>5+ <br>Event speakers</h6></div>
+                <div class="com-detail det3"><i class="fa-solid fa-calendar"></i><h6>7+ <br> Events</h6></div>
+                <div class="com-detail det4"><i class="fa-solid fa-handshake"></i><h6>15+ <br> Participating institute</h6></div>
+            </div>
+        </div>
+        <!--What’s in Store?-->
+        <div class="Store ">
+            <h1>What’s in Store?</h1>
+            <h5>7–8 Tech Events: <br> <span class="detail"> Coding battles, hackathons, quizzes & more. </span></h5>
+            <h5>6–7 Non-Tech Events: <br><span class="detail">  Puzzles, fun games, rapid-fire challenges.</span></h5>
+        </div>
+        <!--Fest-->
+        <div class="fest">
+            <h1>Why It’s More Than Just a Fest?</h1>
+            <h5>Backed by a strong lineup of sponsors, TechBlaze isn’t just about winning – it’s about growing. Top performers can unlock internship opportunities, industry exposure, and take real steps toward career success.</h5>
+        </div>
+        <!-- Footer -->
+        <Footer class="footer">
+        <div class="footerdiv">
+            <div class="map">
+                <h1>Locate us</h1><br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d67924.24208324916!2d80.14750944863282!3d12.801299400000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5250847d3353d7%3A0x6a585af1f362dadb!2sHindustan%20Institute%20of%20Technology%20%26%20Science!5e1!3m2!1sen!2sin!4v1759128184642!5m2!1sen!2sin" width="460" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
+            </div>
+            <div class="detail">
+                <h1>Connect</h1>
+                <div class="media">
+
+                    <div><i style="font-size: 25px;" class="fa-brands fa-instagram"></i></div>
+                    <div><i style="font-size: 25px;" class="fa-brands fa-youtube"></i></div>
+                </div>
+                <h1>Reach out</h1>
+                <div class="reachout">
+                    <h5><i style="color: rgb(255, 208, 0) ; font-size: 17px; " class="fa-solid fa-location-dot"></i>  Rajiv Gandhi Salai (OMR), Padur,(Via) Kelambakkam,Chennai - 603 103</h5>
+                    <h5><i style="color: rgb(255, 208, 0) ; font-size: 17px; " class="fa-regular fa-envelope"></i>  TechBlaze80@gmail.com</h5>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <h5>© 2025 TechBlaze'26 - Made by team TechBlaze </h5>
+        </div>
+    </Footer>     
+    </div>
+
+  
+    <!-- Scripts -->
+    <script src="event.js"></script>
+    
+</body>
+</html>

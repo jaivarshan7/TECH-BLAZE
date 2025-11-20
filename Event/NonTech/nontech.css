@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    border-style: none;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+.main{
+    display: flex;
+    flex-direction: row;
+}
+.container{
+    padding-top: 150px;
+    width: 20vw;
+    height: 60vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction:column;
+    overflow: hidden;
+    gap: 10px;    
+}
+
+
+@keyframes moveup {
+0% {
+    transform: translate(-50%, -100vh); /* start below viewport */
+  }
+  100% {
+    transform: translate(-50%, 100vh); /* move above viewport */
+  }
+}
+.container11 img{    
+    width: 10vw;
+    height: 20vh;
+    animation: moveup 10s ease-in-out infinite;
+}
+@keyframes movedon {
+0% {
+    transform: translate(-50%, 100vh); /* start below viewport */
+  }
+  100% {
+    transform: translate(-50%, -100vh); /* move above viewport */
+  }
+}
+.container12 img{    
+    width: 10vw;
+    height: 20vh;
+    animation: moveup 10s ease-in-out infinite;
+}
+.container{
+     background-color: black;
+     width: 20vw;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.container2 img{    
+    width: 10vw;
+    height: 20vh;
+    animation: movedon 10s ease-in-out infinite;
+   
+}

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECH BLAZE</title>
+    <!--Link css-->
+    <link rel="stylesheet" href="Home.css">
+    <!--Font awesome cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <!--    Google Font   -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    
+    <!-- FlipDown CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flipdown@0.3.2/dist/flipdown.min.css">
+    <!-- FlipDown JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flipdown@0.3.2/dist/flipdown.min.js"></script>
+    <!--gap-->
+</head>
+<body >
+    <!--Video-Bg    -->
+    <div class="video-background" >
+        <video autoplay muted loop playsinline id="bg-video">
+          <source src="/Home/image/nebula.3840x2160.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="app-container" id="main-container">
+        <!-- Nav-bar   -->
+        <div class="nav-bar">
+                <div class="logo">
+                     <h1 >TECH BLAZE</h1>
+                </div>
+                 <div class="menus">
+                     <li><a href="#" style="color: #EAEAEA; " class="Current-page">Home</a></li>
+                     <!--    About    -->
+                   <li><a href="#" onclick="Showabout()">About</a></li>
+                     <div class="about-dec" id="about" onmouseleave="Hideabout()">
+                         <div class="about-univ">
+                             <li><a href="/About/About-univ/univ.html" >About University</a></li>
+                         </div>
+                         <div class="about-dept">
+                             <li><a href="/About/About-department/deparment.html" >About Department</a></li>
+                         </div>
+                         <div class="about-event">
+                             <li><a href="/About/About-event/event.html" >About Tech Blaze</a></li>
+                         </div>
+                   </div>
+                     <!---   Event   -->
+                   <li><a href="#" onclick="Showevent()">Events</a></li>
+                     <div class="event-dec" id="event" onmouseleave="Hideevent()">
+                         <div class="Tech">
+                             <li><a href="/Event/Tech/tech.html" >Tech Events</a></li>
+                         </div>
+                         <div class="Non-tech">
+                             <li><a href="/Event/NonTech/nontech.html" >Non Tech Events</a></li>
+                         </div>
+                     </div>
+                     <li><a href="#">Sponsors</a></li>
+                     <li><a href="/Gallery/gallery.html ">Gallery</a></li>
+                     <li><a href="/Achievement/achievement.html">Achievement</a></li>
+               </div>
+                 <div class="Credentail">
+                     <div class="login">
+                         <li><a href="/Reach-us/contact.html" class="login">Login</a></li>
+                     </div>
+               </div>
+                              
+                <div class="profile" onmouseover="Showprofile()" onmouseleave="hideprofile()">
+
+                    <i class="fa-solid fa-circle-user"></i>
+                    <div class="profile-detail" id="profiledetail">
+                        <img src="/Home/image/dharan.jpg" alt="" height="100px"  width="150px" >
+                        <h4 style="font-size: 17px;">Welcome Dharan</h4>
+                        <h4 style="font-size: 14px;">Hindustan institute of technology and science</h4>
+                        <div class="icon">
+                            <div class="com-icon" style="background-color:#002BFF;">
+                                <i class="fa-solid fa-key"></i>
+                            </div>
+                            <div class="com-icon" style="background-color:#E50914;">
+                                <i class="fa-solid fa-power-off"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+               
+                
+        </div>
+        
+        
+        
+        <!--  Main-Content  -->    
+              
+        <div class="main-content main-content-animate " >
+            <div class="about">
+                <div class="detail">
+                    <div class="name">
+                        <h1 >TECH <span class="blaze" id="year">BLAZE'25</span></h1>
+                        
+                    </div>
+                    <div class="line"></div>
+                    <div class="date" id="date">
+                        <h5 >(14–15 FEB ‘26 | <span class="detail-loc"> Into the Tech Unknown — MGR Auditorium, HITS)</span></h5>
+                    </div>
+                    <div class="description">
+                        <h5 class="namedec">A is a college-level technical symposium <br>hosted at Hindustan Institute of Technology and Science, Chennai.</h5>
+                    </div>
+                    <div class="register">
+                        <a href="#">Register now</a>
+                    </div>
+                </div>
+                <!--Date-Time-->
+                <div class="date-time-container">
+                    <p id="demo"></p>
+                    <div class="days com">
+                        
+                        <div class="count" id="days-count"></div>
+                        <div class="day com-h1">Days</div>
+                    </div>
+                    <div class="hours com">
+                        
+                        <div class="count" id="hours-count"></div>
+                        <div class="hour com-h1">Hours</div>
+                    </div>
+                    <div class="minutes com">
+                        
+                        <div class="count" id="minutes-count"></div>
+                        <div class="minute com-h1">Minutes</div>
+                    </div>
+                    <div class="seconds com">
+                        
+                        <div class="count" id="seconds-count"></div>
+                        <div class="second com-h1">Seconds</div>
+                    </div>
+                </div>
+                
+
+            </div>            
+        </div>
+        <!--chat-container-->
+        <div class="bot-container">  
+            <div class="bot" >
+                        <div class="about-bot" id="exit">
+                            <a onclick="Closedesc()" href="https://wa.me/919003409417"></a>
+                            <h1></h1>
+                        </div> 
+                        <div class="btn">
+                            <a href="https://wa.me/919003409417" target="_blank" onclick="closebotdecp()" ondblclick="closechatbox()" ><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" height="70px" width="40px" /></a>
+                        </div>    
+            </div>       
+        </div>   
+        <!--Event highlight
+        <div class="Event-highlight">
+            <div class="heading">
+                <h1>Event Highlights</h1>
+            </div>
+            <div class="container">
+                <div class="event com">
+                    <h1>15+</h1>
+                    <h6>Events</h6>
+                </div>
+                <div class="speaker com">
+                    <h1>3+</h1>
+                    <h6>Speakers</h6>
+                </div>
+                <div class="prizepool com">
+                    <h1>30k+</h1>
+                    <h6>Prizepool</h6>
+                </div>
+                <div class="workshop com">
+                    <h1>5+</h1>
+                    <h6>Workshop</h6>
+                </div>
+            </div>
+        </div>-->
+
+        <!--  Achievement  -->
+        <div class="Achievement-content block ">
+            <div class="title ">
+                <div>
+                    <h1>Meet the Achievers of <br> <span class="eventname"> Tech Blaze'2025</span></h1>
+                </div>
+                <div class="Viewall">
+                    <a href="/Achievement/achievement.html">View all Events </a>
+                </div>
+            </div>
+            <div class="Achievers-detail ">
+                    <div class="Achievers-detail1 common-Achievers" id="Achievers-detail1">
+                            <img src="/Home/image/spider.jpg" alt="No image Found" width="280px" height="250px">
+                            <h1>Web-O-Spider</h1>
+                            <h3><span style="font-size: 12px; color: rgb(255, 255, 255); ">(Desc: The event to evaluate the Webpage building skills of the participants. ) </span> </h3>
+                            <a href="#">View Winner</a>
+                    </div>
+                    <div class="Achievers-detail2 common-Achievers" id="Achievers-detail2">
+                        <img src="/Home/image/hacker-rank.jpg" alt="No image Found" width="280px" height="250px">
+                        <h1>Hacker Rank</h1>
+                        <h3> <span style="font-size: 12px; color: rgb(255, 255, 255); ">(Desc: The Crypt Puzzle test knowledge of Encryption Decryption skills. ) </span></h3>
+                        <a href="#">View Winner</a>
+                    </div>
+                    <div class="Achievers-detail3 common-Achievers" id="Achievers-detail3">
+                        <img src="/Home/image/logical-thinking.jpg" alt="No image Found" width="280px" height="250px">
+                        <h1>Code Craft</h1>
+                        <h3><span style="font-size: 12px; color: rgb(255, 255, 255); ">(Desc: The Code craft brings out the Logical thinking skills of the Participants. ) </span></h3>
+                        <a href="#">View Winner</a>
+                    </div>
+            </div>
+        </div>
+        <!--Current-sponsors    -->
+        <div class="sponsors-container">
+            <div class="Header">
+                <h1>Sponsors</h1>
+            </div>
+            <div class="Current-sponsors">
+                <div class="sponsors">
+                        <img src="/Home/image/green-technologies.webp" alt="" class="card">
+                        <img src="/Home/image/4i.jpg" alt="" class="card">
+                        <img src="/Home/image/just sponsor.jpg" alt="" class="card">
+                        <img src="/Home/image/skein tech.jpg" alt="" class="card">
+                        <img src="/Home/image/dominos.webp" alt="" class="card">
+                        <img src="/Home/image/a2b.png   " alt="" class="card">
+                        
+                </div>
+                <div class="sponsors">
+                        <img src="/Home/image/green-technologies.webp" alt="" class="card">
+                        <img src="/Home/image/4i.jpg" alt="" class="card">
+                        <img src="/Home/image/just sponsor.jpg" alt="" class="card">
+                        <img src="/Home/image/skein tech.jpg" alt="" class="card">
+                        <img src="/Home/image/dominos.webp" alt="" class="card">
+                        <img src="/Home/image/a2b.png   " alt="" class="card">
+                </div>
+            </div>    
+        </div>    
+        <!-- Gallery 
+         <div class="Gallery-container block">
+                <header class="header">
+                    <h1>Gallery – TechBlaze '25</h1>
+                    <h5>Step into the highlights of TechBlaze ‘25! ✨ From thrilling technical events and innovative project showcases</h5>
+                </header>
+                <main class="gallery">
+                    <div class="img1 images">
+                        <div class="img-con1">
+                            <img src="image/hall.jpg" alt="" class="top-image" width="200px" height="300px" onclick="window.open('image/hall.jpg','_blank')">
+                            <img src="image/father-prayer.jpg" alt="" class="top-image1" width="200px" height="200px" onclick="window.open('image/father-prayer.jpg','_blank')">
+                        </div>
+                        <div class="img-con1">    
+                            <img src="image/stage.jpg" alt="" class="top-image" width="200px" height="300px" onclick="window.open('image/stage.jpg','_blank')">
+                            <img src="image/hod.jpg" alt=""  class="top-image1" width="200px" height="200px" onclick="window.open('image/hod.jpg','_blank')">
+                        </div>    
+                    </div>
+                    <div class="img2 images">
+                        <div class="img-con1">  
+                            <img src="image/faculty.jpg" alt="" class="top-image" width="200px" height="250px" onclick="window.open('image/faculty.jpg','_blank')">
+                            <img src="image/prayer.jpg" alt="" class="top-image2" width="200px" height="200px" onclick="window.open('image/prayer.jpg','_blank')">
+                        </div>    
+                        <div class="img-con1">  
+                            <img src="image/host.jpg" alt="" class="top-image" width="200px" height="250px" onclick="window.open('image/host.jpg','_blank')">
+                            <img src="image/audience-prayer.jpg" alt=""  class="top-image2" width="200px" height="200px" onclick="window.open('image/audience-prayer.jpg','_blank')" >
+                        </div>
+                    </div>
+                </main>
+                <div class="btn">
+                    <a href="/Gallery/gallery.html">View more</a>
+                </div>
+            
+        </div>-->
+        
+        <div class="main-img-container">
+            <header class="header">
+                    <h1>Gallery – TechBlaze '25</h1>
+                    <h5>Step into the highlights of TechBlaze ‘25! ✨ From thrilling technical events and innovative project showcases</h5>
+                </header>
+            <div class="img-container img-container1">
+                <div class="image1 image">
+                    <img src="/Home/image/hall.jpg" alt="" >
+                </div>
+                <div class="image2 image">
+                    <img src="/Home/image/chief-guest.jpg" alt="">
+                </div>
+                <div class="image3 image">
+                    <img src="/Home/image/stage.jpg" alt="" >
+                </div>
+                <div class="image4 image">
+                    <img src="/Home/image/hod.jpg" alt="" >
+                </div>
+                <div class="image5 image">
+                    <img src="/Home/image/audience-prayer.jpg" alt="">
+                </div>
+            </div>
+            <div class="img-container img-container2">
+                <div class="image1 image">
+                    <img src="/Home/image/faculty.jpg" alt="" >
+                </div>
+                <div class="image2 image">
+                    <img src="/Home/image/host.jpg" alt="">
+                </div>
+                <div class="image3 image">
+                    <img src="/Home/image/father-prayer.jpg" alt="" >
+                </div>
+                <div class="image4 image">
+                    <img src="/Home/image/hall.jpg" alt="" >
+                </div>            
+            </div>
+            <div class="img-container img-container3">
+                <div class="image1 image">
+                    <img src="/Home/image/stage.jpg" alt="" >
+                </div>
+                <div class="image2 image">
+                    <img src="/Home/image/prayer1.jpg" alt="">
+                </div>
+                <div class="image3 image">
+                    <img src="/Home/image/prayer2.jpg" alt="" >
+                </div>
+                <div class="image4 image">
+                    <img src="/Home/image/prayer-faculty.jpg" alt="" >
+                </div>
+                <div class="image5 image">
+                    <img src="/Home/image/chief-guest.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!--Registration-queries-->
+        <div class="Registration-queries block" id="Registration">
+            <div class="heading">
+                <h1 >REGISTRATION <span class="QUERIES"> QUERIES </span></h1>
+            </div>
+            <div class="detail">
+                <h5>For any questions or more information regarding registration,<br> please feel free to contact our heads.</h5>
+                <div class="coordinators">
+                    <div class="ppl1 com-ppl" >
+                        <img src="/Home/image/nani.jpg" alt="" height="150px" width="150px">
+                        <h3>Nanish K R</h3>
+                        <h6>(Team-head)</h6>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-solid fa-circle-user"></i></a>
+                    </div>
+                    <div class="ppl2 com-ppl">
+                        <img src="/Home/image/vasanth.jpg" alt="" height="150px" width="150px">
+                        <h3>Vasanth Srinivas</h3>
+                        <h6>(Team-head)</h6>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-solid fa-circle-user"></i></a>
+                    </div>
+                    <div class="ppl3 com-ppl">
+                        <img src="/Home/image/founder blk.jpg" alt=""height="150px" width="150px">
+                        <h3>Arunachalam</h3>
+                        <h6>(Team-head)</h6>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-solid fa-circle-user"></i></a>
+                    </div>
+                </div>
+                <div class="coordinators coordinators1">
+                    <div class="ppl1 com-ppl">
+                        <img src="/Home/image/suraj.jpg" alt="" height="150px" width="150px">
+                        <h3>Suraj Kumar</h3>
+                        <h6>(Team-head)</h6>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-solid fa-circle-user"></i></a>
+                    </div>
+                    <div class="ppl2 com-ppl">
+                        <img src="/Home/image/jai.png" alt="" height="150px" width="150px">
+                        <h3>Jaivarshan</h3>
+                        <h6>(Team-head)</h6>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-solid fa-circle-user"></i></a>
+                    </div>
+                    <div class="ppl3 com-ppl">
+                        <img src="/Home/image/dharan.jpg" alt="" height="150px" width="150px">
+                        <h3>Sri Dharan</h3>
+                        <h6>(Team-head)</h6>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-solid fa-circle-user"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Location-->
+        <div class="venue block" id="venue">
+            <h1>VENUE</h1>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d67924.24208324916!2d80.14750944863282!3d12.801299400000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5250847d3353d7%3A0x6a585af1f362dadb!2sHindustan%20Institute%20of%20Technology%20%26%20Science!5e1!3m2!1sen!2sin!4v1759128184642!5m2!1sen!2sin" width="930" height="420" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
+            
+        </div>
+        <!--FAQ-->
+        <div class="FAQ">
+            <h1>FAQs</h1>
+            <div class="faq" id="faq1">
+                <div class="Que1 com-que" id="Que1" onclick="showans1()" >
+                    <h3>What is TechBlaze?</h3>
+                </div>    
+                <div class="ans" id="ans1">
+                    TechBlaze is a proposed technical symposium organized by the Department of Computer Applications  and Computer Science at Hindustan Institute of Technology and Science.
+                </div>
+            </div>    
+            <div class="faq" id="faq2">
+                <div class="Que2 com-que" id="Que2" onclick="showans2()">
+                    <h3>Do I need to pay to participate?</h3>
+                </div>    
+                <div class="ans" id="ans2">    
+                    Yes, participation in TechBlaze is completely paid.                
+                </div>    
+            </div>
+            <div class="faq" id="faq3">
+                <div class="Que3 com-que" id="Que3" onclick="showans3()">
+                    <h3>Can I participate in multiple events</h3>
+                </div>
+                <div class="ans" id="ans3">
+                    Yes, students are allowed to participate in multiple events
+                </div>    
+            </div>
+            <div class="faq" id="faq4">
+                <div class="Que4 com-que" id="Que4" onclick="showans4()">
+                    <h3>Are there certificates for all participants</h3>
+                </div>
+                <div class="ans" id="ans4">
+                    Yes, certificates will be provided to all participants upon participation or winning in the events.
+                </div> 
+            </div>
+            <div class="faq" id="faq5">       
+                <div class="Que5 com-que" id="Que5" onclick="showans5()">
+                    <h3>is transport facility available?</h3>
+                </div>
+                <div class="ans" id="ans5">
+                    No, transport facilities are not available for the participants.
+                </div>   
+            </div> 
+
+        </div> 
+        <!--Pop-box
+        <div class="popup" id="popup">
+            <img src="/Home/image/green tick.png" alt="no-image" height="150px" width="150px">
+            <h3>Your Submission was received :)</h3>
+            <a href="/Home/Home.html">Back to Home</a>
+        </div>-->
+        
+        <!-- Footer -->
+        <footer class="footer" id="footer">
+            <div class="copyright">
+                <h5>© 2025 TechBlaze'26 - Made by team TechBlaze </h5>
+            </div>
+        </footer>
+    </div>  
+   
+    <!-- Scripts -->
+    <script src="Home.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+    
+
+    <script>
+    // Register the plugin
+    gsap.registerPlugin(TextPlugin);
+
+    // Animate text change
+    gsap.to("#year", {
+      duration: 2,
+      text: "BLAZE'26",
+      ease: "none"
+    });
+
+    //registerPlugin for description
+    gsap.registerPlugin(SplitText) 
+
+    let split = SplitText.create(".namedec", { type: "chars" });
+    gsap.from(split.chars, {
+    duration: 1, 
+    x: 70,     
+    autoAlpha: 0, 
+    stagger: 0.03
+    });
+
+
+   
+</script>
+</body>
+</html>

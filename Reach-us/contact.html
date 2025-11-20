@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECH BLAZE</title>
+    <!--Link-css-->
+    <link rel="stylesheet" href="contact.css">
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--Video-Bg    -->
+    <div class="video-background" >
+        <video autoplay muted loop playsinline id="bg-video">
+          <source src="/Home/image/nebula.3840x2160.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="app-container">
+       
+        <!-- Nav-bar   -->
+        <div class="nav-bar">
+                <div class="logo">
+                     <h1 >TECH BLAZE</h1>
+                </div>
+                <div class="menus">
+                    <li><a href="/Home/Home.html" style="color: #EAEAEA; " >Home</a></li>
+                    <!--    About    -->
+
+                    <li><a href="#" onclick="Showabout()">About</a></li>
+                    <div class="about-dec" id="about" onmouseleave="Hideabout()">
+                        <div class="about-univ">
+                            <li><a href="/About/About-univ/univ.html" >About University</a></li>
+                        </div>
+                        <div class="about-dept">
+                            <li><a href="/About/About-department/deparment.html" >About Department</a></li>
+                        </div>
+                        <div class="about-event">
+                            <li><a href="/About/About-event/event.html" >About Tech Blaze</a></li>
+                        </div>
+
+                    </div>
+                    <!---   Event   -->
+
+                    <li><a href="#" onclick="Showevent()">Events</a></li>
+                    <div class="event-dec" id="event" onmouseleave="Hideevent()">
+                        <div class="Tech">
+                            <li><a href="/Event/Tech/tech.html" >Tech Events</a></li>
+                        </div>
+                        <div class="Non-tech">
+                            <li><a href="/Event/NonTech/nontech.html" >Non Tech Events</a></li>
+                        </div>
+                    </div>
+                    <li><a href="#">Sponsors</a></li>
+                    <li><a href="/Gallery/gallery.html ">Gallery</a></li>
+                    <li><a href="/Achievement/achievement.html">Achievement</a></li>
+
+                </div>
+                <div class="Credentail">
+                    <div class="login">
+                        <li><a href="/Reach-us/contact.html" class="login">Login</a></li>
+                    </div>
+                    
+                </div>
+                <div class="profile" onmouseover="Showprofile()" onmouseleave="hideprofile()">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <div class="profile-detail" id="profiledetail">
+                        <img src="/Home/image/dharan.jpg" alt="" height="100px"  width="150px" >
+                        <h4 style="font-size: 17px;">Welcome Dharan</h4>
+                        <h4 style="font-size: 14px;">Hindustan institute of technology and science</h4>
+                        <div class="icon">
+                            <div class="com-icon" style="background-color:#002BFF;">
+                                <i class="fa-solid fa-key"></i>
+                            </div>
+                            <div class="com-icon" style="background-color:#E50914;">
+                                <i class="fa-solid fa-power-off"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+         
+        <div class="main-container">
+            <div class="contact-us">
+                <h1>Contact Us</h1>
+                <div class="form-container">
+                    <form action="#">
+                        <table style="width: 100%;">
+                            <tr>
+                                <th><label for="name" class="det1">Name</label></th>
+                                <td><input type="text" id="name" placeholder="Enter your name" required></td>
+                            </tr>    
+                            <tr>
+                                <th><label for="mobile-number" class="det1">Mobile Number</label></th>
+                                <td><input type="number" id="mobile-number" placeholder="+91 xxxxxxxxxx" required></td>
+                            </tr>
+                            <tr>
+                                <th><label for="Email">Email</label></th>
+                                <td><input type="email" id="email" placeholder="Enter Email address" required></td>
+                            </tr>
+                            <tr>    
+                                <th><label for="mobile-number">Mobile Number</label></th>
+                                <td><input type="number" id="mobile-number" placeholder="+91 xxxxxxxxxx" required></td>
+
+                            </tr>
+                            <tr >
+                                <th ><label for="message">Query</label></th>
+                                <td ><input type="text" class="Query" id="query" placeholder="Type your query here" class="msg" required></td>
+                            </tr>
+                        
+                        </table>  
+                        <button type="submit" class="btn">Submit</button>  
+                    </form>
+                </div>
+            </div>
+        </div>   
+    </div>    
+    <!-- Footer -->
+    <Footer class="footer">
+        <div class="footerdiv">
+            <div class="map">
+                <h1>Locate us</h1><br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d67924.24208324916!2d80.14750944863282!3d12.801299400000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5250847d3353d7%3A0x6a585af1f362dadb!2sHindustan%20Institute%20of%20Technology%20%26%20Science!5e1!3m2!1sen!2sin!4v1759128184642!5m2!1sen!2sin" width="460" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
+            </div>
+            <div class="detail">
+                <h1>Connect</h1>
+                <div class="media">
+
+                    <div><i style="font-size: 25px;" class="fa-brands fa-instagram"></i></div>
+                    <div><i style="font-size: 25px;" class="fa-brands fa-youtube"></i></div>
+                </div>
+                <h1>Reach out</h1>
+                <div class="reachout">
+                    <h5><i style="color: rgb(255, 208, 0) ; font-size: 17px; " class="fa-solid fa-location-dot"></i>  Rajiv Gandhi Salai (OMR), Padur,(Via) Kelambakkam,Chennai - 603 103</h5>
+                    <h5><i style="color: rgb(255, 208, 0) ; font-size: 17px; " class="fa-regular fa-envelope"></i>  TechBlaze80@gmail.com</h5>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <h5>© 2025 TechBlaze'26 - Made by team TechBlaze </h5>
+        </div>
+    </Footer>
+    
+    <script src="contact.js"></script>
+</body>
+</html>
