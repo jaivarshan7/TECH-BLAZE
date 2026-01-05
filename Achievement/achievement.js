@@ -95,3 +95,30 @@ function darkmode(){
         el.style.color = "white";
     });
 }
+
+function detail(){
+    let val=document.getElementById("achievers")
+
+    let eventname=["Web-O-Spider","Hacker Rank","Code Craft","Data Dive","QuizKwiz","nothing"]
+
+    eventname.forEach(event=> {
+        if (val.value==event){
+            let currentevent=document.getElementById(event)
+            currentevent.style.visibility="visible";
+
+
+            eventname.forEach(preevent=>{
+                if (preevent!=event){
+                    let prevevent=document.getElementById(preevent)
+                    prevevent.style.visibility="hidden";
+                }
+            })
+            
+        }
+
+
+    })
+
+    
+    
+}

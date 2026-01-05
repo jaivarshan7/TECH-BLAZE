@@ -119,3 +119,14 @@ var x = setInterval(function() {
 const video = document.getElementById("bg-video");
 video.addEventListener("pause", () => video.play());
 
+/*hambuger icon*/
+function display(){
+    let hambugermenu=document.getElementById("hambuger-menu")
+    hambugermenu.style.display="block"
+}
+
+function closedisplay(){
+    let hambugermenu=document.getElementById("hambuger-menu")
+    hambugermenu.style.display="none"
+}
+
