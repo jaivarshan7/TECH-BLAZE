@@ -38,3 +38,13 @@ function hideprofile(){
     const el = document.getElementById("profiledetail");
     if(el) el.style.display="none";
 }
+
+
+function toggleMobileAbout() {
+    const submenu = document.getElementById("mobile-about-submenu");
+    if (submenu.style.display === "block") {
+        submenu.style.display = "none";
+    } else {
+        submenu.style.display = "block";
+    }
+}
