@@ -20,9 +20,17 @@
 </head>
 <body >
     <!--Video-Bg    -->
-    <div class="video-background" >
-        <video autoplay muted loop playsinline id="bg-video">
-          <source src="/Home/image/nebula.3840x2160.mp4" type="video/mp4">
+    <div class="video-background">
+        <video
+          id="bg-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          disablepictureinpicture
+        >
+        <source src="/Home/image/nebula.3840x2160.mp4" type="video/mp4">
         </video>
     </div>
     
@@ -33,10 +41,10 @@
                      <h1 >TECH BLAZE</h1>
                 </div>
                  <div class="menus">
-                     <li><a href="#" style="color: #EAEAEA; " class="Current-page">Home</a></li>
+                    <li><a href="#" style="color: #EAEAEA; " class="Current-page">Home</a></li>
                      <!--    About    -->
-                   <li><a href="#" onclick="Showabout()">About</a></li>
-                     <div class="about-dec" id="about" onmouseleave="Hideabout()">
+                    <li><a href="#" onclick="Showabout()">About</a></li>
+                    <div class="about-dec" id="about" onmouseleave="Hideabout()">
                          <div class="about-univ">
                              <li><a href="/About/About-univ/univ.html" >About University</a></li>
                          </div>
@@ -46,49 +54,32 @@
                          <div class="about-event">
                              <li><a href="/About/About-event/event.html" >About Tech Blaze</a></li>
                          </div>
-                   </div>
-                     <!---   Event   -->
-                   <li><a href="#" onclick="Showevent()">Events</a></li>
-                     <div class="event-dec" id="event" onmouseleave="Hideevent()">
-                         <div class="Tech">
-                             <li><a href="/Event/Tech/tech.html" >Tech Events</a></li>
-                         </div>
-                         <div class="Non-tech">
-                             <li><a href="/Event/NonTech/nontech.html" >Non Tech Events</a></li>
-                         </div>
-                     </div>
-                     <li><a href="#">Sponsors</a></li>
-                     <li><a href="/Gallery/gallery.html ">Gallery</a></li>
-                     <li><a href="/Achievement/achievement.html">Achievement</a></li>
+                    </div>
+                    <!---   Event   -->
+                    <li><a href="#" onclick="Showevent()">Events</a></li>
+                    <div class="event-dec" id="event" onmouseleave="Hideevent()">
+                        <div class="Tech">
+                            <li><a href="/Event/Tech/tech.html" >Tech Events</a></li>
+                        </div>
+                        <div class="Non-tech">
+                            <li><a href="/Event/NonTech/nontech.html" >Non Tech Events</a></li>
+                        </div>
+                    </div>
+                    <li><a href="#">Sponsors</a></li>
+                    <li><a href="/Gallery/gallery.html ">Gallery</a></li>
+                    <li><a href="/Achievement/achievement.html">Achievement</a></li>
                 </div>
                 <div class="credential-detail">
                     <div class="Credentail">
                          <div class="login">
                              <li><a href="/Reach-us/contact.html" class="login">Login</a></li>
                          </div>
-                    </div>
-
-                    <div class="profile" onmouseover="Showprofile()" onmouseleave="hideprofile()">
-
-                        <i class="fa-solid fa-circle-user"></i>
-                        <div class="profile-detail" id="profiledetail">
-                            <img src="/Home/image/dharan.jpg" alt="" height="100px"  width="150px" >
-                            <h4 style="font-size: 17px;">Welcome Dharan</h4>
-                            <h4 style="font-size: 14px;">Hindustan institute of technology and science</h4>
-                            <div class="icon">
-                                <div class="com-icon" style="background-color:#002BFF;">
-                                    <i class="fa-solid fa-key"></i>
-                                </div>
-                                <div class="com-icon" style="background-color:#E50914;">
-                                    <i class="fa-solid fa-power-off"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>    
+                    </div>   
                     <div class="hambuger">
-                        <button id="hambugericon" onclick="display()"><i class="fa-solid fa-power-off"></i></button>
+                        <button id="hambugericon" onclick="display()"><i class="fa-solid fa-bars"></i></button>
                     </div>
                 </div>
+                
                
                 
         </div>
@@ -98,7 +89,7 @@
             <div class="Credentail">
                          <div class="login">
                              <li><a href="/Reach-us/contact.html" class="login">Login</a></li>
-                             <button id="hambugercicon" onclick="closedisplay()"><i class="fa-solid fa-power-off"></i></button>
+                             <button id="hambugercicon" onclick="closedisplay()"><i class="fa-regular fa-circle-xmark"></i></button>
                          </div>
                          
                     </div>
@@ -164,18 +155,6 @@
 
             </div>            
         </div>
-        <!--chat-container
-        <div class="bot-container">  
-            <div class="bot" >
-                        <div class="about-bot" id="exit">
-                            <a onclick="Closedesc()" href="https://wa.me/919003409417"></a>
-                            <h1></h1>
-                        </div> 
-                        <div class="btn">
-                            <a href="https://wa.me/919003409417" target="_blank" onclick="closebotdecp()" ondblclick="closechatbox()" ><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" height="70px" width="40px" /></a>
-                        </div>    
-            </div>       
-        </div>    -->
         <!--Event highlight-->
         <div class="Event-highlight">
             <div class="heading">
@@ -184,59 +163,54 @@
                 <marquee behavior="scroll" direction="left" scrollamount="8" style="font-size: 1.2rem;">Welcome to <span style="color: #E50914; font-weight: bold !important;">Techblaze </span>, the Symposium at Hindustan Institute of Technology and Science, Department of Computer Applications! This symposium brings together bright minds to explore emerging technologies 
                 and exchange innovative ideas.A platform to learn, collaborate, and gain fresh insights from experts. Join us as we celebrate creativity and shape the future of technology together. <br></marquee>
             </div>
-            <div class="container">
-                <div class="event com">
-                    <h1>15+</h1>
-                    <h6>Events</h6>
+            <div class="event-stats">
+                <div class="stat-card">
+                  <h2>15+</h2>
+                  <span>Events</span>
                 </div>
-                <div class="speaker com">
-                    <h1>3+</h1>
-                    <h6>Speakers</h6>
+            
+                <div class="stat-card">
+                  <h2>3+</h2>
+                  <span>Speakers</span>
                 </div>
-                <div class="prizepool com">
-                    <h1>30k+</h1>
-                    <h6>Prizepool</h6>
+            
+                <div class="stat-card">
+                  <h2>30k+</h2>
+                  <span>Prize Pool</span>
                 </div>
-                <div class="workshop com">
-                    <h1>5+</h1>
-                    <h6>Workshop</h6>
+            
+                <div class="stat-card">
+                  <h2>5+</h2>
+                  <span>Workshops</span>
                 </div>
             </div>
+
         </div>
 
         <!-- Gallery -->
-         <div class="Gallery-container block">
-                <header class="header">
-                    <h1>GALLERY – TECHBLAZE '25</h1>
-                    <h5>Step into the highlights of TechBlaze ‘25! ✨ From thrilling technical events and innovative project showcases</h5>
-                </header>
-                <main class="gallery">
-                    <div class="img1 images">
-                        <!--<div class="img-con1"> -->
-                            <img src="image/hall.jpg" alt="" class="top-image"  onclick="window.open('image/hall.jpg','_blank')">
-                            <img src="image/father-prayer.jpg" alt="" class="top-image1" onclick="window.open('image/father-prayer.jpg','_blank')">
-                        <!--</div>-->
-                        <!--<div class="img-con1"> -->   
-                            <img src="image/stage.jpg" alt="" class="top-image"onclick="window.open('image/stage.jpg','_blank')">
-                            <img src="image/hod.jpg" alt=""  class="top-image1 mob-image" onclick="window.open('image/hod.jpg','_blank')">
-                        <!--</div>    -->
-                    </div>
-                    <div class="img2 images">
-                        <!--<div class="img-con1"> -->  
-                            <img src="image/faculty.jpg" alt="" class="top-image" width="200px" height="250px" onclick="window.open('image/faculty.jpg','_blank')">
-                            <img src="image/prayer.jpg" alt="" class="top-image2" width="200px" height="200px" onclick="window.open('image/prayer.jpg','_blank')">
-                        <!--</div>    --> 
-                        <!--<div class="img-con1"> -->  
-                            <img src="image/host.jpg" alt="" class="top-image" width="200px" height="250px" onclick="window.open('image/host.jpg','_blank')">
-                            <img src="image/audience-prayer.jpg" alt=""  class="top-image2 mob-image" width="200px" height="200px" onclick="window.open('image/audience-prayer.jpg','_blank')" >
-                        <!--</div>--> 
-                    </div>
-                </main>
-                <div class="btn">
-                    <a href="/Gallery/gallery.html">View more</a>
-                </div>
-            
-        </div>
+        <section class="gallery-section">
+          <div class="gallery-header">
+            <h1>GALLERY – TECHBLAZE '25</h1>
+            <p>
+              Step into the highlights of TechBlaze ‘25! ✨  
+              From thrilling technical events and innovative project showcases
+            </p>
+          </div>
+      
+          <div class="gallery-grid">
+            <img src="image/hall.jpg" alt="Gallery Image" onclick="openImg(this.src)">
+            <img src="image/father-prayer.jpg" alt="Gallery Image" onclick="openImg(this.src)">
+            <img src="image/stage.jpg" alt="Gallery Image" onclick="openImg(this.src)">
+            <img src="image/hod.jpg" alt="Gallery Image" onclick="openImg(this.src)">
+            <img src="image/faculty.jpg" alt="Gallery Image" onclick="openImg(this.src)">
+            <img src="image/host.jpg" alt="Gallery Image" onclick="openImg(this.src)">
+          </div>
+      
+          <div class="gallery-btn">
+            <a href="/Gallery/gallery.html">View More</a>
+          </div>
+        </section>
+
 
         <!--Current-sponsors    -->
         <div class="sponsors-container">

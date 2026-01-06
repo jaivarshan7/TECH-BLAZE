@@ -20,30 +20,27 @@
         </video>
     </div>
     <div class="app-container" >
-        <!--  Nav-bar  -->
+        <!-- Nav-bar   -->
         <div class="nav-bar">
-            <div class="logo">
-                <h1 >TECH BLAZE</h1>
-            </div>
-            <div class="menus">
-                <li><a href="/Home/Home.html">Home</a></li>
-                <!--    About    -->
-
+                <div class="logo">
+                     <h1 >TECH BLAZE</h1>
+                </div>
+                 <div class="menus">
+                    <li><a href="#" style="color: #EAEAEA; " class="Current-page">Home</a></li>
+                     <!--    About    -->
                     <li><a href="#" onclick="Showabout()">About</a></li>
                     <div class="about-dec" id="about" onmouseleave="Hideabout()">
-                        <div class="about-univ">
-                            <li><a href="/About/About-univ/univ.html" >About University</a></li>
-                        </div>
-                        <div class="about-dept">
-                            <li><a href="/About/About-department/deparment.html" >About Department</a></li>
-                        </div>
-                        <div class="about-event">
-                            <li><a href="/About/About-event/event.html" >About Tech Blaze</a></li>
-                        </div>
-
+                         <div class="about-univ">
+                             <li><a href="/About/About-univ/univ.html" >About University</a></li>
+                         </div>
+                         <div class="about-dept">
+                             <li><a href="/About/About-department/deparment.html" >About Department</a></li>
+                         </div>
+                         <div class="about-event">
+                             <li><a href="/About/About-event/event.html" >About Tech Blaze</a></li>
+                         </div>
                     </div>
-                <!---   Event   -->
-
+                    <!---   Event   -->
                     <li><a href="#" onclick="Showevent()">Events</a></li>
                     <div class="event-dec" id="event" onmouseleave="Hideevent()">
                         <div class="Tech">
@@ -53,100 +50,66 @@
                             <li><a href="/Event/NonTech/nontech.html" >Non Tech Events</a></li>
                         </div>
                     </div>
-
-                <li><a href="#">Sponsors</a></li>
-                <li><a href="#" style="color: #ffffff;" class="Current-page">Gallery</a></li>
-                <li><a href="/Achievement/achievement.html">Achievement</a></li>
-                
-            </div>
-            <div class="Credentail" >
-                <li><a href="/Reach-us/contact.html">Login</a></li>
-            </div>
-        </div>
-        <!--  Gallery  -->
-        <div class="Gallery-container">
-            <header class="header">
-                <h1>Gallery – TechBlaze '26</h1>
-                <h5>Step into the highlights of TechBlaze ‘26! ✨ From thrilling technical events and innovative project showcases</h5>
-            </header>
-            <main class="gallery">
-                <div class="cont1">
-                    <div class="img1 image" >
-                        <img src="image/hall.jpg" alt="" width="220px" height="300px" onclick="window.open('image/hall.jpg','_blank') ">
-                        <img src="/Home/image/father-prayer.jpg" alt="" class="top-image1" width="220px" height="200px" onclick="window.open('/Home/image/father-prayer.jpg','_blank')">
-                        <img src="image/stage.jpg" alt="" width="220px" height="300px" onclick="window.open('image/stage.jpg','_blank')">
-                        <img src="/Home/image/hod.jpg" alt=""  class="top-image1" width="220px" height="200px" onclick="window.open('/Home/image/hod.jpg','_blank')">
+                    <li><a href="#">Sponsors</a></li>
+                    <li><a href="/Gallery/gallery.html ">Gallery</a></li>
+                    <li><a href="/Achievement/achievement.html">Achievement</a></li>
+                </div>
+                <div class="credential-detail">
+                    <div class="Credentail">
+                         <div class="login">
+                             <li><a href="/Reach-us/contact.html" class="login">Login</a></li>
+                         </div>
+                    </div>   
+                    <div class="hambuger">
+                        <button id="hambugericon" onclick="display()"><i class="fa-solid fa-bars"></i></button>
                     </div>
-                </div>    
-                <div class="img2 image">
-                    <img src="/Home/image/faculty.jpg" alt="" width="220px" height="250px" onclick="window.open('/Home/image/faculty.jpg','_blank')">
-                    <img src="image/prayer.jpg" alt="" class="top-image2" width="220px" height="220px" onclick="window.open('image/prayer.jpg','_blank')">
-                    <img src="/Home/image/host.jpg" alt="" width="220px" height="250px" onclick="window.open('/Home/image/host.jpg','_blank')">
-                    <img src="/Home/image/audience-prayer.jpg" alt=""  class="top-image2" width="220px" height="220px" onclick="window.open('/Home/image/audience-prayer.jpg','_blank')">
-                </div>
-                <div class="img3 image">
-                    <img src="/Home/image/prayer1.jpg" alt="" width="220px" height="260px" onclick="window.open('/Home/image/prayer1.jpg','_blank')">
-                    <img src="/Home/image/prayer-faculty.jpg" alt="" class="top-image3" width="220px" height="240px" onclick="window.open('/Home/image/prayer-faculty.jpg','_blank')">
-                    <img src="/Home/image/chief-guest.jpg" alt="" width="220px" height="260px" onclick="window.open('/Home/image/chief-guest.jpg','_blank')">
-                    <img src="/Home/image/prayer2.jpg" alt=""  class="top-image3" width="220px" height="240px" onclick="window.open('/Home/image/prayer2.jpg','_blank')">
-                </div>
-                <div class="img3 image">
-                    <img src="/Home/image/event.jpg" alt="" width="220px" height="260px" onclick="window.open('/Home/image/event.jpg','_blank')">
-                    <img src="/Home/image/hall.jpg" alt="" class="top-image3" width="220px" height="240px" onclick="window.open('/Home/image/hall.jpg','_blank')">
-                    <img src="/Home/image/founder blk.jpg" alt="" width="220px" height="260px" onclick="window.open('/Home/image/founder blk.jpg','_blank')">
-                    <img src="/Home/image/prayer-faculty.jpg" alt=""  class="top-image3" width="220px" height="240px" onclick="window.open('/Home/image/prayer-faculty.jpg','_blank')">
                 </div>
                 
-            </main>
-        </div> 
-        <div class="vdo-container">
-            <h5>Join us at TechBlaze ‘26!, where innovators, developers, and industry leaders <br> come together to explore the latest in AI, Cybersecurity, Web3, and more.</h5>
-            <div class="video">
-                <div class="vdo1">
-                    <img src="/Home/image/prayer.jpg" alt="" height="450px" width="280px" onclick="window.open('/Home/image/prayer.jpg','_blank')">
-                    <video width="600px" height="440px" autoplay muted loop class="top-image3" onclick="window.open('/Home/image/audience.mp4','_blank')">
-                        <source src="/Home/image/audience.mp4" type="video/mp4" >
-                    </video>
-                </div>
-                <div class="vdo2">
-                    <img class="img1" src="/Home/image/faculty.jpg" alt="" height="190px" width="280px" onclick="window.open('/Home/image/faculty.jpg','_blank')">
-                    <img src="/Home/image/audience.jpg" alt="" height="300px" width="350px" onclick="window.open('/Home/image/audience.jpg','_blank')">
-                    <img class="img3" src="/Home/image/hall.jpg" alt="" height="400px" width="230px" onclick="window.open('/Home/image/hall.jpg','_blank')">
-                </div>
-                <div class="vdo3">
-                    <video width="655px" height="440px" autoplay muted loop class="top-image3" onclick="window.open('/Home/image/event.mp4','_blank')">
-                        <source src="/Home/image/event.mp4" type="video/mp4">
-                    </video>
-                    <img src="/Home/image/hod.jpg" alt="" height="270px" width="230px" onclick="window.open('/Home/image/hod.jpg','_blank')">
-                </div>
-            </div>
+               
+                
         </div>
-    </div>
-    <!-- Footer -->
-    <Footer class="footer">
-        <div class="footerdiv">
-            <div class="map">
-                <h1>Locate us</h1><br>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d67924.24208324916!2d80.14750944863282!3d12.801299400000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5250847d3353d7%3A0x6a585af1f362dadb!2sHindustan%20Institute%20of%20Technology%20%26%20Science!5e1!3m2!1sen!2sin!4v1759128184642!5m2!1sen!2sin" width="460" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
-            </div>
-            <div class="detail">
-                <h1>Connect</h1>
-                <div class="media">
+         <div class="hambuger-menu" id="hambuger-menu">
+            <div class="Credentail">
+                         <div class="login">
+                             <li><a href="/Reach-us/contact.html" class="login">Login</a></li>
+                             <button id="hambugercicon" onclick="closedisplay()"><i class="fa-regular fa-circle-xmark"></i></button>
+                         </div>
+                         
+                    </div>
+            
+            <ul>
+                <a href="#" style="color: #EAEAEA; " class="Current-page">Home</a></li>
+                <a href="#" onclick="Showabout()">About</a>
+                <a href="#" onclick="Showevent()">Events</a>
+                <a href="#">Sponsors</a>
+                <a href="/Gallery/gallery.html ">Gallery</a>
+                <a href="/Achievement/achievement.html">Achievement</a>
+                <a href=""></a>
+            </ul>
+        </div>
+        <!-- GALLERY -->
+    <section class="gallery-section">
+      <header>
+        <h2>Gallery – TechBlaze '26</h2>
+        <p>Moments from our events, celebrations and innovations</p>
+      </header>
 
-                    <div><i style="font-size: 25px;" class="fa-brands fa-instagram"></i></div>
-                    <div><i style="font-size: 25px;" class="fa-brands fa-youtube"></i></div>
-                </div>
-                <h1>Reach out</h1>
-                <div class="reachout">
-                    <h5><i style="color: rgb(255, 208, 0) ; font-size: 17px; " class="fa-solid fa-location-dot"></i>  Rajiv Gandhi Salai (OMR), Padur,(Via) Kelambakkam,Chennai - 603 103</h5>
-                    <h5><i style="color: rgb(255, 208, 0) ; font-size: 17px; " class="fa-regular fa-envelope"></i>  TechBlaze80@gmail.com</h5>
-                </div>
-            </div>
-        </div>
-        <div class="copyright">
-            <h5>© 2025 TechBlaze'26 - Made by team TechBlaze </h5>
-        </div>
-    </Footer>
+      <div class="gallery-grid">
+        <img src="/Home/image/hall.jpg" alt="">
+        <img src="/Home/image/prayer.jpg" alt="">
+        <img src="/Home/image/host.jpg" alt="">
+        <img src="/Home/image/faculty.jpg" alt="">
+        <img src="/Home/image/chief-guest.jpg" alt="">
+        <img src="/Home/image/event.jpg" alt="">
+        <img src="/Home/image/audience.jpg" alt="">
+        <img src="/Home/image/hod.jpg" alt="">
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>© 2025 TechBlaze '26 — Built by Team TechBlaze</p>
+    </footer>
 
 
     <!-- Scripts -->

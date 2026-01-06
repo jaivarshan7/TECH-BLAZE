@@ -17,48 +17,72 @@
     </div>
     <div class="app-container" >
         <!-- Nav-bar   -->
-            <div class="nav-bar">
-                    <div class="logo">
-                       <!--<h1 >TECH BLAZE</h1> -->
-                       <h1>TECH BLAZE</h1>
+        <div class="nav-bar">
+                <div class="logo">
+                     <h1 >TECH BLAZE</h1>
+                </div>
+                 <div class="menus">
+                    <li><a href="#" style="color: #EAEAEA; " class="Current-page">Home</a></li>
+                     <!--    About    -->
+                    <li><a href="#" onclick="Showabout()">About</a></li>
+                    <div class="about-dec" id="about" onmouseleave="Hideabout()">
+                         <div class="about-univ">
+                             <li><a href="/About/About-univ/univ.html" >About University</a></li>
+                         </div>
+                         <div class="about-dept">
+                             <li><a href="/About/About-department/deparment.html" >About Department</a></li>
+                         </div>
+                         <div class="about-event">
+                             <li><a href="/About/About-event/event.html" >About Tech Blaze</a></li>
+                         </div>
                     </div>
-                    <div class="menus">
-                        <li><a href="/Home/Home.html" >Home</a></li>
-                        <!--    About    -->
-
-                        <li><a href="#" onclick="Showabout()" style="color: #ffffff;" class="Current-page">About</a></li>
-                        <div class="about-dec" id="about" onmouseleave="Hideabout()">
-                            <div class="about-univ">
-                                <li><a href="/About/About-univ/univ.html" >About University</a></li>
-                            </div>
-                            <div class="about-dept">
-                                <li><a href="/About/About-department/deparment.html" >About Department</a></li>
-                            </div>
-                            <div class="about-event">
-                                <li><a href="/About/About-event/event.html" >About Tech Blaze</a></li>
-                            </div>
-
+                    <!---   Event   -->
+                    <li><a href="#" onclick="Showevent()">Events</a></li>
+                    <div class="event-dec" id="event" onmouseleave="Hideevent()">
+                        <div class="Tech">
+                            <li><a href="/Event/Tech/tech.html" >Tech Events</a></li>
                         </div>
-                        <!---   Event   -->
-
-                        <li><a href="#" onclick="Showevent()">Events</a></li>
-                        <div class="event-dec" id="event" onmouseleave="Hideevent()">
-                            <div class="Tech">
-                                <li><a href="/Event/Tech/tech.html" >Tech Events</a></li>
-                            </div>
-                            <div class="Non-tech">
-                                <li><a href="/Event/NonTech/nontech.html" >Non Tech Events</a></li>
-                            </div>
+                        <div class="Non-tech">
+                            <li><a href="/Event/NonTech/nontech.html" >Non Tech Events</a></li>
                         </div>
-                        <li><a href="#">Sponsors</a></li>
-                        <li><a href="/Gallery/gallery.html ">Gallery</a></li>
-                        <li><a href="/Achievement/achievement.html">Achievement</a></li>
-
                     </div>
+                    <li><a href="#">Sponsors</a></li>
+                    <li><a href="/Gallery/gallery.html ">Gallery</a></li>
+                    <li><a href="/Achievement/achievement.html">Achievement</a></li>
+                </div>
+                <div class="credential-detail">
                     <div class="Credentail">
-                        <li><a href="/Reach-us/contact.html">Login</a></li>
+                         <div class="login">
+                             <li><a href="/Reach-us/contact.html" class="login">Login</a></li>
+                         </div>
+                    </div>   
+                    <div class="hambuger">
+                        <button id="hambugericon" onclick="display()"><i class="fa-solid fa-bars"></i></button>
                     </div>
-            </div>    
+                </div>
+                
+               
+                
+        </div>
+         <div class="hambuger-menu" id="hambuger-menu">
+            <div class="Credentail">
+                         <div class="login">
+                             <li><a href="/Reach-us/contact.html" class="login">Login</a></li>
+                             <button id="hambugercicon" onclick="closedisplay()"><i class="fa-regular fa-circle-xmark"></i></button>
+                         </div>
+                         
+                    </div>
+            
+            <ul>
+                <a href="#" style="color: #EAEAEA; " class="Current-page">Home</a></li>
+                <a href="#" onclick="Showabout()">About</a>
+                <a href="#" onclick="Showevent()">Events</a>
+                <a href="#">Sponsors</a>
+                <a href="/Gallery/gallery.html ">Gallery</a>
+                <a href="/Achievement/achievement.html">Achievement</a>
+                <a href=""></a>
+            </ul>
+        </div>
         <!--Main container  
         <div class="Container"  >   
           <div class="Main-container ">
@@ -189,19 +213,22 @@
                 <div class="com-detail det3"><i class="fa-solid fa-calendar"></i><h6>7+ <br> Events</h6></div>
                 <div class="com-detail det4"><i class="fa-solid fa-handshake"></i><h6>15+ <br> Participating institute</h6></div>
             </div>
+            <!--What’s in Store?-->
+            <div class="Store ">
+                <h1>What’s in Store?</h1>
+                <h5>7–8 Tech Events: <br> <span class="detail"> Coding battles, hackathons, quizzes & more. </span></h5>
+                <h5>6–7 Non-Tech Events: <br><span class="detail">  Puzzles, fun games, rapid-fire challenges.</span></h5>
+            </div>
+            <!--Fest-->
+            <div class="fest">
+                <h1>Why It’s More Than Just a Fest?</h1>
+                <h5>Backed by a strong lineup of sponsors, TechBlaze isn’t just about winning – it’s about growing. Top performers can unlock internship opportunities, industry exposure, and take real steps toward career success.</h5>
+            </div>
         </div>
-        <!--What’s in Store?-->
-        <div class="Store ">
-            <h1>What’s in Store?</h1>
-            <h5>7–8 Tech Events: <br> <span class="detail"> Coding battles, hackathons, quizzes & more. </span></h5>
-            <h5>6–7 Non-Tech Events: <br><span class="detail">  Puzzles, fun games, rapid-fire challenges.</span></h5>
-        </div>
-        <!--Fest-->
-        <div class="fest">
-            <h1>Why It’s More Than Just a Fest?</h1>
-            <h5>Backed by a strong lineup of sponsors, TechBlaze isn’t just about winning – it’s about growing. Top performers can unlock internship opportunities, industry exposure, and take real steps toward career success.</h5>
-        </div>
-        <!-- Footer -->
+        
+        
+        
+        <!-- Footer 
         <Footer class="footer">
         <div class="footerdiv">
             <div class="map">
@@ -225,7 +252,7 @@
         <div class="copyright">
             <h5>© 2025 TechBlaze'26 - Made by team TechBlaze </h5>
         </div>
-    </Footer>     
+    </Footer>     -->
     </div>
 
   
