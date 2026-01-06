@@ -1,83 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TECH BLAZE   </title>
+    <title>TECH BLAZE </title>
     <!--Link css-->
     <link rel="stylesheet" href="department.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../Shared/navbar.css">
 
 </head>
+
 <body>
     <!--Video-Bg    -->
-    <div class="video-background" >
+    <div class="video-background">
         <video autoplay muted loop playsinline id="bg-video">
-          <source src="/Home/image/nebula.3840x2160.mp4" type="video/mp4">
+            <source src="../../Home/image/nebula.3840x2160.mp4" type="video/mp4">
         </video>
     </div>
     <div class="app-container" id="main-container">
         <!-- Nav-bar   -->
         <div class="nav-bar">
-                <div class="logo">
-                     <h1 >TECH BLAZE</h1>
-                </div>
-                 <div class="menus">
-                    <li><a href="#" style="color: #EAEAEA; " class="Current-page">Home</a></li>
-                     <!--    About    -->
-                    <li><a href="#" onclick="Showabout()">About</a></li>
-                    <div class="about-dec" id="about" onmouseleave="Hideabout()">
-                         <div class="about-univ">
-                             <li><a href="/About/About-univ/univ.html" >About University</a></li>
-                         </div>
-                         <div class="about-dept">
-                             <li><a href="/About/About-department/deparment.html" >About Department</a></li>
-                         </div>
-                         <div class="about-event">
-                             <li><a href="/About/About-event/event.html" >About Tech Blaze</a></li>
-                         </div>
+            <div class="logo">
+                <h1>TECH BLAZE</h1>
+            </div>
+            <div class="menus">
+                <li><a href="../../Home/Home.html" style="color: #EAEAEA; ">Home</a></li>
+                <!--    About    -->
+                <li><a href="#" onclick="Showabout()" class="Current-page">About</a></li>
+                <div class="about-dec" id="about" onmouseleave="Hideabout()">
+                    <div class="about-univ">
+                        <li><a href="../../About/About-univ/univ.html">About University</a></li>
                     </div>
-                    <!---   Event   -->
-                    <li><a href="#" onclick="Showevent()">Events</a></li>
-                    <div class="event-dec" id="event" onmouseleave="Hideevent()">
-                        <div class="Tech">
-                            <li><a href="/Event/Tech/tech.html" >Tech Events</a></li>
-                        </div>
-                        <div class="Non-tech">
-                            <li><a href="/Event/NonTech/nontech.html" >Non Tech Events</a></li>
-                        </div>
+                    <div class="about-dept">
+                        <li><a href="../../About/About-department/deparment.html">About Department</a></li>
                     </div>
-                    <li><a href="#">Sponsors</a></li>
-                    <li><a href="/Gallery/gallery.html ">Gallery</a></li>
-                </div>
-                <div class="credential-detail">
-                    <div class="Credentail">
-                         <div class="Contact US">
-                             <li><a href="/Reach-us/contact.html" class="login">Contact US</a></li>
-                         </div>
-                    </div>   
-                    <div class="hambuger">
-                        <button id="hambugericon" onclick="display()"><i class="fa-solid fa-bars"></i></button>
+                    <div class="about-event">
+                        <li><a href="../../About/About-event/event.html">About Tech Blaze</a></li>
                     </div>
                 </div>
-                
-               
-                
+                <!---   Event   -->
+                <li><a href="../../Event/event.html">Events</a></li>
+                <li><a href="#">Sponsors</a></li>
+                <li><a href="../../Gallery/gallery.html ">Gallery</a></li>
+            </div>
+            <div class="credential-detail">
+                <div class="Credentail">
+                    <div class="Contact US">
+                        <li><a href="../../Reach-us/contact.html" class="login">Contact US</a></li>
+                    </div>
+                </div>
+                <div class="hambuger">
+                    <button id="hambugericon" onclick="display()"><i class="fa-solid fa-bars"></i></button>
+                </div>
+            </div>
+
+
+
         </div>
-         <div class="hambuger-menu" id="hambuger-menu">
+        <div class="hambuger-menu" id="hambuger-menu">
             <div class="Credentail">
-                         <div class="Contact US">
-                             <li><a href="/Reach-us/contact.html" class="login">Contact US</a></li>
-                             <button id="hambugercicon" onclick="closedisplay()"><i class="fa-regular fa-circle-xmark"></i></button>
-                         </div>
-                         
-                    </div>
-            
+                <div class="Contact US">
+                    <li><a href="../../Reach-us/contact.html" class="login">Contact US</a></li>
+                    <button id="hambugercicon" onclick="closedisplay()"><i
+                            class="fa-regular fa-circle-xmark"></i></button>
+                </div>
+
+            </div>
+
             <ul>
-                <a href="#" style="color: #EAEAEA; " class="Current-page">Home</a></li>
+                <a href="../../Home/Home.html" style="color: #EAEAEA; " class="Current-page">Home</a></li>
                 <a href="#" onclick="Showabout()">About</a>
-                <a href="#" onclick="Showevent()">Events</a>
+                <a href="../../Event/event.html">Events</a>
                 <a href="#">Sponsors</a>
-                <a href="/Gallery/gallery.html ">Gallery</a>
+                <a href="../../Gallery/gallery.html ">Gallery</a>
             </ul>
         </div>
         <div class="dept-info">
@@ -85,27 +82,44 @@
             <div class="bca-section">
                 <h2>Bachelor of Computer Applications (BCA)</h2>
                 <p>
-                    The Bachelor of Computer Applications (BCA) at Hindustan Institute of Technology & Science is a three-year undergraduate program designed to provide students with a strong foundation in computer science, software development, and IT management. The curriculum is structured to meet the dynamic needs of the IT industry, blending theoretical knowledge with practical skills.
+                    The Bachelor of Computer Applications (BCA) at Hindustan Institute of Technology & Science is a
+                    three-year undergraduate program designed to provide students with a strong foundation in computer
+                    science, software development, and IT management. The curriculum is structured to meet the dynamic
+                    needs of the IT industry, blending theoretical knowledge with practical skills.
                 </p>
                 <p>
-                    The program covers core subjects such as programming languages, database management, web technologies, software engineering, and computer networks. Students gain hands-on experience through laboratory sessions, projects, and internships, preparing them for real-world challenges in the technology sector.
+                    The program covers core subjects such as programming languages, database management, web
+                    technologies, software engineering, and computer networks. Students gain hands-on experience through
+                    laboratory sessions, projects, and internships, preparing them for real-world challenges in the
+                    technology sector.
                 </p>
                 <p>
-                    The BCA program offers specializations in areas like Artificial Intelligence, Data Science, Cyber Security, and Cloud Computing, enabling students to focus on emerging technologies and industry trends. The department emphasizes holistic development through seminars, workshops, and industry collaborations.
+                    The BCA program offers specializations in areas like Artificial Intelligence, Data Science, Cyber
+                    Security, and Cloud Computing, enabling students to focus on emerging technologies and industry
+                    trends. The department emphasizes holistic development through seminars, workshops, and industry
+                    collaborations.
                 </p>
                 <h3>Specializations</h3>
                 <ul>
                     <li>
                         <strong>BCA Database Systems:</strong>
-                        This specialization focuses on the design, implementation, and management of database systems. Students learn about relational databases, SQL, data modeling, and database administration, preparing them for roles in database development and management in IT industries.
+                        This specialization focuses on the design, implementation, and management of database systems.
+                        Students learn about relational databases, SQL, data modeling, and database administration,
+                        preparing them for roles in database development and management in IT industries.
                     </li>
                     <li>
                         <strong>BCA Multimedia and Animation:</strong>
-                        This stream equips students with skills in multimedia technologies, animation, graphics, and interactive media. The curriculum covers digital content creation, 2D/3D animation, and multimedia applications, preparing graduates for careers in animation studios, media houses, and creative industries.
+                        This stream equips students with skills in multimedia technologies, animation, graphics, and
+                        interactive media. The curriculum covers digital content creation, 2D/3D animation, and
+                        multimedia applications, preparing graduates for careers in animation studios, media houses, and
+                        creative industries.
                     </li>
                     <li>
                         <strong>BCA Cyber Security:</strong>
-                        This specialization provides in-depth knowledge of cyber security principles, ethical hacking, network security, and digital forensics. Students are trained to protect information systems from cyber threats and vulnerabilities, making them industry-ready for roles in cyber security and IT risk management.
+                        This specialization provides in-depth knowledge of cyber security principles, ethical hacking,
+                        network security, and digital forensics. Students are trained to protect information systems
+                        from cyber threats and vulnerabilities, making them industry-ready for roles in cyber security
+                        and IT risk management.
                     </li>
                 </ul>
                 <h3>Key Features</h3>
@@ -113,37 +127,53 @@
                     <li>Industry-oriented curriculum with latest technologies</li>
                     <li>Experienced faculty and modern infrastructure</li>
                     <li>Opportunities for internships and live projects</li>
-                    <li>Specializations in AI, Data Science, Cyber Security, Cloud Computing, Database Systems, Multimedia & Animation</li>
+                    <li>Specializations in AI, Data Science, Cyber Security, Cloud Computing, Database Systems,
+                        Multimedia & Animation</li>
                     <li>Strong placement support and career guidance</li>
                     <li>Focus on research, innovation, and entrepreneurship</li>
                 </ul>
                 <h3>Career Opportunities</h3>
                 <p>
-                    Graduates of the BCA program are well-equipped for careers in software development, IT consulting, system analysis, web and mobile application development, database administration, multimedia and animation, and cyber security. The program also provides a solid foundation for higher studies such as MCA, MSc (CS/IT), and MBA.
+                    Graduates of the BCA program are well-equipped for careers in software development, IT consulting,
+                    system analysis, web and mobile application development, database administration, multimedia and
+                    animation, and cyber security. The program also provides a solid foundation for higher studies such
+                    as MCA, MSc (CS/IT), and MBA.
                 </p>
             </div>
             <div class="mca-section">
                 <h2>Master of Computer Applications (MCA)</h2>
                 <p>
-                    The Master of Computer Applications (MCA) at Hindustan Institute of Technology & Science is a two-year postgraduate program designed to develop advanced skills in computer science, software engineering, and IT management. The MCA curriculum is tailored to meet the evolving demands of the IT industry, focusing on both theoretical concepts and practical applications.
+                    The Master of Computer Applications (MCA) at Hindustan Institute of Technology & Science is a
+                    two-year postgraduate program designed to develop advanced skills in computer science, software
+                    engineering, and IT management. The MCA curriculum is tailored to meet the evolving demands of the
+                    IT industry, focusing on both theoretical concepts and practical applications.
                 </p>
                 <p>
-                    The program covers advanced topics such as software development, database systems, web technologies, cloud computing, artificial intelligence, and cyber security. Students benefit from hands-on training through laboratory work, industry projects, internships, and research activities.
+                    The program covers advanced topics such as software development, database systems, web technologies,
+                    cloud computing, artificial intelligence, and cyber security. Students benefit from hands-on
+                    training through laboratory work, industry projects, internships, and research activities.
                 </p>
                 <p>
-                    The MCA program encourages students to participate in seminars, workshops, and technical events, fostering innovation and leadership. The department collaborates with leading IT companies to provide exposure to current industry practices and trends.
+                    The MCA program encourages students to participate in seminars, workshops, and technical events,
+                    fostering innovation and leadership. The department collaborates with leading IT companies to
+                    provide exposure to current industry practices and trends.
                 </p>
-                    <h3>Specializations</h3>
-                    <ul>
-                        <li>
-                            <strong>MCA Big Data Analytics:</strong>
-                            This specialization focuses on the analysis, management, and processing of large-scale data. Students learn about big data technologies, data mining, machine learning, and data visualization, preparing them for careers in data analytics, business intelligence, and related fields.
-                        </li>
-                        <li>
-                            <strong>MCA Cloud Computing:</strong>
-                            This stream provides expertise in cloud infrastructure, virtualization, cloud services, and deployment models. Students gain hands-on experience with cloud platforms and learn to design, implement, and manage cloud-based solutions for modern enterprises.
-                        </li>
-                    </ul>
+                <h3>Specializations</h3>
+                <ul>
+                    <li>
+                        <strong>MCA Big Data Analytics:</strong>
+                        This specialization focuses on the analysis, management, and processing of large-scale data.
+                        Students learn about big data technologies, data mining, machine learning, and data
+                        visualization, preparing them for careers in data analytics, business intelligence, and related
+                        fields.
+                    </li>
+                    <li>
+                        <strong>MCA Cloud Computing:</strong>
+                        This stream provides expertise in cloud infrastructure, virtualization, cloud services, and
+                        deployment models. Students gain hands-on experience with cloud platforms and learn to design,
+                        implement, and manage cloud-based solutions for modern enterprises.
+                    </li>
+                </ul>
                 <h3>Key Features</h3>
                 <ul>
                     <li>Comprehensive curriculum with focus on emerging technologies</li>
@@ -155,140 +185,177 @@
                 </ul>
                 <h3>Career Opportunities</h3>
                 <p>
-                    MCA graduates are prepared for careers in software development, IT consulting, system and network administration, data analytics, web and mobile application development, and research. The program also serves as a stepping stone for doctoral studies and academic careers.
+                    MCA graduates are prepared for careers in software development, IT consulting, system and network
+                    administration, data analytics, web and mobile application development, and research. The program
+                    also serves as a stepping stone for doctoral studies and academic careers.
                 </p>
             </div>
             <div class="bsc-section">
-                    <h2 style="color: #1565c0;">Bachelor of Science (B.Sc.) Programs</h2>
-                    <p>
-                        The Bachelor of Science (B.Sc.) programs at Hindustan Institute of Technology & Science are designed to provide students with a strong foundation in science and technology, focusing on both theoretical concepts and practical skills. These programs prepare graduates for dynamic careers in IT, analytics, gaming, and research, and offer a blend of core scientific principles with specialized industry-relevant training. Students benefit from modern infrastructure, experienced faculty, and opportunities for internships and placements.
-                    </p>
-                       <h3>Key Features</h3>
-                       <ul>
-                           <li>Industry-oriented curriculum with latest technologies</li>
-                           <li>Experienced faculty and modern infrastructure</li>
-                           <li>Hands-on laboratory sessions and project-based learning</li>
-                           <li>Opportunities for internships, placements, and research projects</li>
-                           <li>Specializations in Computer Science, AI & Data Analytics, Data Science, and Gaming Design</li>
-                           <li>Focus on innovation, creativity, and real-world applications</li>
-                       </ul>
-                    <h3>Specializations</h3>
-                    <ul>
-                    
-                        <li>
-                            <strong>B.Sc. Computer Science:</strong>
-                            Comprehensive understanding of computer science fundamentals, programming, algorithms, and software development. Emphasizes practical skills and theoretical knowledge for careers in IT, software engineering, and research.
-                            <ul>
-                                <li>Core subjects: Programming, Data Structures, Algorithms, Database Management, Web Technologies</li>
-                                <li>Hands-on laboratory sessions and project work</li>
-                                <li>Industry-oriented curriculum and modern infrastructure</li>
-                                <li>Opportunities for internships and placements</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>B.Sc. Artificial Intelligence and Data Analytics:</strong>
-                            Focuses on emerging fields of AI and Data Analytics, equipping students with skills in machine learning, data mining, and big data technologies. Blends theory with practical applications for roles in AI development, data science, and analytics.
-                            <ul>
-                                <li>Specialized courses in AI, Machine Learning, Data Analytics, and Big Data</li>
-                                <li>Project-based learning and industry collaborations</li>
-                                <li>Exposure to real-world data challenges and solutions</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>B.Sc. Data Science:</strong>
-                            Tailored for students interested in data-driven technologies and analytics. Covers statistics, programming, data visualization, and predictive modeling for careers in data science and analytics.
-                            <ul>
-                                <li>Courses in Statistics, Data Mining, Data Visualization, and Predictive Analytics</li>
-                                <li>Practical training through labs and projects</li>
-                                <li>Industry-relevant curriculum and placement support</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>B.Sc. Computer Science (Gaming Design):</strong>
-                            Combines computer science fundamentals with gaming design and development. Covers game programming, graphics, animation, and interactive media for careers in gaming and multimedia development.
-                            <ul>
-                                <li>Courses in Game Programming, Graphics, Animation, and Interactive Media</li>
-                                <li>Hands-on experience with game development tools and engines</li>
-                                <li>Focus on creativity, innovation, and industry trends</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <h3>Career Opportunities</h3>
-                   <p>
-                       Graduates of the B.Sc. programs are well-equipped for careers in software development, data analytics, artificial intelligence, gaming design, IT consulting, research, and higher studies such as M.Sc., MCA, and related fields. The programs provide a strong foundation for roles in technology companies, research organizations, and creative industries.
-                   </p>
+                <h2 style="color: #1565c0;">Bachelor of Science (B.Sc.) Programs</h2>
+                <p>
+                    The Bachelor of Science (B.Sc.) programs at Hindustan Institute of Technology & Science are designed
+                    to provide students with a strong foundation in science and technology, focusing on both theoretical
+                    concepts and practical skills. These programs prepare graduates for dynamic careers in IT,
+                    analytics, gaming, and research, and offer a blend of core scientific principles with specialized
+                    industry-relevant training. Students benefit from modern infrastructure, experienced faculty, and
+                    opportunities for internships and placements.
+                </p>
+                <h3>Key Features</h3>
+                <ul>
+                    <li>Industry-oriented curriculum with latest technologies</li>
+                    <li>Experienced faculty and modern infrastructure</li>
+                    <li>Hands-on laboratory sessions and project-based learning</li>
+                    <li>Opportunities for internships, placements, and research projects</li>
+                    <li>Specializations in Computer Science, AI & Data Analytics, Data Science, and Gaming Design</li>
+                    <li>Focus on innovation, creativity, and real-world applications</li>
+                </ul>
+                <h3>Specializations</h3>
+                <ul>
+
+                    <li>
+                        <strong>B.Sc. Computer Science:</strong>
+                        Comprehensive understanding of computer science fundamentals, programming, algorithms, and
+                        software development. Emphasizes practical skills and theoretical knowledge for careers in IT,
+                        software engineering, and research.
+                        <ul>
+                            <li>Core subjects: Programming, Data Structures, Algorithms, Database Management, Web
+                                Technologies</li>
+                            <li>Hands-on laboratory sessions and project work</li>
+                            <li>Industry-oriented curriculum and modern infrastructure</li>
+                            <li>Opportunities for internships and placements</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>B.Sc. Artificial Intelligence and Data Analytics:</strong>
+                        Focuses on emerging fields of AI and Data Analytics, equipping students with skills in machine
+                        learning, data mining, and big data technologies. Blends theory with practical applications for
+                        roles in AI development, data science, and analytics.
+                        <ul>
+                            <li>Specialized courses in AI, Machine Learning, Data Analytics, and Big Data</li>
+                            <li>Project-based learning and industry collaborations</li>
+                            <li>Exposure to real-world data challenges and solutions</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>B.Sc. Data Science:</strong>
+                        Tailored for students interested in data-driven technologies and analytics. Covers statistics,
+                        programming, data visualization, and predictive modeling for careers in data science and
+                        analytics.
+                        <ul>
+                            <li>Courses in Statistics, Data Mining, Data Visualization, and Predictive Analytics</li>
+                            <li>Practical training through labs and projects</li>
+                            <li>Industry-relevant curriculum and placement support</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>B.Sc. Computer Science (Gaming Design):</strong>
+                        Combines computer science fundamentals with gaming design and development. Covers game
+                        programming, graphics, animation, and interactive media for careers in gaming and multimedia
+                        development.
+                        <ul>
+                            <li>Courses in Game Programming, Graphics, Animation, and Interactive Media</li>
+                            <li>Hands-on experience with game development tools and engines</li>
+                            <li>Focus on creativity, innovation, and industry trends</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h3>Career Opportunities</h3>
+                <p>
+                    Graduates of the B.Sc. programs are well-equipped for careers in software development, data
+                    analytics, artificial intelligence, gaming design, IT consulting, research, and higher studies such
+                    as M.Sc., MCA, and related fields. The programs provide a strong foundation for roles in technology
+                    companies, research organizations, and creative industries.
+                </p>
             </div>
             <div class="msc-section">
-                    <h2>Master of Science (M.Sc.) Programs</h2>
-                    <p>
-                        The Master of Science (M.Sc.) programs at Hindustan Institute of Technology & Science are designed to provide advanced scientific and technical knowledge, preparing students for leadership roles in research, industry, and academia. These programs emphasize innovation, analytical thinking, and hands-on experience with cutting-edge technologies. Students benefit from expert faculty, modern laboratories, and opportunities for research collaborations and internships.
-                    </p>
-                       <h3>Key Features</h3>
-                       <ul>
-                           <li>Advanced curriculum with focus on emerging technologies</li>
-                           <li>Expert faculty and state-of-the-art laboratories</li>
-                           <li>Research-oriented approach and industry collaborations</li>
-                           <li>Hands-on training with real-world data and AI platforms</li>
-                           <li>Opportunities for internships, projects, and higher studies</li>
-                           <li>Specializations in Artificial Intelligence, Data Analytics, and Data Science</li>
-                       </ul>
-                    <h3>Specializations</h3>
-                    <ul>
-                    
-                        <li>
-                            <strong>M.Sc. Artificial Intelligence and Data Analytics:</strong>
-                            Advanced knowledge and skills in AI, machine learning, and data analytics. The curriculum covers deep learning, natural language processing, big data technologies, and real-world applications, preparing students for careers in AI research, data science, and analytics.
-                            <ul>
-                                <li>Advanced courses in AI, Machine Learning, Deep Learning, and Data Analytics</li>
-                                <li>Hands-on experience with industry-standard tools and platforms</li>
-                                <li>Research projects and industry collaborations</li>
-                                <li>Focus on innovation, problem-solving, and real-world applications</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>M.Sc. Data Science:</strong>
-                            Develops expertise in data analysis, statistical modeling, and computational techniques. Students learn about big data, data mining, predictive analytics, and visualization, preparing them for roles in data science, analytics, and research across various industries.
-                            <ul>
-                                <li>Comprehensive curriculum covering Big Data, Data Mining, Predictive Analytics, and Visualization</li>
-                                <li>Practical training through labs, projects, and internships</li>
-                                <li>Industry-relevant skills and placement support</li>
-                                <li>Opportunities for research and higher studies</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <h3>Career Opportunities</h3>
-                   <p>
-                       MSc graduates are prepared for careers in data science, artificial intelligence, analytics, research, software development, and academic roles. The programs also serve as a stepping stone for doctoral studies and leadership positions in technology-driven industries.
-                   </p>
+                <h2>Master of Science (M.Sc.) Programs</h2>
+                <p>
+                    The Master of Science (M.Sc.) programs at Hindustan Institute of Technology & Science are designed
+                    to provide advanced scientific and technical knowledge, preparing students for leadership roles in
+                    research, industry, and academia. These programs emphasize innovation, analytical thinking, and
+                    hands-on experience with cutting-edge technologies. Students benefit from expert faculty, modern
+                    laboratories, and opportunities for research collaborations and internships.
+                </p>
+                <h3>Key Features</h3>
+                <ul>
+                    <li>Advanced curriculum with focus on emerging technologies</li>
+                    <li>Expert faculty and state-of-the-art laboratories</li>
+                    <li>Research-oriented approach and industry collaborations</li>
+                    <li>Hands-on training with real-world data and AI platforms</li>
+                    <li>Opportunities for internships, projects, and higher studies</li>
+                    <li>Specializations in Artificial Intelligence, Data Analytics, and Data Science</li>
+                </ul>
+                <h3>Specializations</h3>
+                <ul>
+
+                    <li>
+                        <strong>M.Sc. Artificial Intelligence and Data Analytics:</strong>
+                        Advanced knowledge and skills in AI, machine learning, and data analytics. The curriculum covers
+                        deep learning, natural language processing, big data technologies, and real-world applications,
+                        preparing students for careers in AI research, data science, and analytics.
+                        <ul>
+                            <li>Advanced courses in AI, Machine Learning, Deep Learning, and Data Analytics</li>
+                            <li>Hands-on experience with industry-standard tools and platforms</li>
+                            <li>Research projects and industry collaborations</li>
+                            <li>Focus on innovation, problem-solving, and real-world applications</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>M.Sc. Data Science:</strong>
+                        Develops expertise in data analysis, statistical modeling, and computational techniques.
+                        Students learn about big data, data mining, predictive analytics, and visualization, preparing
+                        them for roles in data science, analytics, and research across various industries.
+                        <ul>
+                            <li>Comprehensive curriculum covering Big Data, Data Mining, Predictive Analytics, and
+                                Visualization</li>
+                            <li>Practical training through labs, projects, and internships</li>
+                            <li>Industry-relevant skills and placement support</li>
+                            <li>Opportunities for research and higher studies</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h3>Career Opportunities</h3>
+                <p>
+                    MSc graduates are prepared for careers in data science, artificial intelligence, analytics,
+                    research, software development, and academic roles. The programs also serve as a stepping stone for
+                    doctoral studies and leadership positions in technology-driven industries.
+                </p>
             </div>
 
         </div>
         <!--Footer-->
         <Footer class="footer">
-        <div class="footerdiv">
-            <div class="map">
-                <h1>Locate us</h1><br>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d67924.24208324916!2d80.14750944863282!3d12.801299400000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5250847d3353d7%3A0x6a585af1f362dadb!2sHindustan%20Institute%20of%20Technology%20%26%20Science!5e1!3m2!1sen!2sin!4v1759128184642!5m2!1sen!2sin" width="460" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
-            </div>
-            <div class="detail">
-                <h1>Connect</h1>
-                <div class="media">
+            <div class="footerdiv">
+                <div class="map">
+                    <h1>Locate us</h1><br>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d67924.24208324916!2d80.14750944863282!3d12.801299400000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5250847d3353d7%3A0x6a585af1f362dadb!2sHindustan%20Institute%20of%20Technology%20%26%20Science!5e1!3m2!1sen!2sin!4v1759128184642!5m2!1sen!2sin"
+                        width="460" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="detail">
+                    <h1>Connect</h1>
+                    <div class="media">
 
-                    <div><i style="font-size: 25px;" class="fa-brands fa-instagram"></i></div>
-                    <div><i style="font-size: 25px;" class="fa-brands fa-youtube"></i></div>
-                </div>
-                <h1>Reach out</h1>
-                <div class="reachout">
-                    <h5><i style="color: rgb(255, 208, 0) ; font-size: 17px; " class="fa-solid fa-location-dot"></i>  Rajiv Gandhi Salai (OMR), Padur,(Via) Kelambakkam,Chennai - 603 103</h5>
-                    <h5><i style="color: rgb(255, 208, 0) ; font-size: 17px; " class="fa-regular fa-envelope"></i>  TechBlaze80@gmail.com</h5>
+                        <div><i style="font-size: 25px;" class="fa-brands fa-instagram"></i></div>
+                        <div><i style="font-size: 25px;" class="fa-brands fa-youtube"></i></div>
+                    </div>
+                    <h1>Reach out</h1>
+                    <div class="reachout">
+                        <h5><i style="color: rgb(255, 208, 0) ; font-size: 17px; " class="fa-solid fa-location-dot"></i>
+                            Rajiv Gandhi Salai (OMR), Padur,(Via) Kelambakkam,Chennai - 603 103</h5>
+                        <h5><i style="color: rgb(255, 208, 0) ; font-size: 17px; " class="fa-regular fa-envelope"></i>
+                            TechBlaze80@gmail.com</h5>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="copyright">
-            <h5>© 2025 TechBlaze'26 - Made by team TechBlaze </h5>
-        </div>
+            <div class="copyright">
+                <h5>© 2025 TechBlaze'26 - Made by team TechBlaze </h5>
+            </div>
         </Footer>
-    </div> 
+    </div>
     <script src="department.js"></script>
+    <script src="../../Shared/navbar.js"></script>
 </body>
+
 </html>

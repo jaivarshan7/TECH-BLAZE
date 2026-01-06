@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EventHorizon | Modern Events Listing</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../Shared/navbar.css">
 
     <style>
         /* --- CSS VARIABLES & RESET --- */
@@ -16,9 +18,7 @@
             --text-main: #ffffff;
             --text-muted: #94a3b8;
             --accent-color: #8b5cf6;
-            /* Violet */
             --accent-glow: rgba(139, 92, 246, 0.5);
-            --gradient-bg: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -30,37 +30,24 @@
         }
 
         body {
-            background: var(--gradient-bg);
-            background-attachment: fixed;
-            /* Parallax feel */
+            background: transparent;
             color: var(--text-main);
             min-height: 100vh;
             overflow-x: hidden;
+            position: relative;
         }
 
-        /* --- DECORATIVE BACKGROUND BLOBS --- */
-        .blob {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(80px);
-            z-index: -1;
-            opacity: 0.4;
+        .video-background {
+            position: fixed;
+            inset: 0;
+            z-index: -10;
+            overflow: hidden;
         }
 
-        .blob-1 {
-            top: -10%;
-            left: -10%;
-            width: 500px;
-            height: 500px;
-            background: #4c1d95;
-        }
-
-        .blob-2 {
-            bottom: -10%;
-            right: -10%;
-            width: 400px;
-            height: 400px;
-            background: #0ea5e9;
+        .video-background video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         /* --- CONTAINER --- */
@@ -381,8 +368,64 @@
 
 <body>
 
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
+    <div class="video-background">
+        <video autoplay muted loop playsinline id="bg-video">
+            <source src="../Home/image/nebula.3840x2160.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="nav-bar">
+        <div class="logo">
+            <h1>TECH BLAZE</h1>
+        </div>
+        <div class="menus">
+            <li><a href="../Home/Home.html">Home</a></li>
+            <!--    About    -->
+            <li><a href="#" onclick="Showabout()">About</a></li>
+            <div class="about-dec" id="about" onmouseleave="Hideabout()">
+                <div class="about-univ">
+                    <li><a href="../About/About-univ/univ.html">About University</a></li>
+                </div>
+                <div class="about-dept">
+                    <li><a href="../About/About-department/deparment.html">About Department</a></li>
+                </div>
+                <div class="about-event">
+                    <li><a href="../About/About-event/event.html">About Tech Blaze</a></li>
+                </div>
+            </div>
+            <!---   Event   -->
+            <li><a href="../Event/event.html" class="Current-page">Events</a></li>
+            <li><a href="#">Sponsors</a></li>
+            <li><a href="../Gallery/gallery.html ">Gallery</a></li>
+        </div>
+        <div class="credential-detail">
+            <div class="Credentail">
+                <div class="Contact US">
+                    <li><a href="../Reach-us/contact.html" class="login">Contact US</a></li>
+                </div>
+            </div>
+            <div class="hambuger">
+                <button id="hambugericon" onclick="display()"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="hambuger-menu" id="hambuger-menu">
+        <div class="Credentail">
+            <div class="Contact US">
+                <li><a href="../Reach-us/contact.html" class="login">Contact US</a></li>
+                <button id="hambugercicon" onclick="closedisplay()"><i class="fa-regular fa-circle-xmark"></i></button>
+            </div>
+        </div>
+
+        <ul>
+            <a href="../Home/Home.html">Home</a>
+            <a href="#" onclick="Showabout()">About</a>
+            <a href="../Event/event.html">Events</a>
+            <a href="#">Sponsors</a>
+            <a href="../Gallery/gallery.html ">Gallery</a>
+        </ul>
+    </div>
 
     <div class="container">
         <header>
@@ -663,6 +706,7 @@
         renderEvents(eventsData);
 
     </script>
+    <script src="../Shared/navbar.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,110 +8,105 @@
     <!--CSS link-->
     <link rel="stylesheet" href="gallery.css">
     <!--Font awesome cdn-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../Shared/navbar.css">
     <!--Google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <div class="video-background">
-        <video autoplay muted loop playsinline id="bg-video" >
-          <source src="/Home/image/nebula.3840x2160.mp4" type="video/mp4">
+        <video autoplay muted loop playsinline id="bg-video">
+            <source src="../Home/image/nebula.3840x2160.mp4" type="video/mp4">
         </video>
     </div>
-    <div class="app-container" >
-        <!-- Nav-bar   -->
+    <div class="app-container">
         <div class="nav-bar">
-                <div class="logo">
-                     <h1 >TECH BLAZE</h1>
-                </div>
-                 <div class="menus">
-                    <li><a href="#" style="color: #EAEAEA; " class="Current-page">Home</a></li>
-                     <!--    About    -->
-                    <li><a href="#" onclick="Showabout()">About</a></li>
-                    <div class="about-dec" id="about" onmouseleave="Hideabout()">
-                         <div class="about-univ">
-                             <li><a href="/About/About-univ/univ.html" >About University</a></li>
-                         </div>
-                         <div class="about-dept">
-                             <li><a href="/About/About-department/deparment.html" >About Department</a></li>
-                         </div>
-                         <div class="about-event">
-                             <li><a href="/About/About-event/event.html" >About Tech Blaze</a></li>
-                         </div>
+            <div class="logo">
+                <h1>TECH BLAZE</h1>
+            </div>
+            <div class="menus">
+                <li><a href="../Home/Home.html">Home</a></li>
+                <!--    About    -->
+                <li><a href="#" onclick="Showabout()">About</a></li>
+                <div class="about-dec" id="about" onmouseleave="Hideabout()">
+                    <div class="about-univ">
+                        <li><a href="../About/About-univ/univ.html">About University</a></li>
                     </div>
-                    <!---   Event   -->
-                    <li><a href="#" onclick="Showevent()">Events</a></li>
-                    <div class="event-dec" id="event" onmouseleave="Hideevent()">
-                        <div class="Tech">
-                            <li><a href="/Event/Tech/tech.html" >Tech Events</a></li>
-                        </div>
-                        <div class="Non-tech">
-                            <li><a href="/Event/NonTech/nontech.html" >Non Tech Events</a></li>
-                        </div>
+                    <div class="about-dept">
+                        <li><a href="../About/About-department/deparment.html">About Department</a></li>
                     </div>
-                    <li><a href="#">Sponsors</a></li>
-                    <li><a href="/Gallery/gallery.html ">Gallery</a></li>
-                </div>
-                <div class="credential-detail">
-                    <div class="Credentail">
-                         <div class="Contact US"> 
-                             <li><a href="/Reach-us/contact.html" class="login">Contact US</a></li>
-                         </div>
-                    </div>   
-                    <div class="hambuger">
-                        <button id="hambugericon" onclick="display()"><i class="fa-solid fa-bars"></i></button>
+                    <div class="about-event">
+                        <li><a href="../About/About-event/event.html">About Tech Blaze</a></li>
                     </div>
                 </div>
-                
-               
-                
+                <!---   Event   -->
+                <li><a href="../Event/event.html">Events</a></li>
+                <li><a href="#">Sponsors</a></li>
+                <li><a href="../Gallery/gallery.html " class="Current-page">Gallery</a></li>
+            </div>
+            <div class="credential-detail">
+                <div class="Credentail">
+                    <div class="Contact US">
+                        <li><a href="../Reach-us/contact.html" class="login">Contact US</a></li>
+                    </div>
+                </div>
+                <div class="hambuger">
+                    <button id="hambugericon" onclick="display()"><i class="fa-solid fa-bars"></i></button>
+                </div>
+            </div>
         </div>
-         <div class="hambuger-menu" id="hambuger-menu">
+
+        <div class="hambuger-menu" id="hambuger-menu">
             <div class="Credentail">
-                         <div class="Contact US">
-                             <li><a href="/Reach-us/contact.html" class="login">Contact US</a></li>
-                             <button id="hambugercicon" onclick="closedisplay()"><i class="fa-regular fa-circle-xmark"></i></button>
-                         </div>
-                         
-                    </div>
-            
+                <div class="Contact US">
+                    <li><a href="../Reach-us/contact.html" class="login">Contact US</a></li>
+                    <button id="hambugercicon" onclick="closedisplay()"><i
+                            class="fa-regular fa-circle-xmark"></i></button>
+                </div>
+            </div>
+
             <ul>
-                <a href="#" style="color: #EAEAEA; " class="Current-page">Home</a></li>
+                <a href="../Home/Home.html">Home</a>
                 <a href="#" onclick="Showabout()">About</a>
-                <a href="#" onclick="Showevent()">Events</a>
+                <a href="../Event/event.html">Events</a>
                 <a href="#">Sponsors</a>
-                <a href="/Gallery/gallery.html ">Gallery</a>
+                <a href="../Gallery/gallery.html ">Gallery</a>
             </ul>
         </div>
         <!-- GALLERY -->
-    <section class="gallery-section">
-      <header>
-        <h2>Gallery – TechBlaze '26</h2>
-        <p>Moments from our events, celebrations and innovations</p>
-      </header>
+        <section class="gallery-section">
+            <header>
+                <h2>Gallery – TechBlaze '26</h2>
+                <p>Moments from our events, celebrations and innovations</p>
+            </header>
 
-      <div class="gallery-grid">
-        <img src="/Home/image/hall.jpg" alt="">
-        <img src="/Home/image/prayer.jpg" alt="">
-        <img src="/Home/image/host.jpg" alt="">
-        <img src="/Home/image/faculty.jpg" alt="">
-        <img src="/Home/image/chief-guest.jpg" alt="">
-        <img src="/Home/image/event.jpg" alt="">
-        <img src="/Home/image/audience.jpg" alt="">
-        <img src="/Home/image/hod.jpg" alt="">
-      </div>
-    </section>
+            <div class="gallery-grid">
+                <img src="../Home/image/hall.jpg" alt="">
+                <img src="../Home/image/prayer.jpg" alt="">
+                <img src="../Home/image/host.jpg" alt="">
+                <img src="../Home/image/faculty.jpg" alt="">
+                <img src="../Home/image/chief-guest.jpg" alt="">
+                <img src="../Home/image/event.jpg" alt="">
+                <img src="../Home/image/audience.jpg" alt="">
+                <img src="../Home/image/hod.jpg" alt="">
+            </div>
+        </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-      <p>© 2025 TechBlaze '26 — Built by Team TechBlaze</p>
-    </footer>
+        <!-- FOOTER -->
+        <footer class="footer">
+            <p>© 2025 TechBlaze '26 — Built by Team TechBlaze</p>
+        </footer>
 
 
-    <!-- Scripts -->
-    <script src="gallery.js"></script>
-    
+        <!-- Scripts -->
+        <script src="gallery.js"></script>
+        <script src="../Shared/navbar.js"></script>
+
 </body>
+
 </html>
