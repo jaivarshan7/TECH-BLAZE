@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventHorizon | Modern Events Listing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --card-border: rgba(255, 255, 255, 0.1);
+            --text-main: #ffffff;
+            --text-muted: #94a3b8;
+            --accent-color: #8b5cf6; /* Violet */
+            --accent-glow: rgba(139, 92, 246, 0.5);
+            --gradient-bg: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: var(--gradient-bg);
+            background-attachment: fixed; /* Parallax feel */
+            color: var(--text-main);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* --- DECORATIVE BACKGROUND BLOBS --- */
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: -1;
+            opacity: 0.4;
+        }
+        .blob-1 { top: -10%; left: -10%; width: 500px; height: 500px; background: #4c1d95; }
+        .blob-2 { bottom: -10%; right: -10%; width: 400px; height: 400px; background: #0ea5e9; }
+
+        /* --- CONTAINER --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* --- HEADER SECTION --- */
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 1s ease;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(to right, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        p.subtitle {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        /* --- CONTROLS (Search & Filter) --- */
+        .controls {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            padding: 1rem;
+            border-radius: 16px;
+            border: 1px solid var(--card-border);
+            max-width: 800px;
+            margin: 0 auto 3rem auto;
+        }
+
+        .search-box {
+            flex: 1 1 300px;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 20px;
+            border-radius: 12px;
+            border: 1px solid var(--card-border);
+            background: rgba(0, 0, 0, 0.2);
+            color: white;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .search-box input:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
+
+        .filter-btns {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-muted);
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--accent-color);
+            color: white;
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
+
+        /* --- EVENTS GRID --- */
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        /* --- EVENT CARD DESIGN --- */
+        .event-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: var(--transition);
+            opacity: 0; /* For load animation */
+            animation: fadeUp 0.6s forwards;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .event-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: rgba(139, 92, 246, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Image Wrapper with Overlay */
+        .card-image {
+            height: 200px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .event-card:hover .card-image img {
+            transform: scale(1.1);
+        }
+
+        .category-tag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            z-index: 2;
+        }
+
+        .tag-online { background: #10b981; color: #000; } /* Green */
+        .tag-offline { background: #f43f5e; color: #fff; } /* Red */
+
+        /* Card Content */
+        .card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .event-date {
+            color: var(--accent-color);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .event-title {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .event-desc {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Hidden details that appear/expand */
+        .event-details {
+            border-top: 1px solid var(--card-border);
+            padding-top: 1rem;
+            margin-top: auto;
+        }
+
+        .location-info {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Register Button */
+        .register-btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            background: white;
+            color: #0f172a;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .register-btn:hover {
+            background: var(--accent-color);
+            color: white;
+            box-shadow: 0 0 20px var(--accent-glow);
+        }
+
+        /* --- ANIMATIONS --- */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .controls { flex-direction: column; }
+            .filter-btns { width: 100%; justify-content: space-between; }
+            .filter-btn { flex: 1; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <div class="container">
+        <header>
+            <h1>EventHorizon</h1>
+            <p class="subtitle">Discover the best experiences happening around you.</p>
+        </header>
+
+        <div class="controls">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search events...">
+            </div>
+            <div class="filter-btns">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="online">Online</button>
+                <button class="filter-btn" data-filter="offline">Offline</button>
+            </div>
+        </div>
+
+        <main id="eventsContainer" class="events-grid">
+            </main>
+    </div>
+
+    <script>
+        // --- DATA SOURCE ---
+        const eventsData = [
+            {
+                id: 1,
+                title: "Future AI Summit 2024",
+                date: "March 15, 2024 • 10:00 AM",
+                description: "Explore the latest in artificial intelligence and machine learning with industry leaders.",
+                type: "online",
+                location: "Zoom Webinar",
+                image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                id: 2,
+                title: "Urban Photography Walk",
+                date: "April 02, 2024 • 04:00 PM",
+                description: "Join us for a sunset photography walk through the city center. Bring your own camera.",
+                type: "offline",
+                location: "Central Park, NYC",
+                image: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                id: 3,
+                title: "ReactJS Advanced Workshop",
+                date: "March 20, 2024 • 02:00 PM",
+                description: "Deep dive into React hooks, state management, and performance optimization.",
+                type: "online",
+                location: "Google Meet",
+                image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                id: 4,
+                title: "Indie Music Festival",
+                date: "May 10, 2024 • 06:00 PM",
+                description: "A night of live music featuring top independent artists from around the country.",
+                type: "offline",
+                location: "The Grand Arena, LA",
+                image: "https://images.unsplash.com/photo-1459749411177-0473ef7161cf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                id: 5,
+                title: "Digital Marketing Masterclass",
+                date: "April 15, 2024 • 11:00 AM",
+                description: "Learn how to scale your brand using modern SEO and social media strategies.",
+                type: "online",
+                location: "Live Stream",
+                image: "https://images.unsplash.com/photo-1557838923-2985c318be48?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                id: 6,
+                title: "Start-up Networking Night",
+                date: "March 25, 2024 • 07:00 PM",
+                description: "Meet potential co-founders and investors in this casual networking mixer.",
+                type: "offline",
+                location: "TechHub Coworking, SF",
+                image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+            }
+        ];
+
+        // --- DOM ELEMENTS ---
+        const container = document.getElementById('eventsContainer');
+        const searchInput = document.getElementById('searchInput');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+
+        // --- RENDER FUNCTION ---
+        function renderEvents(data) {
+            container.innerHTML = ''; // Clear current content
+
+            if (data.length === 0) {
+                container.innerHTML = `<p style="text-align:center; grid-column: 1/-1; color: var(--text-muted);">No events found matching your criteria.</p>`;
+                return;
+            }
+
+            data.forEach((event, index) => {
+                // Determine tag class and text
+                const tagClass = event.type === 'online' ? 'tag-online' : 'tag-offline';
+                const locationIcon = event.type === 'online' ? '🌐' : '📍';
+                
+                // Staggered Animation Delay calculation
+                const delay = index * 0.1; 
+
+                const cardHTML = `
+                    <article class="event-card" style="animation-delay: ${delay}s">
+                        <div class="card-image">
+                            <span class="category-tag ${tagClass}">${event.type}</span>
+                            <img src="${event.image}" alt="${event.title}">
+                        </div>
+                        <div class="card-content">
+                            <div class="event-date">${event.date}</div>
+                            <h3 class="event-title">${event.title}</h3>
+                            <p class="event-desc">${event.description}</p>
+                            
+                            <div class="event-details">
+                                <div class="location-info">
+                                    <span>${locationIcon}</span>
+                                    <span>${event.location}</span>
+                                </div>
+                                <button class="register-btn">Register Now</button>
+                            </div>
+                        </div>
+                    </article>
+                `;
+                container.innerHTML += cardHTML;
+            });
+        }
+
+        // --- FILTER & SEARCH LOGIC ---
+        function filterEvents() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const activeCategory = document.querySelector('.filter-btn.active').dataset.filter;
+
+            const filtered = eventsData.filter(event => {
+                // 1. Check Category
+                const matchesCategory = activeCategory === 'all' || event.type === activeCategory;
+                // 2. Check Search Text
+                const matchesSearch = event.title.toLowerCase().includes(searchTerm) || 
+                                      event.description.toLowerCase().includes(searchTerm);
+                
+                return matchesCategory && matchesSearch;
+            });
+
+            renderEvents(filtered);
+        }
+
+        // --- EVENT LISTENERS ---
+        
+        // Search Input Listener
+        searchInput.addEventListener('input', filterEvents);
+
+        // Filter Button Listeners
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked
+                btn.classList.add('active');
+                // Filter
+                filterEvents();
+            });
+        });
+
+        // --- INITIAL RENDER ---
+        renderEvents(eventsData);
+
+    </script>
+</body>
+</html>
