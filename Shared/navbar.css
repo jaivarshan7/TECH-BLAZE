@@ -118,7 +118,7 @@
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-    z-index: 1001;
+    z-index: 1000;
 }
 
 /* Arrow for dropdown */
@@ -167,19 +167,17 @@
     /* remove main hover underline for dropdown items */
 }
 
-
-/* --- Contact CTA --- */
-.credential-detail {
+.contact-detail {
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
-.Credentail li {
+.Contact {
     list-style: none;
 }
 
-.Credentail .login {
+.Contact .login {
     display: inline-block;
     padding: 8px 20px;
     background: transparent;
@@ -194,7 +192,7 @@
     box-shadow: 0 0 5px rgba(0, 243, 255, 0.2);
 }
 
-.Credentail .login:hover {
+.Contact .login:hover {
     background: var(--primary-neon);
     color: #000;
     box-shadow: 0 0 20px var(--primary-neon);
@@ -337,7 +335,7 @@
         /* Hide desktop menu */
     }
 
-    .nav-bar .credential-detail .Credentail {
+    .nav-bar .Contact {
         display: none;
         /* Hide desktop contact button */
     }

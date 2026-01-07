@@ -38,9 +38,9 @@ function loadNavbar() {
             <li><a href="/Gallery/gallery.html" class="nav-link" data-page="gallery">Gallery</a></li>
         </div>
         
-        <div class="credential-detail">
-            <div class="Credentail">
-                <li><a href="/Reach-us/contact.html" class="login">Contact US</a></li>
+        <div class="contact-detail">
+            <div class="Contact">
+                <li><a href="https://chat.whatsapp.com/CcAG6FlCDkIKmUUW7NphKx" class="login" id="contact">Contact US</a></li>
             </div>
             <div class="hambuger">
                 <button id="hambugericon"><i class="fa-solid fa-bars"></i></button>
@@ -68,7 +68,7 @@ function loadNavbar() {
             <li><a href="/Event/event.html">Events</a></li>
             <li><a href="#">Sponsors</a></li>
             <li><a href="/Gallery/gallery.html">Gallery</a></li>
-            <li><a href="/Reach-us/contact.html" class="mobile-contact">Contact US</a></li>
+            <li><a href="https://chat.whatsapp.com/CcAG6FlCDkIKmUUW7NphKx" class="mobile-contact">Contact US</a></li>
         </ul>
     </div>
     `;
@@ -131,3 +131,4 @@ window.toggleMobileAbout = function(event) {
         if(icon) icon.style.transform = "rotate(180deg)";
     }
 };
+
