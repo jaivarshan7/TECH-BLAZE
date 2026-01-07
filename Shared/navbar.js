@@ -19,7 +19,7 @@ function loadNavbar() {
     const html = `
     <div class="nav-bar">
         <div class="logo">
-            <a href="/index.html" style="text-decoration:none;"><h1>TECH BLAZE</h1></a>
+            <img src="/img/tblogo.png" alt="Logo">
         </div>
         <div class="menus">
             <li><a href="/index.html" class="nav-link" data-page="home">Home</a></li>
@@ -40,7 +40,7 @@ function loadNavbar() {
         
         <div class="contact-detail">
             <div class="Contact">
-                <li><a href="https://chat.whatsapp.com/CcAG6FlCDkIKmUUW7NphKx" class="login" id="contact">Contact US</a></li>
+                <li><a href="https://chat.whatsapp.com/CcAG6FlCDkIKmUUW7NphKx" target="_blank" class="login" id="contact">Contact US</a></li>
             </div>
             <div class="hambuger">
                 <button id="hambugericon"><i class="fa-solid fa-bars"></i></button>

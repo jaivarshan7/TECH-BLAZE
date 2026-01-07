@@ -1,0 +1,85 @@
+/* Sponsors Section Styles extracted from Home.css */
+
+/*Current-sponsors */
+.sponsors-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.Header {
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-shadow: 0 0 15px #ff3700, 0 0 35px #FF2E63;
+    margin: 70px 0;
+    width: auto;
+    text-align: center;
+    font-family: "IM Fell English", "IM Fell English SC", serif;
+    font-weight: 300;
+    scroll-behavior: smooth;
+}
+
+.Current-sponsors {
+    height: 100px;
+    width: auto;
+    margin: 30px auto;
+    display: flex;
+    overflow-x: auto;
+    gap: 2.5em;
+    scroll-behavior: smooth;
+}
+
+.Current-sponsors::-webkit-scrollbar {
+    display: none;
+}
+
+.sponsors {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5em;
+    animation: spin 10s infinite linear;
+}
+
+@keyframes spin {
+    from {
+        translate: 0%;
+    }
+
+    to {
+        translate: -100%;
+    }
+}
+
+.card {
+    height: 70px;
+    width: 150px;
+    background-color: #292b2a;
+}
+
+/* Media Queries Extracted from Home.css */
+
+/* Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    .card {
+        width: 120px;
+        height: auto;
+    }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+    .sponsors-container .Current-sponsors {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .sponsors {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        width: 80px;
+        /* Smaller logos */
+        margin: 5px;
+    }
+}

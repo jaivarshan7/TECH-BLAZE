@@ -18,6 +18,7 @@
     align-items: center;
     padding: 15px 5%;
     position: sticky;
+    width: auto;
     top: 0;
     z-index: 1000;
     background: var(--glass-bg);
@@ -29,29 +30,16 @@
 }
 
 /* --- Logo --- */
-.nav-bar .logo h1 {
-    font-family: 'Orbitron', 'Avanta Garde', sans-serif;
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #fff;
+.nav-bar .logo img {
+    width: 60px;
+    height: 60px;
     margin: 0;
-    letter-spacing: 2px;
-    background: linear-gradient(90deg, #fff, var(--primary-neon));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
-    transition: 0.3s;
-}
-
-.nav-bar .logo:hover h1 {
-    text-shadow: 0 0 20px var(--primary-neon), 0 0 40px var(--secondary-neon);
-    transform: scale(1.02);
 }
 
 /* --- Menu Links (Desktop) --- */
 .nav-bar .menus {
     display: flex;
-    align-items: center;
+    align-items: right;
     gap: 30px;
     margin: 0;
     padding: 0;
@@ -115,6 +103,7 @@
     border-radius: 8px;
     padding: 10px 0;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    text-align: center;
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
@@ -347,9 +336,5 @@
 
     .nav-bar {
         padding: 15px 20px;
-    }
-
-    .logo h1 {
-        font-size: 1.5rem;
-    }
+    }   
 }

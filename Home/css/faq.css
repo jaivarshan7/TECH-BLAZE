@@ -1,0 +1,80 @@
+/* FAQ Section Styles extracted from Home.css */
+
+.FAQ {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.FAQ h1 {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-weight: 50;
+    color: #ffffff;
+    text-shadow: 0 0 15px #ff3700, 0 0 35px #FF2E63;
+}
+
+.FAQ .faq {
+    height: auto;
+    width: 60vw;
+    text-align: center;
+    display: flex;
+    color: #ffffff;
+    background-color: rgba(32, 30, 30, 0.4);
+    border-radius: 2px;
+    flex-direction: column;
+    margin: 20px 0;
+    padding: 15px 20px;
+    box-shadow: #272626 0 0 20px 0;
+    animation: popout 3s forwards;
+}
+
+@keyframes popout {
+    from {
+        width: 40vw;
+    }
+
+    to {
+        width: 60vw;
+    }
+}
+
+.FAQ .faq .com-que {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    font-family: "IM Fell English", "IM Fell English SC", serif;
+    font-weight: 300;
+    justify-content: space-between;
+}
+
+.FAQ .faq .com-que h3 {
+    font-size: 1.5vw;
+}
+
+.FAQ .faq .com-que:hover {
+    color: #ef38fcff;
+    cursor: pointer;
+}
+
+.FAQ .faq .com-que .fa-twitch {
+    color: #0374ff;
+    font-size: 25px;
+}
+
+.FAQ .faq .ans {
+    font-family: "IM Fell English", "IM Fell English SC", serif;
+    font-weight: 300;
+    display: none;
+    padding: 3px 0px;
+}
+
+/* Mobile responsive for FAQ if any (checked Home.css, mostly minimal) */
+@media (max-width: 480px) {
+    .faq h3 {
+        font-size: 15px;
+    }
+}

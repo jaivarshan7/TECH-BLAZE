@@ -1,0 +1,293 @@
+/* Hero Section Styles extracted from Home.css */
+
+/* Main content */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    margin-top: 180px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.main-content .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content .date {
+    animation: movedown 3s;
+    margin-top: 10px;
+    color: rgb(176, 30, 30);
+    width: 450px;
+    border-radius: 20px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+@keyframes movedown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(0%);
+        opacity: 0.9;
+    }
+}
+
+.main-content .about .date h5 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #F8F8F8;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4),
+        0 0 20px rgba(122, 56, 252, 0.5);
+    font-size: 0.6rem;
+    overflow: hidden;
+    margin: 0 auto;
+    animation: typing 6s steps(60, end) infinite;
+    white-space: nowrap;
+}
+
+@keyframes typing {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+.main-content .about .name h1 {
+    margin-top: 10px;
+    font-size: 70px;
+    font-weight: 800;
+    color: #FFFFFF;
+    text-shadow: 0 0 20px #00FFFF, 0 0 45px #00BFFF;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.blaze {
+    margin-top: 10px;
+    font-size: 70px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #FFFFFF;
+    text-shadow: 0 0 20px #FF2E63, 0 0 45px #FF007F;
+}
+
+.main-content .line {
+    background: linear-gradient(90deg,
+            #7f00ff 0%, #ffffff 50%, #ff0000 100%);
+    border-radius: 2px;
+    box-shadow: 0 0 10px #ff0000, 0 0 10px #7f00ff;
+    border-radius: 50%;
+    height: 3px;
+    width: 35%;
+    margin: 0px auto;
+}
+
+.main-content .about .description h5 {
+    margin-top: 10px;
+    font-family: "IM Fell English", "IM Fell English SC", serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #EAEAEA;
+    font-size: 16px;
+    letter-spacing: 1px;
+    white-space: inherit;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.2), 0 0 20px rgba(122, 56, 252, 0.4);
+}
+
+.main-content .register {
+    margin: 40px 0;
+}
+
+.main-content .register a {
+    text-decoration: none;
+    padding: 5px 10px;
+    color: #fff;
+    background: linear-gradient(90deg, #FF2E63, #7A38FC);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 0 15px #7A38FC, 0 0 25px #FF2E63;
+    transition: 0.3s ease-in-out;
+}
+
+.register a:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 30px #C77DFF, 0 0 60px #FF2E63;
+}
+
+/*TIMER  */
+.date-time-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    padding: 18px 38px;
+    border-radius: 14px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Each time block */
+.date-time-container .com {
+    min-width: 90px;
+    padding: 15px 30px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.09);
+    border-radius: 10px;
+}
+
+/* Numbers */
+.date-time-container .count {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* Labels */
+.date-time-container .com-h1 {
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #d0d0d0;
+    margin-top: 4px;
+}
+
+/* Media Queries extracted from Home.css */
+
+@media (max-width: 480px) {
+
+    /* Hero text */
+    .main-content h1 {
+        font-size: 24px;
+    }
+
+    .main-content h5 {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .main-content .about .description h5 {
+        font-size: 11px;
+        width: 95%;
+        margin: 10px auto;
+        line-height: 1.6;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+}
+
+/* --- Responsive Design (Mobile) --- */
+@media (max-width: 768px) {
+
+    /* Hero Section */
+    .main-content {
+        margin-top: 100px;
+        padding: 0 15px;
+    }
+
+    .main-content .about .name h1 {
+        font-size: 3rem;
+        /* Smaller title */
+        line-height: 1.2;
+    }
+
+    .blaze {
+        font-size: 3rem;
+    }
+
+    .main-content .date {
+        width: 90% !important;
+        /* Override fixed 450px */
+        margin: 10px auto;
+    }
+
+    .main-content .date h5 {
+        font-size: 0.8rem;
+        white-space: normal;
+        /* Allow wrap */
+        animation: none;
+        /* Disable typing animation on mobile if it breaks layout */
+        width: 100%;
+    }
+
+    /* Countdown Timer */
+    .date-time-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        padding: 14px 16px;
+    }
+
+    .date-time-container .com {
+        width: 70px;
+        /* Smaller boxes */
+        min-width: 65px;
+        height: auto;
+        padding: 10px;
+    }
+
+    .date-time-container .count {
+        font-size: 1.5rem;
+        /* blended from two queries */
+    }
+
+    .date-time-container .com-h1 {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Smaller Phones */
+    .main-content .about .name h1 {
+        font-size: 2.5rem;
+    }
+
+    .blaze {
+        font-size: 2.5rem;
+    }
+}
+
+/* Fixes Overflow */
+@media (max-width: 768px) {
+
+    /* Hero Section */
+    .main-content {
+        margin-top: 100px;
+        padding: 0 10px;
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .main-content .about .name h1 {
+        font-size: 2.5rem;
+        line-height: 1.1;
+        width: 100%;
+        word-wrap: break-word;
+    }
+
+    .blaze {
+        font-size: 2.5rem;
+        width: 100%;
+        word-wrap: break-word;
+    }
+}
