@@ -398,14 +398,119 @@
         </div>-->
 
             <!-- EVENT-TIMELINE  -->
-            <div class="flowchart">
+            <div class="flowchart" id="timeline-section">
                 <div class="heading">
-                    <h1>EVENT TIMELINE</h1>
+                    <h1>EVENT SCHEDULE</h1>
                     <p>From ideas to impact, one step at a time!</p>
                 </div>
-                <div class="details ">
-                    <div class="bothday">
-                        <img src="/Home/image/eventtimeline.jpg" alt="">
+
+                <div class="timeline-controls">
+                    <button class="timeline-btn active" onclick="switchDay('day1')">Day 1 (27 Feb)</button>
+                    <button class="timeline-btn" onclick="switchDay('day2')">Day 2 (28 Feb)</button>
+                </div>
+
+                <div class="timeline-container active" id="day1">
+                    <div class="timeline-item">
+                        <div class="time">08:00 AM - 09:00 AM</div>
+                        <div class="content">
+                            <h3>Registration Verification</h3>
+                            <span class="tag">General</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">09:00 AM - 10:00 AM</div>
+                        <div class="content">
+                            <h3>Inauguration</h3>
+                            <span class="tag">General</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">10:20 AM - 10:50 AM</div>
+                        <div class="content">
+                            <h3>SQL Showdown</h3>
+                            <h3>Web Relay Rush</h3>
+                            <span class="tag">Technical</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">11:00 AM - 01:00 PM</div>
+                        <div class="content">
+                            <h3>Cyber Quest</h3>
+                            <h3>Tech Quiz</h3>
+                            <span class="tag">Technical</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">01:10 PM - 01:50 PM</div>
+                        <div class="content">
+                            <h3>Lunch Break</h3>
+                            <span class="tag break">Break</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">02:00 PM - 03:30 PM</div>
+                        <div class="content">
+                            <h3>SQL Showdown (Finals)</h3>
+                            <h3>Voices Beyond The Code</h3>
+                            <h3>Code Relay</h3>
+                            <span class="tag">Events</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-container" id="day2">
+                    <div class="timeline-item">
+                        <div class="time">08:00 AM - 09:00 AM</div>
+                        <div class="content">
+                            <h3>Registration Verification</h3>
+                            <span class="tag">General</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">09:00 AM - 10:00 AM</div>
+                        <div class="content">
+                            <h3>Inauguration / Recap</h3>
+                            <span class="tag">General</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">10:20 AM - 11:00 AM</div>
+                        <div class="content">
+                            <h3>Reverse Coding</h3>
+                            <h3>Data Analysis</h3>
+                            <span class="tag">Technical</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">11:10 AM - 01:00 PM</div>
+                        <div class="content">
+                            <h3>Connection</h3>
+                            <h3>Rapid Fire</h3>
+                            <span class="tag">Non-Technical</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">01:10 PM - 01:50 PM</div>
+                        <div class="content">
+                            <h3>Lunch Break</h3>
+                            <span class="tag break">Break</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">02:00 PM - 03:30 PM</div>
+                        <div class="content">
+                            <h3>Reverse Coding</h3>
+                            <h3>Ideathon '26</h3>
+                            <h3>Data Analysis</h3>
+                            <span class="tag">Events</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">03:30 PM Onwards</div>
+                        <div class="content">
+                            <h3>Validation & Awards</h3>
+                            <span class="tag">Ceremony</span>
+                        </div>
                     </div>
                 </div>
             </div>
