@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TECH BLAZE</title>
     <!--Link css-->
-    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="Home/Home.css">
+    <link rel="stylesheet" href="/Shared/navbar.css">
     <!--Font awesome cdn-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <!--    Google Font   -->
@@ -32,69 +33,9 @@
 
     <div class="app-container" id="main-container">
         <!-- Nav-bar   -->
-        <div class="nav-bar">
-            <div class="logo">
-                <h1>TECH BLAZE</h1>
-            </div>
-            <div class="menus">
-                <li><a href="/Home/Home.html" style="color: #EAEAEA; " class="Current-page">Home</a></li>
-                <!--    About    -->
-                <li><a href="#" onclick="Showabout()">About</a></li>
-                <div class="about-dec" id="about" onmouseleave="Hideabout()">
-                    <div class="about-univ">
-                        <li><a href="/About/About-univ/univ.html">About University</a></li>
-                    </div>
-                    <div class="about-dept">
-                        <li><a href="/About/About-department/deparment.html">About Department</a></li>
-                    </div>
-                    <div class="about-event">
-                        <li><a href="/About/About-event/event.html">About Tech Blaze</a></li>
-                    </div>
-                </div>
-                <!---   Event   -->
-                <li><a href="/Event/event.html">Events</a></li>
-                <li><a href="#">Sponsors</a></li>
-                <li><a href="/Gallery/gallery.html ">Gallery</a></li>
-            </div>
-            <div class="credential-detail">
-                <div class="Credentail">
-                    <div class="Contact US">
-                        <li><a href="/Reach-us/contact.html" class="login">Contact US</a></li>
-                    </div>
-                </div>
-                <div class="hambuger">
-                    <button id="hambugericon" onclick="display()"><i class="fa-solid fa-bars"></i></button>
-                </div>
-            </div>
 
-
-
-        </div>
-
-
-        <div class="hambuger-menu" id="hambuger-menu">
-            <div class="Credentail">
-                <div class="Contact US">
-                    <li><a href="/Reach-us/contact.html" class="login">Contact US</a></li>
-                    <button id="hambugercicon" onclick="closedisplay()"><i
-                            class="fa-regular fa-circle-xmark"></i></button>
-                </div>
-
-            </div>
-
-            <ul>
-                <a href="#" style="color: #EAEAEA; " class="Current-page">Home</a></li>
-                <a href="#" onclick="toggleMobileAbout()">About</a>
-                <ul id="mobile-about-submenu">
-                    <li><a href="/About/About-univ/univ.html">About University</a></li>
-                    <li><a href="/About/About-department/deparment.html">About Department</a></li>
-                    <li><a href="/About/About-event/event.html">About Tech Blaze</a></li>
-                </ul>
-                <a href="/Event/event.html">Events</a>
-                <a href="#">Sponsors</a>
-                <a href="/Gallery/gallery.html ">Gallery</a>
-            </ul>
-        </div>
+        <!-- Nav-bar   -->
+        <div id="navbar-container"></div>
 
 
 
@@ -109,7 +50,8 @@
                     </div>
                     <div class="line"></div>
                     <div class="date" id="date">
-                        <h5>(27–28 FEB ‘26 | <span class="detail-loc"> Into the Tech Unknown — MGR Auditorium,HITS)</span></h5>
+                        <h5>(27–28 FEB ‘26 | <span class="detail-loc"> Into the Tech Unknown — MGR
+                                Auditorium,HITS)</span></h5>
                     </div>
                     <div class="description">
                         <h5 class="namedec">A is a college-level technical symposium <br>hosted at Hindustan Institute
@@ -554,6 +496,7 @@
         </div>
 
         <!-- Scripts -->
+        <script src="/Shared/navbar.js"></script>
         <script src="/Home/Home.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
@@ -575,7 +518,7 @@
             //registerPlugin for description
             gsap.registerPlugin(SplitText)
 
-            let split = SplitText.create(".namedec", { type: "chars" });
+            let split = SplitText.create(".namedec", { type: "words, chars" });
             gsap.from(split.chars, {
                 duration: 1,
                 x: 70,
