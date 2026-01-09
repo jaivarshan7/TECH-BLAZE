@@ -84,7 +84,7 @@ body {
 
 @media (min-width: 1025px) {
     body {
-        max-width: 1440px;
+        max-width: auto;
         margin: auto;
     }
 }

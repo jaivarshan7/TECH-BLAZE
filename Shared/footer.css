@@ -35,7 +35,7 @@
 
 /* Brand Section */
 .footer-brand {
-    flex: 1 1 300px;
+    flex: 1 1 30px;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -190,11 +190,13 @@
 }
 
 /* Mobile Responsive */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .footer-content {
         flex-direction: column;
         gap: 30px;
         text-align: center;
+        height: auto;
+        width: auto;
     }
 
     .footer-brand {
@@ -202,17 +204,7 @@
     }
 
     .footer-links-group {
-        justify-content: center;
-        text-align: center;
-    }
-
-    .footer-column h3::after {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .contact-column ul li {
-        justify-content: center;
+        display: none;
     }
 
     .footer-bottom {

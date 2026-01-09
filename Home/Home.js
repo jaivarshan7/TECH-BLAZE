@@ -91,7 +91,7 @@ setInterval(() => {
 }, 2000);
 
 /*timer*/
-var countDownDate = new Date("Feb 5, 2026, 15:37:25").getTime();
+var countDownDate = new Date("Feb 27, 2026, 15:37:25").getTime();
 
 var x = setInterval(function () {
 

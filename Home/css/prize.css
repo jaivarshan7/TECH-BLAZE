@@ -121,8 +121,9 @@
     .com-prize {
         width: 90%;
     }
-
     .com-prize.First {
         transform: none;
+        box-shadow: none;
+        border: none;
     }
 }
