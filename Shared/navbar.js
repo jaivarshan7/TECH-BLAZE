@@ -30,6 +30,7 @@ function loadNavbar() {
                     <a href="/About/About-univ/univ.html">About University</a>
                     <a href="/About/About-department/deparment.html">About Department</a>
                     <a href="/About/About-event/event.html">About Tech Blaze</a>
+                    <a href="/About/About-team/team.html">Our Team</a>
                 </div>
             </li>
 
@@ -63,7 +64,9 @@ function loadNavbar() {
                     <li><a href="/About/About-univ/univ.html">About University</a></li>
                     <li><a href="/About/About-department/deparment.html">About Department</a></li>
                     <li><a href="/About/About-event/event.html">About Tech Blaze</a></li>
+                    <li><a href="/About/About-team/team.html">Our Team</a></li>
                 </ul>
+
             </li>
             <li><a href="/Event/event.html">Events</a></li>
             <li><a href="#">Sponsors</a></li>
