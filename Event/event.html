@@ -225,6 +225,9 @@
                 const tagClass = event.type === 'online' ? 'tag-online' : 'tag-offline';
                 const locationIcon = event.type === 'online' ? '🌐' : '📍';
 
+                // Construct PDF path - assumes PDFs are named by title slug
+                const pdfPath = `Rule-book/${event.title.replace(/\s+/g, '-').toLowerCase()}.pdf`;
+
                 // Staggered Animation Delay calculation
                 const delay = index * 0.1;
 
@@ -244,7 +247,7 @@
                                     <span>${locationIcon}</span>
                                     <span>${event.location || 'Online'}</span>
                                 </div>
-                                <button class="register-btn">Register Now</button>
+                                <a href="${pdfPath}" target="_blank" class="register-btn">Read More</a>
                             </div>
                         </div>
                     </article>
