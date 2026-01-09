@@ -26,6 +26,16 @@
     <meta property="twitter:description"
         content="Join the ultimate technical symposium at HITS. Explore events, workshops, and win exciting prizes!">
     <meta property="twitter:image" content="https://techblaze26.netlify.app/img/tblogo.png">
+    <link rel="canonical" href="https://techblaze26.netlify.app/">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Tech Blaze",
+      "url": "https://techblaze26.netlify.app/",
+      "logo": "https://techblaze26.netlify.app/img/tblogo.png"
+    }
+    </script>
     <!--Link css-->
     <link rel="stylesheet" href="Home/Home.css">
     <link rel="stylesheet" href="/Shared/navbar.css">
@@ -48,14 +58,14 @@
     <!-- FlipDown CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flipdown@0.3.2/dist/flipdown.min.css">
     <!-- FlipDown JS -->
-    <script src="https://cdn.jsdelivr.net/npm/flipdown@0.3.2/dist/flipdown.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flipdown@0.3.2/dist/flipdown.min.js" defer></script>
 
 </head>
 
 <body>
     <!--Video-Bg    -->
     <div class="video-background">
-        <video id="bg-video" autoplay muted loop playsinline preload="auto" disablepictureinpicture>
+        <video id="bg-video" autoplay muted loop playsinline preload="metadata" poster="/Home/image/home-background.jpg" disablepictureinpicture>
             <source src="/Home/image/nebula.3840x2160.mp4" type="video/mp4">
         </video>
     </div>
@@ -161,7 +171,11 @@
                 <article class="event-card">
                     <div class="card-image">
                         <span class="category-tag tag-offline">offline</span>
-                        <img src="Event/image/sqlshowdown.png" alt="SQL Showdown">
+                        <picture>
+                            <source type="image/avif" srcset="/img/optimized/sqlshowdown-1200.avif 1200w, /img/optimized/sqlshowdown-768.avif 768w, /img/optimized/sqlshowdown-480.avif 480w" sizes="(max-width:600px) 100vw, 600px">
+                            <source type="image/webp" srcset="/img/optimized/sqlshowdown-1200.webp 1200w, /img/optimized/sqlshowdown-768.webp 768w, /img/optimized/sqlshowdown-480.webp 480w">
+                            <img src="Event/image/sqlshowdown.png" alt="SQL Showdown" loading="lazy" decoding="async" width="600" height="400">
+                        </picture>
                     </div>
                     <div class="card-content">
                         <div class="event-date">February 27, 2026 • 10:20 AM</div>
@@ -182,7 +196,11 @@
                 <article class="event-card">
                     <div class="card-image">
                         <span class="category-tag tag-offline">offline</span>
-                        <img src="Event/image/cyberquest.png" alt="Cyber Quest">
+                        <picture>
+                            <source type="image/avif" srcset="/img/optimized/cyberquest-1200.avif 1200w, /img/optimized/cyberquest-768.avif 768w, /img/optimized/cyberquest-480.avif 480w" sizes="(max-width:600px) 100vw, 600px">
+                            <source type="image/webp" srcset="/img/optimized/cyberquest-1200.webp 1200w, /img/optimized/cyberquest-768.webp 768w, /img/optimized/cyberquest-480.webp 480w">
+                            <img src="Event/image/cyberquest.png" alt="Cyber Quest" loading="lazy" decoding="async" width="600" height="400">
+                        </picture>
                     </div>
                     <div class="card-content">
                         <div class="event-date">February 27, 2026 • 11:00 AM</div>
@@ -202,7 +220,11 @@
                 <article class="event-card">
                     <div class="card-image">
                         <span class="category-tag tag-online">online</span>
-                        <img src="Event/image/gamedev.png" alt="Game Development">
+                        <picture>
+                            <source type="image/avif" srcset="/img/optimized/gamedev-1200.avif 1200w, /img/optimized/gamedev-768.avif 768w, /img/optimized/gamedev-480.avif 480w" sizes="(max-width:600px) 100vw, 600px">
+                            <source type="image/webp" srcset="/img/optimized/gamedev-1200.webp 1200w, /img/optimized/gamedev-768.webp 768w, /img/optimized/gamedev-480.webp 480w">
+                            <img src="Event/image/gamedev.png" alt="Game Development" loading="lazy" decoding="async" width="600" height="400">
+                        </picture>
                     </div>
                     <div class="card-content">
                         <div class="event-date">February 19, 2026</div>
@@ -236,12 +258,36 @@
             </div>
 
             <div class="gallery-grid">
-                <img src="/Home/image/hall.jpg" alt="Gallery Image" onclick="openImg(this.src)">
-                <img src="/Home/image/father-prayer.jpg" alt="Gallery Image" onclick="openImg(this.src)">
-                <img src="/Home/image/stage.jpg" alt="Gallery Image" onclick="openImg(this.src)">
-                <img src="/Home/image/hod.jpg" alt="Gallery Image" onclick="openImg(this.src)">
-                <img src="/Home/image/faculty.jpg" alt="Gallery Image" onclick="openImg(this.src)">
-                <img src="/Home/image/host.jpg" alt="Gallery Image" onclick="openImg(this.src)">
+                <picture onclick="openImg(this.querySelector('img').src)">
+                    <source type="image/avif" srcset="/img/optimized/hall-1200.avif 1200w, /img/optimized/hall-768.avif 768w, /img/optimized/hall-480.avif 480w" sizes="(max-width:1200px) 100vw, 1200px">
+                    <source type="image/webp" srcset="/img/optimized/hall-1200.webp 1200w, /img/optimized/hall-768.webp 768w, /img/optimized/hall-480.webp 480w">
+                    <img src="/Home/image/hall.jpg" alt="Event hall" loading="lazy" decoding="async" width="1200" height="800">
+                </picture>
+                <picture onclick="openImg(this.querySelector('img').src)">
+                    <source type="image/avif" srcset="/img/optimized/father-prayer-1200.avif 1200w, /img/optimized/father-prayer-768.avif 768w, /img/optimized/father-prayer-480.avif 480w" sizes="(max-width:1200px) 100vw, 1200px">
+                    <source type="image/webp" srcset="/img/optimized/father-prayer-1200.webp 1200w, /img/optimized/father-prayer-768.webp 768w, /img/optimized/father-prayer-480.webp 480w">
+                    <img src="/Home/image/father-prayer.jpg" alt="Prayer song" loading="lazy" decoding="async" width="1200" height="800">
+                </picture>
+                <picture onclick="openImg(this.querySelector('img').src)">
+                    <source type="image/avif" srcset="/img/optimized/stage-1200.avif 1200w, /img/optimized/stage-768.avif 768w, /img/optimized/stage-480.avif 480w" sizes="(max-width:1200px) 100vw, 1200px">
+                    <source type="image/webp" srcset="/img/optimized/stage-1200.webp 1200w, /img/optimized/stage-768.webp 768w, /img/optimized/stage-480.webp 480w">
+                    <img src="/Home/image/stage.jpg" alt="Event stage" loading="lazy" decoding="async" width="1200" height="800">
+                </picture>
+                <picture onclick="openImg(this.querySelector('img').src)">
+                    <source type="image/avif" srcset="/img/optimized/hod-1200.avif 1200w, /img/optimized/hod-768.avif 768w, /img/optimized/hod-480.avif 480w" sizes="(max-width:1200px) 100vw, 1200px">
+                    <source type="image/webp" srcset="/img/optimized/hod-1200.webp 1200w, /img/optimized/hod-768.webp 768w, /img/optimized/hod-480.webp 480w">
+                    <img src="/Home/image/hod.jpg" alt="Head of Department" loading="lazy" decoding="async" width="1200" height="800">
+                </picture>
+                <picture onclick="openImg(this.querySelector('img').src)">
+                    <source type="image/avif" srcset="/img/optimized/faculty-1200.avif 1200w, /img/optimized/faculty-768.avif 768w, /img/optimized/faculty-480.avif 480w" sizes="(max-width:1200px) 100vw, 1200px">
+                    <source type="image/webp" srcset="/img/optimized/faculty-1200.webp 1200w, /img/optimized/faculty-768.webp 768w, /img/optimized/faculty-480.webp 480w">
+                    <img src="/Home/image/faculty.jpg" alt="Faculty members" loading="lazy" decoding="async" width="1200" height="800">
+                </picture>
+                <picture onclick="openImg(this.querySelector('img').src)">
+                    <source type="image/avif" srcset="/img/optimized/host-1200.avif 1200w, /img/optimized/host-768.avif 768w, /img/optimized/host-480.avif 480w" sizes="(max-width:1200px) 100vw, 1200px">
+                    <source type="image/webp" srcset="/img/optimized/host-1200.webp 1200w, /img/optimized/host-768.webp 768w, /img/optimized/host-480.webp 480w">
+                    <img src="/Home/image/host.jpg" alt="Event host" loading="lazy" decoding="async" width="1200" height="800">
+                </picture>
             </div>
 
             <div class="gallery-btn">
@@ -257,21 +303,21 @@
             </div>
             <div class="Current-sponsors">
                 <div class="sponsors">
-                    <img src="/Home/image/green-technologies.webp" alt="" class="card">
-                    <img src="/Home/image/4i.jpg" alt="" class="card">
-                    <img src="/Home/image/just sponsor.jpg" alt="" class="card">
-                    <img src="/Home/image/skein tech.jpg" alt="" class="card">
-                    <img src="/Home/image/dominos.webp" alt="" class="card">
-                    <img src="/Home/image/a2b.png   " alt="" class="card">
+                    <img src="/Home/image/green-technologies.webp" alt="Green Technologies (sponsor)" class="card" loading="lazy" decoding="async" width="300" height="150">
+                    <img src="/Home/image/4i.jpg" alt="4i (sponsor)" class="card" loading="lazy" decoding="async" width="300" height="150">
+                    <img src="/Home/image/just sponsor.jpg" alt="Just Sponsor" class="card" loading="lazy" decoding="async" width="300" height="150">
+                    <img src="/Home/image/skein tech.jpg" alt="Skein Tech (sponsor)" class="card" loading="lazy" decoding="async" width="300" height="150">
+                    <img src="/Home/image/dominos.webp" alt="Dominos (sponsor)" class="card" loading="lazy" decoding="async" width="300" height="150">
+                    <img src="/Home/image/a2b.png" alt="A2B (sponsor)" class="card" loading="lazy" decoding="async" width="300" height="150">
 
                 </div>
                 <div class="sponsors">
-                    <img src="/Home/image/green-technologies.webp" alt="" class="card">
-                    <img src="/Home/image/4i.jpg" alt="" class="card">
-                    <img src="/Home/image/just sponsor.jpg" alt="" class="card">
-                    <img src="/Home/image/skein tech.jpg" alt="" class="card">
-                    <img src="/Home/image/dominos.webp" alt="" class="card">
-                    <img src="/Home/image/a2b.png   " alt="" class="card">
+                    <img src="/Home/image/green-technologies.webp" alt="Green Technologies (sponsor)" class="card" loading="lazy" decoding="async" width="300" height="150">
+                    <img src="/Home/image/4i.jpg" alt="4i (sponsor)" class="card" loading="lazy" decoding="async" width="300" height="150">
+                    <img src="/Home/image/just sponsor.jpg" alt="Just Sponsor" class="card" loading="lazy" decoding="async" width="300" height="150">
+                    <img src="/Home/image/skein tech.jpg" alt="Skein Tech (sponsor)" class="card" loading="lazy" decoding="async" width="300" height="150">
+                    <img src="/Home/image/dominos.webp" alt="Dominos (sponsor)" class="card" loading="lazy" decoding="async" width="300" height="150">
+                    <img src="/Home/image/a2b.png" alt="A2B (sponsor)" class="card" loading="lazy" decoding="async" width="300" height="150">
                 </div>
             </div>
         </div>
@@ -501,18 +547,20 @@
         <div id="footer-container"></div>
 
         <!-- Scripts -->
-        <script src="/Shared/navbar.js"></script>
-        <script src="Shared/footer.js"></script>
-        <script src="/Home/Home.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+        <script src="/Shared/navbar.js" defer></script>
+        <script src="Shared/footer.js" defer></script>
+        <script src="/Home/Home.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js" defer></script>
 
 
 
         <script>
+        document.addEventListener('DOMContentLoaded', function(){
             // Register the plugin
             gsap.registerPlugin(TextPlugin);
+            gsap.registerPlugin(SplitText);
 
             // Animate text change
             gsap.to("#year", {
@@ -521,9 +569,6 @@
                 ease: "none"
             });
 
-            //registerPlugin for description
-            gsap.registerPlugin(SplitText)
-
             let split = SplitText.create(".namedec", { type: "words, chars" });
             gsap.from(split.chars, {
                 duration: 1,
@@ -531,9 +576,7 @@
                 autoAlpha: 0,
                 stagger: 0.03
             });
-
-
-
+        });
         </script>
 
 </body>

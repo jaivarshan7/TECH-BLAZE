@@ -1,0 +1,13 @@
+{
+  "name": "tech-blaze-site",
+  "version": "1.0.0",
+  "description": "Tech Blaze static site",
+  "scripts": {
+    "optimize-images": "node scripts/optimize-images.js"
+  },
+  "devDependencies": {
+    "glob": "^10.3.3",
+    "mkdirp": "^1.0.4",
+    "sharp": "^0.32.0"
+  }
+}

@@ -17,6 +17,7 @@
     <meta property="og:description"
         content="Explore and register for exciting events at Tech Blaze '26. Win big prizes!">
     <meta property="og:image" content="https://techblaze26.netlify.app/img/tblogo.png">
+    <link rel="canonical" href="https://techblaze26.netlify.app/Event/event.html">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
@@ -35,7 +36,7 @@
 <body>
 
     <div class="video-background">
-        <video autoplay muted loop playsinline id="bg-video">
+        <video autoplay muted loop playsinline id="bg-video" preload="metadata" poster="../Home/image/home-background.jpg">
             <source src="../Home/image/nebula.3840x2160.mp4" type="video/mp4">
         </video>
     </div>
@@ -250,12 +251,19 @@
 
                 // Staggered Animation Delay calculation
                 const delay = index * 0.1;
+                const baseName = event.image.split('/').pop().split('.').slice(0,-1).join('.');
+                const avifSrcset = `/img/optimized/${baseName}-1200.avif 1200w, /img/optimized/${baseName}-768.avif 768w, /img/optimized/${baseName}-480.avif 480w`;
+                const webpSrcset = `/img/optimized/${baseName}-1200.webp 1200w, /img/optimized/${baseName}-768.webp 768w, /img/optimized/${baseName}-480.webp 480w`;
 
                 const cardHTML = `
                     <article class="event-card" style="animation-delay: ${delay}s">
                         <div class="card-image">
                             <span class="category-tag ${tagClass}">${event.type}</span>
-                            <img src="${event.image}" alt="${event.title}">
+                            <picture>
+                                <source type="image/avif" srcset="${avifSrcset}" sizes="(max-width:600px) 100vw, 600px">
+                                <source type="image/webp" srcset="${webpSrcset}">
+                                <img src="${event.image}" alt="${event.title}" loading="lazy" decoding="async" width="600" height="400">
+                            </picture>
                         </div>
                         <div class="card-content">
                             <div class="event-date">${event.date}</div>
@@ -315,9 +323,31 @@
         // --- INITIAL RENDER ---
         renderEvents(eventsData);
 
+        // Inject JSON-LD for events for SEO
+        (function(){
+            const ld = {
+                "@context":"https://schema.org",
+                "@graph": eventsData.map(ev => ({
+                    "@type":"Event",
+                    "name": ev.title,
+                    "description": ev.description,
+                    "image": "https://techblaze26.netlify.app/Event/" + ev.image,
+                    "location": {
+                        "@type":"Place",
+                        "name": ev.location || "Online"
+                    },
+                    "url": "https://techblaze26.netlify.app/Event/" + (ev.title.replace(/\s+/g, '-').toLowerCase() + '.html')
+                }))
+            };
+            const s = document.createElement('script');
+            s.type = 'application/ld+json';
+            s.textContent = JSON.stringify(ld);
+            document.head.appendChild(s);
+        })();
+
     </script>
-    <script src="../Shared/navbar.js"></script>
-    <script src="../Shared/footer.js"></script>
+    <script src="../Shared/navbar.js" defer></script>
+    <script src="../Shared/footer.js" defer></script>
 </body>
 
 </html>
