@@ -94,6 +94,29 @@ function loadNavbar() {
             mobileMenu.classList.remove("active");
         });
     }
+
+    // Change Contact button to Register on non-home pages
+    const currentPath = window.location.pathname.toLowerCase();
+    // Check if we are NOT on home page (considering root / and index.html)
+    // Note: This logic assumes 'home' is only / or /index.html. 
+    // If the site is hosted in a subdir, this might need adjustment, but for now this works.
+    const isHomePage = currentPath === "/" || currentPath.endsWith("/index.html");
+
+    if (!isHomePage) {
+        const desktopContact = document.getElementById("contact");
+        const mobileContact = document.querySelector(".mobile-contact");
+        const registerUrl = "https://techblaze26.netlify.app/";
+
+        if (desktopContact) {
+            desktopContact.textContent = "REGISTER";
+            desktopContact.href = registerUrl;
+        }
+
+        if (mobileContact) {
+            mobileContact.textContent = "REGISTER";
+            mobileContact.href = registerUrl;
+        }
+    }
 }
 
 function highlightCurrentPage() {
@@ -109,26 +132,26 @@ function highlightCurrentPage() {
                 link.classList.add("Current-page");
             }
         } else if (href !== "#" && href !== "/" && currentPath.includes(href)) {
-             link.classList.add("Current-page");
+            link.classList.add("Current-page");
         } else if (href !== "#" && href !== "/" && href.includes(currentPath)) {
             // Reverse check if needed
-             link.classList.add("Current-page");
+            link.classList.add("Current-page");
         }
     });
 }
 
 // Global scope function for the mobile submenu toggle in HTML onclick
-window.toggleMobileAbout = function(event) {
-    if(event) event.preventDefault();
+window.toggleMobileAbout = function (event) {
+    if (event) event.preventDefault();
     const submenu = document.getElementById("mobile-about-submenu");
     const icon = event.target.querySelector("i") || event.target.parentElement.querySelector("i");
-    
+
     if (submenu.style.display === "block") {
         submenu.style.display = "none";
-        if(icon) icon.style.transform = "rotate(0deg)";
+        if (icon) icon.style.transform = "rotate(0deg)";
     } else {
         submenu.style.display = "block";
-        if(icon) icon.style.transform = "rotate(180deg)";
+        if (icon) icon.style.transform = "rotate(180deg)";
     }
 };
 

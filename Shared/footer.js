@@ -80,7 +80,7 @@ window.loadFooter = function () {
                     <p class="tagline">Igniting Innovation, <br>Inspiring Future.</p>
                     <div class="social-links">
                         <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
                         <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
                     </div>
                 </div>
@@ -99,16 +99,13 @@ window.loadFooter = function () {
                         <h3>Events</h3>
                         <ul>
                             <li><a href="${rootPath}Event/event.html">All Events</a></li>
-                            <li><a href="${rootPath}Event/technical.html">Technical</a></li>
-                            <li><a href="${rootPath}Event/non-technical.html">Non-Technical</a></li>
-                            <li><a href="${rootPath}Event/workshop.html">Workshops</a></li>
                         </ul>
                     </div>
                     <div class="footer-column contact-column">
                         <h3>Contact Us</h3>
                         <ul>
                             <li><i class="fa-solid fa-location-dot"></i> Rajiv Gandhi Salai (OMR), Padur, Chennai - 603 103</li>
-                            <li><a href="mailto:TechBlaze80@gmail.com"><i class="fa-solid fa-envelope"></i> TechBlaze80@gmail.com</a></li>
+                            <li><a href="mailto:techblaze@hindustanuniv.ac.in"><i class="fa-solid fa-envelope"></i> TechBlaze@hindustanuniv.ac.in</a></li>
                         </ul>
                     </div>
                 </div>

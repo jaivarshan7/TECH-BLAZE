@@ -11,16 +11,23 @@
     --text-main: #e0e0e0;
 }
 
+body {
+    padding-top: 100px;
+}
+
+
 /* --- Base Navbar Container --- */
 .nav-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 5%;
-    position: sticky;
-    width: auto;
+    position: fixed;
+    width: 100%;
     top: 0;
+    left: 0;
     z-index: 1000;
+    box-sizing: border-box;
     background: var(--glass-bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -137,7 +144,7 @@
     text-transform: none;
     color: var(--text-main);
     border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-    transition: 0.2s;
+    transition: 1s;
 }
 
 .dropdown-menu a:hover {
@@ -336,5 +343,5 @@
 
     .nav-bar {
         padding: 15px 20px;
-    }   
+    }
 }
