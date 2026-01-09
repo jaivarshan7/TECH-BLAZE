@@ -318,133 +318,7 @@
     }
 }
 
-/* Achievement content */
-.Achievement-content {
-    color: white;
-    padding: 50px 0px;
-    height: 600px;
-    width: auto;
-    margin-top: 120px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    scroll-behavior: smooth;
-}
 
-.Achievement-content .title {
-    align-items: center;
-    justify-content: space-between;
-    margin: 0px auto;
-    display: flex;
-    flex-direction: row;
-    color: #fffdff;
-    position: relative;
-    justify-content: space-between;
-    width: 80%;
-    font-size: 18px;
-    font-family: "IM Fell English", "IM Fell English SC", serif;
-    font-weight: 300;
-}
-
-.Achievement-content .title h1 {
-    font-size: 2rem;
-}
-
-.Achievement-content .title a {
-    text-decoration: none;
-    font-size: 1rem;
-    padding: 1rem 2rem;
-    color: rgb(255, 255, 255);
-    border-radius: 10px;
-    background: #8a2be2;
-    transition: background 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 0 10px #8a2be2;
-
-}
-
-.Achievement-content .title a:hover {
-    background: #a84be3;
-    box-shadow: 0 0 20px #a84be3;
-    transform: translateY(-3px);
-}
-
-.Achievement-content .Achievers-detail {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 80%;
-    justify-content: space-between;
-    margin-top: 50px;
-    gap: 30px;
-}
-
-.Achievement-content .common-Achievers img {
-    height: 171px;
-    width: 240px;
-    margin: 15px;
-    border-radius: 10px;
-    transition: 0.5s;
-}
-
-.Achievement-content .common-Achievers img:hover {
-    transform: scale(1.05);
-}
-
-.Achievement-content .common-Achievers {
-    background-color: #000000;
-    height: 355px;
-    width: 270px;
-    border-radius: 10px;
-    color: rgb(255, 255, 255);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.Achievement-content .common-Achievers:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
-}
-
-.Achievement-content .common-Achievers h1 {
-    font-family: Times New Roman;
-    font-weight: bold;
-    font-size: 20px;
-    text-align: center;
-}
-
-.Achievement-content .common-Achievers h3 {
-    font-family: "IM Fell English", "IM Fell English SC", serif;
-    font-weight: 300;
-    padding: 15px 20px;
-    color: #ffffff;
-    padding-bottom: 30px;
-    text-align: center;
-    font-size: 1.25rem;
-}
-
-.Achievement-content .common-Achievers a {
-    color: #ffffff;
-    font-size: 15px;
-    font-family: 'Times New Roman', Times, serif;
-    text-decoration: none;
-    font-weight: 150;
-    padding: 5px 10px;
-    border-radius: 20px;
-    margin: 0 84px;
-    background-color: #9b59b6;
-    transition: background 0.3s ease;
-    cursor: pointer;
-}
-
-.Achievement-content .common-Achievers a:hover {
-    background-color: #8e44ad;
-}
-
-.Achievement-content .Achievers-detail4 {
-    display: none;
-}
 
 
 /* Extracted from General Mobile Media Queries in Home.css */
@@ -464,4 +338,174 @@
     .timeline-item .content {
         width: 100%;
     }
+}
+
+/* --- FEATURED EVENTS SECTION --- */
+.featured-events {
+    width: 80%;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.featured-events h2 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 40px;
+    text-shadow: 0 0 15px #ff3700, 0 0 35px #FF2E63;
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+/* Event Card Styles (Adapted from Event/event.css) */
+.event-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.event-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: rgba(139, 92, 246, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.card-image {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.event-card:hover .card-image img {
+    transform: scale(1.1);
+}
+
+.category-tag {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 2;
+}
+
+.tag-online {
+    background: #10b981;
+    color: #000;
+}
+
+.tag-offline {
+    background: #f43f5e;
+    color: #fff;
+}
+
+.card-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.event-date {
+    color: #8b5cf6;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.event-title {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+    color: #ffffff;
+}
+
+.event-desc {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.event-details {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1rem;
+    margin-top: auto;
+}
+
+.location-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #94a3b8;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.register-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: white;
+    color: #0f172a;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.register-btn:hover {
+    background: #8b5cf6;
+    color: white;
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+}
+
+.view-all-events {
+    margin-top: 40px;
+}
+
+.view-all-events a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 12px 30px;
+    color: #fff;
+    border: 1px solid #7A38FC;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    background: rgba(122, 56, 252, 0.1);
+}
+
+.view-all-events a:hover {
+    background: #7A38FC;
+    box-shadow: 0 0 20px rgba(122, 56, 252, 0.4);
+    transform: translateY(-3px);
 }

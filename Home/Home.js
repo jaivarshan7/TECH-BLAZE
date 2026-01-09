@@ -1,60 +1,5 @@
 
 
-function Showabout() {
-
-    document.getElementById("about").style.display = "block";
-}
-function Hideabout() {
-    document.getElementById("about").style.display = "none";
-}
-function Showevent() {
-
-    document.getElementById("event").style.display = "block";
-}
-function Hideevent() {
-    document.getElementById("event").style.display = "none";
-}
-function shownextwinner() {
-    document.getElementById("Achievers-detail1").style.display = "none";
-    let Achieversdetail2 = document.getElementById("Achievers-detail2")
-    Achieversdetail2.className = "Achievers-detail1 common-Achievers";
-
-    document.getElementById("Achievers-detail4").style.display = "block";
-}
-
-
-function Confirmation() {
-    document.getElementById("popup").style.display = "block";
-    document.getElementById("venue").style.opacity = "0.5";
-    document.getElementById("footer").style.opacity = "0.5";
-}
-
-//Closedesc bot
-function Closedesc() {
-    document.getElementById("exit").style.display = "none"
-}
-
-function closebotdec() {
-    document.getElementById("exit").style.display = "none"
-    document.getElementById("chatbox").style.display = "block"
-}
-
-function Closechatdesc() {
-    document.getElementById("chatbox").style.display = "none"
-}
-
-function closechatbox() {
-    document.getElementById("chatbox").style.display = "none"
-}
-
-//profile
-function Showprofile() {
-    document.getElementById("profiledetail").style.display = "block";
-}
-function hideprofile() {
-    document.getElementById("profiledetail").style.display = "none";
-}
-
 /*FAQ*/
 function showans1() {
     document.getElementById("ans1").style.display = "block";
@@ -141,16 +86,7 @@ document.addEventListener("visibilitychange", () => {
 window.addEventListener("focus", forcePlay);
 window.addEventListener("resize", forcePlay);
 
-/*hambuger icon*/
-function display() {
-    let hambugermenu = document.getElementById("hambuger-menu")
-    hambugermenu.style.display = "block"
-}
 
-function closedisplay() {
-    let hambugermenu = document.getElementById("hambuger-menu")
-    hambugermenu.style.display = "none"
-}
 
 
 // Timeline Tab Switcher

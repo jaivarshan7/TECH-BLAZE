@@ -63,6 +63,10 @@
         width: 120px;
         height: auto;
     }
+
+    .sponsors {
+        animation-duration: 5s;
+    }
 }
 
 /* Mobile (max-width: 768px) */
@@ -75,6 +79,7 @@
     .sponsors {
         flex-wrap: wrap;
         justify-content: center;
+        animation-duration: 5s;
     }
 
     .card {
