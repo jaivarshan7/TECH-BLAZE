@@ -126,7 +126,7 @@ body{
 }
 /*Event-overview*/
 .Event-overview{
-    height: 400px;
+    height: auto;
     width: auto;
     margin: 0px 140px ;
     padding: 40px 0px;
