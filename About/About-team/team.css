@@ -95,7 +95,7 @@ body {
 /* Grid Layout */
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 4fr));
     gap: 40px;
     width: 90%;
     margin: 0 auto 80px;
@@ -263,5 +263,11 @@ body {
         border-left: none;
         border-bottom: 3px solid var(--neon-purple);
         padding-bottom: 10px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .team-grid {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
