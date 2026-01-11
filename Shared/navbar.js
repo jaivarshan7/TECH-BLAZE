@@ -19,7 +19,10 @@ function loadNavbar() {
     const html = `
     <div class="nav-bar">
         <div class="logo">
-            <img src="/img/tblogo.png" alt="Logo">
+            <img src="/img/all/tb-logo.png" alt="Logo">
+        </div>
+        <div class="hits-logo">
+            <img src="/img/all/hits-white.png" alt="Logo">
         </div>
         <div class="menus">
             <li><a href="/index.html" class="nav-link" data-page="home">Home</a></li>

@@ -43,6 +43,12 @@ body {
     margin: 0;
 }
 
+.nav-bar .hits-logo img {
+    width: 150px;
+    height: 60px;
+    margin: 0;
+}
+
 /* --- Menu Links (Desktop) --- */
 .nav-bar .menus {
     display: flex;
