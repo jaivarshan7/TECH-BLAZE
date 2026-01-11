@@ -36,7 +36,8 @@
 <body>
 
     <div class="video-background">
-        <video autoplay muted loop playsinline id="bg-video" preload="metadata" poster="../Home/image/home-background.jpg">
+        <video autoplay muted loop playsinline id="bg-video" preload="metadata"
+            poster="../Home/image/home-background.jpg">
             <source src="../Home/image/nebula.3840x2160.mp4" type="video/mp4">
         </video>
     </div>
@@ -59,6 +60,17 @@
         <main id="eventsContainer" class="events-grid">
         </main>
     </div>
+
+    <!-- Event Detail Modal -->
+    <div id="eventModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div id="modalBody">
+                <!-- Content injected via JS -->
+            </div>
+        </div>
+    </div>
+
     <div id="footer-container"></div>
 
     <script>
@@ -231,6 +243,8 @@
         // --- DOM ELEMENTS ---
         const container = document.getElementById('eventsContainer');
         const filterBtns = document.querySelectorAll('.filter-btn');
+        const modal = document.getElementById('eventModal');
+        const modalBody = document.getElementById('modalBody');
 
         // --- RENDER FUNCTION ---
         function renderEvents(data) {
@@ -246,12 +260,9 @@
                 const tagClass = event.type === 'online' ? 'tag-online' : 'tag-offline';
                 const locationIcon = event.type === 'online' ? '🌐' : '📍';
 
-                // Construct PDF path - assumes PDFs are named by title slug
-                const pdfPath = `Rule-book/${event.title.replace(/\s+/g, '-').toLowerCase()}.pdf`;
-
                 // Staggered Animation Delay calculation
                 const delay = index * 0.1;
-                const baseName = event.image.split('/').pop().split('.').slice(0,-1).join('.');
+                const baseName = event.image.split('/').pop().split('.').slice(0, -1).join('.');
                 const avifSrcset = `/img/optimized/${baseName}-1200.avif 1200w, /img/optimized/${baseName}-768.avif 768w, /img/optimized/${baseName}-480.avif 480w`;
                 const webpSrcset = `/img/optimized/${baseName}-1200.webp 1200w, /img/optimized/${baseName}-768.webp 768w, /img/optimized/${baseName}-480.webp 480w`;
 
@@ -275,7 +286,7 @@
                                     <span>${locationIcon}</span>
                                     <span>${event.location || 'Online'}</span>
                                 </div>
-                                <a href="${pdfPath}" target="_blank" class="register-btn">Read More</a>
+                                <button class="register-btn" onclick="openModal(${event.id})">Read More</button>
                             </div>
                         </div>
                     </article>
@@ -290,10 +301,7 @@
             const activeCategory = activeBtn ? activeBtn.dataset.filter : 'all';
 
             const filtered = eventsData.filter(event => {
-                // Check Category or Type
-                // If 'all' is active (no button selected), return true for all
                 if (activeCategory === 'all') return true;
-
                 return event.type === activeCategory || event.category === activeCategory;
             });
 
@@ -304,36 +312,71 @@
         // Filter Button Listeners
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                // Check if this button is already active
                 const wasActive = btn.classList.contains('active');
-
-                // Remove active class from all
                 filterBtns.forEach(b => b.classList.remove('active'));
-
-                // If it wasn't active, make it active. If it was active, leave it inactive (toggle off)
                 if (!wasActive) {
                     btn.classList.add('active');
                 }
-
-                // Filter
                 filterEvents();
             });
         });
+
+        // --- MODAL FUNCTIONS ---
+        function openModal(id) {
+            const event = eventsData.find(e => e.id === id);
+            if (!event) return;
+
+            // Construct PDF path - assumes PDFs are named by title slug
+            const pdfPath = `Rule-book/${event.title.replace(/\s+/g, '-').toLowerCase()}.pdf`;
+
+            modalBody.innerHTML = `
+                <div class="modal-header">
+                    <h2 class="modal-title">${event.title}</h2>
+                    <span class="modal-tag ${event.type === 'online' ? 'tag-online' : 'tag-offline'}">${event.type}</span>
+                </div>
+                <div class="modal-body-content">
+                    <img src="${event.image}" alt="${event.title}" class="modal-image">
+                    <div class="modal-info">
+                        <p class="modal-date"><i class="far fa-calendar-alt"></i> ${event.date}</p>
+                        <p class="modal-location"><i class="fas fa-map-marker-alt"></i> ${event.location || 'Online'}</p>
+                        <p class="modal-desc">${event.description}</p>
+                        
+                        <div class="modal-actions">
+                            <a href="${pdfPath}" target="_blank" class="download-btn"><i class="fas fa-file-pdf"></i> Download Rulebook</a>
+                        </div>
+                    </div>
+                </div>
+            `;
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        function closeModal() {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
 
         // --- INITIAL RENDER ---
         renderEvents(eventsData);
 
         // Inject JSON-LD for events for SEO
-        (function(){
+        (function () {
             const ld = {
-                "@context":"https://schema.org",
+                "@context": "https://schema.org",
                 "@graph": eventsData.map(ev => ({
-                    "@type":"Event",
+                    "@type": "Event",
                     "name": ev.title,
                     "description": ev.description,
                     "image": "https://techblaze26.netlify.app/Event/" + ev.image,
                     "location": {
-                        "@type":"Place",
+                        "@type": "Place",
                         "name": ev.location || "Online"
                     },
                     "url": "https://techblaze26.netlify.app/Event/" + (ev.title.replace(/\s+/g, '-').toLowerCase() + '.html')
