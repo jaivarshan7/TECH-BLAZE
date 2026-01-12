@@ -50,10 +50,193 @@
             <p class="subtitle">Discover the best experiences happening around you.</p>
         </header>
 
+
+        <div class="timeline-toggle-area">
+            <button id="timelineToggleBtn" class="timeline-toggle-btn" onclick="toggleTimeline()">Show Events
+                Timeline</button>
+        </div>
+
+        <div id="timeline-wrapper" class="timeline-wrapper">
+            <!-- EVENT-TIMELINE (Copied from Index) -->
+            <div class="flowchart" id="timeline-section" style="margin: 0;">
+                <div class="heading">
+                    <h2>EVENT SCHEDULE</h2>
+                    <p>From ideas to impact, one step at a time!</p>
+                </div>
+
+                <div class="timeline-controls">
+                    <button class="timeline-btn active" onclick="switchDay('day1')">Day 1 (27 Feb)</button>
+                    <button class="timeline-btn" onclick="switchDay('day2')">Day 2 (28 Feb)</button>
+                </div>
+
+                <div class="timeline-container active" id="day1">
+                    <div class="timeline-item">
+                        <div class="time">08:00 AM - 09:00 AM</div>
+                        <div class="content">
+                            <h3>Registration Verification</h3>
+                            <span class="tag">General</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">09:00 AM - 10:00 AM</div>
+                        <div class="events-wrapper">
+                            <div class="content">
+                                <h3>Inauguration</h3>
+                                <span class="tag">Ceremony</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">10:20 AM - 10:50 AM</div>
+                        <div class="events-wrapper">
+                            <div class="content">
+                                <h3>SQL Showdown</h3>
+                                <span class="tag">Technical</span>
+                            </div>
+                            <div class="content">
+                                <h3>Web Relay Rush</h3>
+                                <span class="tag">Technical</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">11:00 AM - 01:00 PM</div>
+                        <div class="events-wrapper">
+                            <div class="content">
+                                <h3>Cyber Quest</h3>
+                                <span class="tag">Technical</span>
+                            </div>
+                            <div class="content">
+                                <h3>Tech Quiz</h3>
+                                <span class="tag">Technical</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">01:10 PM - 01:50 PM</div>
+                        <div class="content">
+                            <h3>Lunch Break</h3>
+                            <span class="tag break">Break</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">02:00 PM - 03:30 PM</div>
+                        <div class="events-wrapper">
+                            <div class="content">
+                                <h3>SQL Showdown (Finals)</h3>
+                                <span class="tag">Technical</span>
+                            </div>
+                            <div class="content">
+                                <h3>Voices Beyond The Code</h3>
+                                <span class="tag">General</span>
+                            </div>
+                            <div class="content">
+                                <h3>Web Relay Rush</h3>
+                                <span class="tag">Technical</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">03:30 PM Onwards</div>
+                        <div class="content">
+                            <h3>Valedictory & Awards</h3>
+                            <span class="tag">Ceremony</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Day 2-->
+                <div class="timeline-container" id="day2">
+                    <div class="timeline-item">
+                        <div class="time">08:00 AM - 09:00 AM</div>
+                        <div class="content">
+                            <h3>Registration Verification</h3>
+                            <span class="tag">General</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">09:00 AM - 10:00 AM</div>
+                        <div class="events-wrapper">
+                            <div class="content">
+                                <h3>Day 1 Recap</h3>
+                                <span class="tag">General</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">10:20 AM - 11:00 AM</div>
+                        <div class="events-wrapper">
+                            <div class="content">
+                                <h3>Reverse Coding</h3>
+                                <span class="tag">Technical</span>
+                            </div>
+                            <div class="content">
+                                <h3>Data Analysis</h3>
+                                <span class="tag">Technical</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">11:10 AM - 01:00 PM</div>
+                        <div class="events-wrapper">
+                            <div class="content">
+                                <h3>Connection</h3>
+                                <span class="tag">Non-Technical</span>
+                            </div>
+                            <div class="content">
+                                <h3>Rapid Fire</h3>
+                                <span class="tag">Non-Technical</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">01:10 PM - 01:50 PM</div>
+                        <div class="content">
+                            <h3>Lunch Break</h3>
+                            <span class="tag break">Break</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">02:00 PM - 03:30 PM</div>
+                        <div class="events-wrapper">
+                            <div class="content">
+                                <h3>Reverse Coding</h3>
+                                <span class="tag">Technical</span>
+                            </div>
+                            <div class="content">
+                                <h3>Ideathon '26</h3>
+                                <span class="tag">Non-Technical</span>
+                            </div>
+                            <div class="content">
+                                <h3>Game Development</h3>
+                                <span class="tag">Technical</span>
+                            </div>
+                            <div class="content">
+                                <h3>Mobile App Development</h3>
+                                <span class="tag">Technical</span>
+                            </div>
+                            <div class="content">
+                                <h3>Data Analysis</h3>
+                                <span class="tag">Technical</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">03:30 PM Onwards</div>
+                        <div class="content">
+                            <h3>Valedictory & Awards</h3>
+                            <span class="tag">Ceremony</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="controls">
             <div class="filter-btns">
                 <button class="filter-btn" data-filter="online">Online</button>
                 <button class="filter-btn" data-filter="offline">Offline</button>
+                <button class="filter-btn" data-filter="Hybrid">Hybrid</button>
             </div>
         </div>
 
@@ -81,17 +264,18 @@
                 category: 'technical',
                 title: "SQL Showdown",
                 date: "February 27, 2026 • 10:20 AM",
-                description: "Explore the latest in artificial intelligence and machine learning with industry leaders.",
+                description: "A database heist-themed event.Act as investigators decoding corrupted SQL queries and recovering lost data to prevent a system shutdown.",
                 type: "offline",
                 location: "Bay Range Campus",
-                image: "image/sqlshowdown.png"
+                image: "image/sqlshowdown.png",
+                contentPath: "events-content/sql-showdown.html"
             },
             {
                 id: 2,
                 category: 'technical',
                 title: "Web Relay Rush",
                 date: "February 27, 2026 • 10:20 AM",
-                description: "Join us for a sunset photography walk through the city center. Bring your own camera.",
+                description: "A relay-based full stack challenge. Team members take turns to build a web application against the clock.",
                 type: "offline",
                 location: "Bay Range Campus",
                 image: "image/webrealyrush.png"
@@ -101,27 +285,29 @@
                 category: 'technical',
                 title: "Cyber Quest",
                 date: "February 27, 2026 • 11:00 AM",
-                description: "Deep dive into React hooks, state management, and performance optimization.",
+                description: "A cybersecurity treasure hunt. Solve cryptographic puzzles, decode hashes, and uncover hidden information to unlock the final prize.",
                 type: "offline",
                 location: "Bay Range Campus",
-                image: "image/cyberquest.png"
+                image: "image/cyberquest.png",
+                contentPath: "events-content/cyberquest.html"
             },
             {
                 id: 4,
                 category: 'technical',
                 title: "Tech Quiz",
                 date: "February 27, 2026 • 11:00 AM",
-                description: "A night of live music featuring top independent artists from around the country.",
+                description: "A multi-level quiz, testing the knowledge in computing, programing, databases, and emerging technologies.",
                 type: "offline",
                 location: "Bay Range Campus",
-                image: "image/techquiz.png"
+                image: "image/techquiz.png",
+                contentPath: "events-content/techquiz.html"
             },
             {
                 id: 5,
                 category: 'general',
                 title: "Drum Sharade",
                 date: "February 27, 2026 • 12:00 PM",
-                description: "Learn how to scale your brand using modern SEO and social media strategies.",
+                description: "Act out words or phrases using only gestures while teammates guess. No verbal communication allowed.",
                 type: "offline",
                 location: "Bay Range Campus",
                 image: "image/drumsharade.png"
@@ -131,47 +317,51 @@
                 category: 'technical',
                 title: "Reverse Coding",
                 date: "February 28, 2026 • 10:20 AM",
-                description: "Meet potential co-founders and investors in this casual networking mixer.",
+                description: "Think backward. Instead of writing code from the problem statement, derive the logic from the given outputs and patterns.",
                 type: "offline",
                 location: "Bay Range Campus",
-                image: "image/reversecoding.png"
+                image: "image/reversecoding.png",
+                contentPath: "events-content/reversecoding.html"
             },
             {
                 id: 7,
                 category: 'technical',
                 title: "Data Analysis",
                 date: "February 28, 2026 • 10:20 AM",
-                description: "A night of live music featuring top independent artists from around the country.",
+                description: "Analyze datasets to identify trends, create visualizations, and predict outcomes using tools like Excel, PowerBI, and Python.",
                 type: "offline",
                 location: "Bay Range Campus",
-                image: "image/dataanalysis.png"
+                image: "image/dataanalysis.png",
+                contentPath: "events-content/dataanalysis.html"
             },
             {
                 id: 8,
                 category: 'general',
                 title: "Connection",
                 date: "February 28, 2026 • 11:10 AM",
-                description: "Learn how to scale your brand using modern SEO and social media strategies.",
+                description: "Identify hidden links betwen images, emojis, and symbols through logical reasoning.",
                 type: "offline",
                 location: "Bay Range Campus",
-                image: "image/connection.png"
+                image: "image/connection.png",
+                contentPath: "events-content/connection.html"
             },
             {
                 id: 9,
                 category: 'general',
                 title: "Rapid Fire",
                 date: "February 28, 2026 • 11:10 AM",
-                description: "Meet potential co-founders and investors in this casual networking mixer.",
+                description: "Anser questions under extreme time pressure. Faster responses score higher.",
                 type: "offline",
                 location: "Bay Range Campus",
-                image: "image/rapidfire.png"
+                image: "image/rapidfire.png",
+                contentPath: "events-content/rapidfire.html"
             },
             {
                 id: 10,
                 category: 'general',
                 title: "Ideathon",
                 date: "February 19-28, 2026",
-                description: "A night of live music featuring top independent artists from around the country.",
+                description: "A high-stakes problem-solving and pitching event. Teams propose innovative, research-backed solutions to real-world problems.",
                 type: "Hybrid",
                 image: "image/ideathon.png"
             },
@@ -180,7 +370,7 @@
                 category: 'technical',
                 title: "Game Development",
                 date: "February 19-28, 2026",
-                description: "A night of live music featuring top independent artists from around the country.",
+                description: "Create engaging mini-games using logic, creativity, and programing skills using any engine or language.",
                 type: "Hybrid",
                 image: "image/gamedev.png"
             },
@@ -189,7 +379,7 @@
                 category: 'technical',
                 title: "Mobile App Development",
                 date: "February 19-28, 2026",
-                description: "A night of live music featuring top independent artists from around the country.",
+                description: "Design and develop a functional mobile application based on a given problem statement within a limited time.",
                 type: "Hybrid",
                 image: "image/mobileapp.png"
             },
@@ -198,7 +388,7 @@
                 category: 'general',
                 title: "Photography",
                 date: "February 19-27, 2026",
-                description: "A night of live music featuring top independent artists from around the country.",
+                description: "Capture creative, orginal photographs based on a given theme.",
                 type: "online",
                 image: "image/photography.png"
             },
@@ -207,7 +397,7 @@
                 category: 'general',
                 title: "Crossword Puzzle",
                 date: "February 19-27, 2026",
-                description: "A night of live music featuring top independent artists from around the country.",
+                description: "A time-bound logic challenge focusing on techinical and general knowledge.",
                 type: "online",
                 image: "image/crosswordpuzzle.png"
             },
@@ -216,7 +406,7 @@
                 category: 'general',
                 title: "Blind Typing",
                 date: "February 19-27, 2026",
-                description: "A night of live music featuring top independent artists from around the country.",
+                description: "Test your typing speed and accuracy without viewing the text while typing.",
                 type: "online",
                 image: "image/blindtyping.png"
             },
@@ -225,7 +415,7 @@
                 category: 'general',
                 title: "Prompt Craft",
                 date: "February 19-27, 2026",
-                description: "A night of live music featuring top independent artists from around the country.",
+                description: "Design a optimized AI prompts that generate results for the given image. the event will be held online.",
                 type: "online",
                 image: "image/promptcraft.png"
             },
@@ -234,7 +424,7 @@
                 category: 'general',
                 title: "Logo Design",
                 date: "February 19-27, 2026",
-                description: "A night of live music featuring top independent artists from around the country.",
+                description: "Design a logo representing a theme using digital tools judged on creativity and originality.",
                 type: "online",
                 image: "image/logodesign.png"
             }
@@ -302,10 +492,46 @@
 
             const filtered = eventsData.filter(event => {
                 if (activeCategory === 'all') return true;
-                return event.type === activeCategory || event.category === activeCategory;
+                // Case-insensitive comparison
+                return (event.type && event.type.toLowerCase() === activeCategory.toLowerCase()) ||
+                    (event.category && event.category.toLowerCase() === activeCategory.toLowerCase());
             });
 
             renderEvents(filtered);
+        }
+
+        // --- TIMELINE FUNCTIONS ---
+        function toggleTimeline() {
+            const wrapper = document.getElementById('timeline-wrapper');
+            const btn = document.getElementById('timelineToggleBtn');
+
+            if (wrapper.style.display === 'block') {
+                wrapper.style.display = 'none';
+                btn.textContent = 'Show Events Timeline';
+            } else {
+                wrapper.style.display = 'block';
+                btn.textContent = 'Hide Events Timeline'; // User requested "make the show timeline to hide event timeline"
+            }
+        }
+
+        function switchDay(dayId) {
+            // Hide all containers
+            document.querySelectorAll('.timeline-container').forEach(el => {
+                el.classList.remove('active');
+            });
+
+            // Deactivate all buttons
+            document.querySelectorAll('.timeline-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Show selected day
+            document.getElementById(dayId).classList.add('active');
+
+            // Activate clicked button
+            const btns = document.querySelectorAll('.timeline-btn');
+            if (dayId === 'day1') btns[0].classList.add('active');
+            else btns[1].classList.add('active');
         }
 
         // --- EVENT LISTENERS ---
@@ -322,12 +548,25 @@
         });
 
         // --- MODAL FUNCTIONS ---
-        function openModal(id) {
+        async function openModal(id) {
             const event = eventsData.find(e => e.id === id);
             if (!event) return;
 
-            // Construct PDF path - assumes PDFs are named by title slug
-            const pdfPath = `Rule-book/${event.title.replace(/\s+/g, '-').toLowerCase()}.pdf`;
+            let extraContent = '';
+
+            // 1. Try to fetch external HTML content
+            if (event.contentPath) {
+                try {
+                    const response = await fetch(event.contentPath);
+                    if (response.ok) {
+                        extraContent = await response.text();
+                    } else {
+                        console.error('Failed to load event details:', response.statusText);
+                    }
+                } catch (error) {
+                    console.error('Error loading event details:', error);
+                }
+            }
 
             modalBody.innerHTML = `
                 <div class="modal-header">
@@ -335,18 +574,15 @@
                     <span class="modal-tag ${event.type === 'online' ? 'tag-online' : 'tag-offline'}">${event.type}</span>
                 </div>
                 <div class="modal-body-content">
-                    <img src="${event.image}" alt="${event.title}" class="modal-image">
                     <div class="modal-info">
                         <p class="modal-date"><i class="far fa-calendar-alt"></i> ${event.date}</p>
                         <p class="modal-location"><i class="fas fa-map-marker-alt"></i> ${event.location || 'Online'}</p>
-                        <p class="modal-desc">${event.description}</p>
-                        
-                        <div class="modal-actions">
-                            <a href="${pdfPath}" target="_blank" class="download-btn"><i class="fas fa-file-pdf"></i> Download Rulebook</a>
-                        </div>
                     </div>
+                    <p class="modal-desc">${event.description}</p>
                 </div>
+                ${extraContent}
             `;
+
             modal.style.display = 'block';
             document.body.style.overflow = 'hidden'; // Prevent background scrolling
         }

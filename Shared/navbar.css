@@ -36,6 +36,13 @@ body {
     transition: all 0.3s ease;
 }
 
+.nav-left {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    gap: 20px;
+}
+
 /* --- Logo --- */
 .nav-bar .logo img {
     width: 60px;
@@ -119,7 +126,7 @@ body {
     text-align: center;
     opacity: 0;
     pointer-events: none;
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    transition: all 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
     z-index: 1000;
 }
 

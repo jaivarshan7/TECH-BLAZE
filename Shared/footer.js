@@ -105,7 +105,7 @@ window.loadFooter = function () {
                         <h3>Contact Us</h3>
                         <ul>
                             <li><i class="fa-solid fa-location-dot"></i> Rajiv Gandhi Salai (OMR), Padur, Chennai - 603 103</li>
-                            <li><a href="mailto:techblaze@hindustanuniv.ac.in"><i class="fa-solid fa-envelope"></i> TechBlaze@hindustanuniv.ac.in</a></li>
+                            <li><a href="mailto:techsympca@hindustanuniv.ac.in" target="_blank"><i class="fa-solid fa-envelope"></i> TechSympca@hindustanuniv.ac.in</a></li>
                         </ul>
                     </div>
                 </div>
