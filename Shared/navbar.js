@@ -46,7 +46,10 @@ function loadNavbar() {
         
         <div class="contact-detail">
             <div class="Contact">
-                <li><a href="https://chat.whatsapp.com/CcAG6FlCDkIKmUUW7NphKx" target="_blank" class="login" id="contact">Contact US</a></li>
+                <li><a href="https://techblaze26.netlify.app/" target="_blank" class="login" id="register-btn">REGISTER</a></li>
+            </div>
+            <div class="Contact">
+                <li><a href="https://chat.whatsapp.com/CcAG6FlCDkIKmUUW7NphKx" target="_blank" class="whatsapp-link" id="contact"><i class="fa-brands fa-whatsapp"></i></a></li>
             </div>
             <div class="hambuger">
                 <button id="hambugericon"><i class="fa-solid fa-bars"></i></button>
@@ -56,29 +59,30 @@ function loadNavbar() {
 
     <!-- Mobile Menu Overlay -->
     <div class="hambuger-menu" id="hambuger-menu">
-        <div class="mobile-header">
-            <h2>MENU</h2>
-            <button id="hambugercicon"><i class="fa-regular fa-circle-xmark"></i></button>
-        </div>
-        
-        <ul>
-            <li><a href="/index.html">Home</a></li>
-            <li class="mobile-dropdown">
-                <a href="#" onclick="toggleMobileAbout(event)">About <i class="fa-solid fa-chevron-down"></i></a>
-                <ul id="mobile-about-submenu">
-                    <li><a href="/About/About-univ/univ.html">About University</a></li>
-                    <li><a href="/About/About-department/deparment.html">About Department</a></li>
-                    <li><a href="/About/About-event/event.html">About Tech Blaze</a></li>
-                    <li><a href="/About/About-team/team.html">Our Team</a></li>
-                </ul>
+            <div class="mobile-header">
+                <h2>MENU</h2>
+                <button id="hambugercicon"><i class="fa-regular fa-circle-xmark"></i></button>
+            </div>
 
-            </li>
-            <li><a href="/Event/event.html">Events</a></li>
-            <li><a href="#">Sponsors</a></li>
-            <li><a href="/Gallery/gallery.html">Gallery</a></li>
-            <li><a href="https://chat.whatsapp.com/CcAG6FlCDkIKmUUW7NphKx" class="mobile-contact">Contact US</a></li>
-        </ul>
-    </div>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li class="mobile-dropdown">
+                    <a href="#" onclick="toggleMobileAbout(event)">About <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul id="mobile-about-submenu">
+                        <li><a href="/About/About-univ/univ.html">About University</a></li>
+                        <li><a href="/About/About-department/deparment.html">About Department</a></li>
+                        <li><a href="/About/About-event/event.html">About Tech Blaze</a></li>
+                        <li><a href="/About/About-team/team.html">Our Team</a></li>
+                    </ul>
+
+                </li>
+                <li><a href="/Event/event.html">Events</a></li>
+                <li><a href="#">Sponsors</a></li>
+                <li><a href="/Gallery/gallery.html">Gallery</a></li>
+                <li><a href="https://techblaze26.netlify.app/" target="_blank">Register</a></li>
+                <li style="display: flex; justify-content: center; margin-top: 20px;"><a href="https://chat.whatsapp.com/CcAG6FlCDkIKmUUW7NphKx" class="mobile-whatsapp"><i class="fa-brands fa-whatsapp" style="font-size: 2.5rem; color: #25D366;"></i></a></li>
+            </ul>
+        </div>
     `;
 
     navbarContainer.innerHTML = html;
@@ -103,28 +107,8 @@ function loadNavbar() {
         });
     }
 
-    // Change Contact button to Register on non-home pages
-    const currentPath = window.location.pathname.toLowerCase();
-    // Check if we are NOT on home page (considering root / and index.html)
-    // Note: This logic assumes 'home' is only / or /index.html. 
-    // If the site is hosted in a subdir, this might need adjustment, but for now this works.
-    const isHomePage = currentPath === "/" || currentPath.endsWith("/index.html");
+    // Logic for button highlighting or other dynamic features can remain here
 
-    if (!isHomePage) {
-        const desktopContact = document.getElementById("contact");
-        const mobileContact = document.querySelector(".mobile-contact");
-        const registerUrl = "https://techblaze26.netlify.app/";
-
-        if (desktopContact) {
-            desktopContact.textContent = "REGISTER";
-            desktopContact.href = registerUrl;
-        }
-
-        if (mobileContact) {
-            mobileContact.textContent = "REGISTER";
-            mobileContact.href = registerUrl;
-        }
-    }
 }
 
 function highlightCurrentPage() {

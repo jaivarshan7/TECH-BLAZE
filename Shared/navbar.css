@@ -126,7 +126,7 @@ body {
     text-align: center;
     opacity: 0;
     pointer-events: none;
-    transition: all 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
     z-index: 1000;
 }
 
@@ -357,4 +357,29 @@ body {
     .nav-bar {
         padding: 15px 20px;
     }
+}
+
+/* WhatsApp Icon Style */
+.whatsapp-link {
+    color: #25D366;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.whatsapp-link:hover {
+    transform: scale(1.1);
+    color: #128C7E;
+}
+
+.mobile-whatsapp {
+    color: #25D366;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.mobile-whatsapp:hover {
+    transform: scale(1.1);
 }
