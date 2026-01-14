@@ -36,8 +36,7 @@
 <body>
 
     <div class="video-background">
-        <video autoplay muted loop playsinline id="bg-video" preload="metadata"
-            poster="../Home/image/home-background.jpg">
+        <video autoplay muted loop playsinline id="bg-video" preload="metadata">
             <source src="../Home/image/nebula.3840x2160.mp4" type="video/mp4">
         </video>
     </div>
@@ -110,6 +109,10 @@
                                 <h3>Tech Quiz</h3>
                                 <span class="tag">Technical</span>
                             </div>
+                            <div class="content">
+                                <h3>Drum Sharede</h3>
+                                <span class="tag">Non-Technical</span>
+                            </div>
                         </div>
                     </div>
                     <div class="timeline-item">
@@ -155,11 +158,20 @@
                         </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="time">09:00 AM - 10:00 AM</div>
+                        <div class="time">09:00 AM - 09:30 AM</div>
                         <div class="events-wrapper">
                             <div class="content">
                                 <h3>Day 1 Recap</h3>
                                 <span class="tag">General</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">09:30 AM - 10:20 AM</div>
+                        <div class="events-wrapper">
+                            <div class="content">
+                                <h3>Crossword Puzzle</h3>
+                                <span class="tag">Non-Technical</span>
                             </div>
                         </div>
                     </div>
@@ -278,7 +290,8 @@
                 description: "A relay-based full stack challenge. Team members take turns to build a web application against the clock.",
                 type: "offline",
                 location: "Bay Range Campus",
-                image: "image/webrealyrush.png"
+                image: "image/webrealyrush.png",
+                contentPath: "events-content/webrelayrush.html",
             },
             {
                 id: 3,
@@ -310,7 +323,8 @@
                 description: "Act out words or phrases using only gestures while teammates guess. No verbal communication allowed.",
                 type: "offline",
                 location: "Bay Range Campus",
-                image: "image/drumsharade.png"
+                image: "image/drumsharade.png",
+                contentPath: "events-content/drumsharade.html"
             },
             {
                 id: 6,
@@ -363,7 +377,8 @@
                 date: "February 19-28, 2026",
                 description: "A high-stakes problem-solving and pitching event. Teams propose innovative, research-backed solutions to real-world problems.",
                 type: "Hybrid",
-                image: "image/ideathon.png"
+                image: "image/ideathon.png",
+                contentPath: "events-content/ideathon.html"
             },
             {
                 id: 11,
@@ -372,7 +387,8 @@
                 date: "February 19-28, 2026",
                 description: "Create engaging mini-games using logic, creativity, and programing skills using any engine or language.",
                 type: "Hybrid",
-                image: "image/gamedev.png"
+                image: "image/gamedev.png",
+                contentPath: "events-content/gamedevelopment.html"
             },
             {
                 id: 12,
@@ -381,7 +397,8 @@
                 date: "February 19-28, 2026",
                 description: "Design and develop a functional mobile application based on a given problem statement within a limited time.",
                 type: "Hybrid",
-                image: "image/mobileapp.png"
+                image: "image/mobileapp.png",
+                contentPath: "events-content/mobileappdev.html"
             },
             {
                 id: 13,
@@ -390,7 +407,8 @@
                 date: "February 19-27, 2026",
                 description: "Capture creative, orginal photographs based on a given theme.",
                 type: "online",
-                image: "image/photography.png"
+                image: "image/photography.png",
+                contentPath: "events-content/photography.html"
             },
             {
                 id: 14,
@@ -399,7 +417,8 @@
                 date: "February 19-27, 2026",
                 description: "A time-bound logic challenge focusing on techinical and general knowledge.",
                 type: "online",
-                image: "image/crosswordpuzzle.png"
+                image: "image/crosswordpuzzle.png",
+                contentPath: "events-content/crosswordpuzzle.html"
             },
             {
                 id: 15,
@@ -408,7 +427,8 @@
                 date: "February 19-27, 2026",
                 description: "Test your typing speed and accuracy without viewing the text while typing.",
                 type: "online",
-                image: "image/blindtyping.png"
+                image: "image/blindtyping.png",
+                contentPath: "events-content/blindtyping.html"
             },
             {
                 id: 16,
@@ -417,7 +437,8 @@
                 date: "February 19-27, 2026",
                 description: "Design a optimized AI prompts that generate results for the given image. the event will be held online.",
                 type: "online",
-                image: "image/promptcraft.png"
+                image: "image/promptcraft.png",
+                contentPath: "events-content/promptcraft.html"
             },
             {
                 id: 17,
@@ -426,7 +447,8 @@
                 date: "February 19-27, 2026",
                 description: "Design a logo representing a theme using digital tools judged on creativity and originality.",
                 type: "online",
-                image: "image/logodesign.png"
+                image: "image/logodesign.png",
+                contentPath: "events-content/logodesign.html"
             }
         ];
 
@@ -580,7 +602,9 @@
                     </div>
                     <p class="modal-desc">${event.description}</p>
                 </div>
+                <div class="rule-container">
                 ${extraContent}
+                </div>
             `;
 
             modal.style.display = 'block';
