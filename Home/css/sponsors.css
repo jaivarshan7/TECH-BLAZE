@@ -57,28 +57,17 @@
 
 /* Media Queries Extracted from Home.css */
 
-/* Mobile (max-width: 480px) */
-@media (max-width: 480px) {
-    .card {
-        width: 120px;
-        height: auto;
-    }
-
-    .sponsors {
-        animation-duration: 5s;
-    }
-}
-
 /* Mobile (max-width: 768px) */
 @media (max-width: 768px) {
     .sponsors-container .Current-sponsors {
-        flex-direction: column;
+        /* Keep as row for marquee effect */
+        flex-direction: row;
         gap: 20px;
     }
 
     .sponsors {
-        flex-wrap: wrap;
-        justify-content: center;
+        /* no wrap to keep single line */
+        flex-wrap: nowrap;
         animation-duration: 5s;
     }
 
@@ -86,5 +75,18 @@
         width: 80px;
         /* Smaller logos */
         margin: 5px;
+    }
+}
+
+/* Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    .card {
+        width: 100px;
+        /* Adjusted to be appropriate for mobile, slightly larger than 80px if readable, or keep consistency */
+        height: auto;
+    }
+
+    .sponsors {
+        animation-duration: 5s;
     }
 }

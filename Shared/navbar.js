@@ -18,13 +18,16 @@ function loadNavbar() {
 
     const html = `
     <div class="nav-bar">
-        <div class="nav-left">
-        <div class="logo">
-            <img src="/img/all/tb-logo.png" alt="Logo">
-        </div>
-        <div class="hits-logo">
-            <img src="/img/all/hits-white.png" alt="Logo">
-        </div>
+        <div class="nav-top">
+            <div class="logo">
+                <img src="/img/all/tb-logo.png" alt="Logo">
+            </div>
+            <div class="hits-logo">
+                <img src="/img/all/hits-white.png" alt="Logo">
+            </div>
+            <div class="hu40-logo">
+                <img src="/img/all/hu40.png" alt="Logo">
+            </div>
         </div>
         <div class="menus">
             <li><a href="/index.html" class="nav-link" data-page="home">Home</a></li>
