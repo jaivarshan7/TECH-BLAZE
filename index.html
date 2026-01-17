@@ -38,14 +38,14 @@
     }
     </script>
     <!--Link css-->
-    <link rel="stylesheet" href="Home/Home.css">
+    <link rel="stylesheet" href="/Home/Home.css">
     <link rel="stylesheet" href="/Shared/navbar.css">
-    <link rel="stylesheet" href="Home/css/gallery.css">
-    <link rel="stylesheet" href="Home/css/sponsors.css">
-    <link rel="stylesheet" href="Home/css/events.css">
-    <link rel="stylesheet" href="Home/css/hero.css">
-    <link rel="stylesheet" href="Home/css/faq.css">
-    <link rel="stylesheet" href="Home/css/registration.css">
+    <link rel="stylesheet" href="/Home/css/gallery.css">
+    <link rel="stylesheet" href="/Home/css/sponsors.css">
+    <link rel="stylesheet" href="/Home/css/events.css">
+    <link rel="stylesheet" href="/Home/css/hero.css">
+    <link rel="stylesheet" href="/Home/css/faq.css">
+    <link rel="stylesheet" href="/Home/css/registration.css">
     <!--Font awesome cdn-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <!--    Google Font   -->
@@ -94,7 +94,8 @@
                         <a href="https://techblaze26.netlify.app/">Register now</a>
                     </div>
                 </div>
-                <!--Date-Time-->
+                <!--firebase analytics-->
+                <script type="module" src="/Shared/analytics.js"></script>
                 <div class="date-time-container">
                     <p id="demo"></p>
                     <div class="days com">
@@ -174,7 +175,7 @@
                                 sizes="(max-width:600px) 100vw, 600px">
                             <source type="image/webp"
                                 srcset="/img/optimized/sqlshowdown-1200.webp 1200w, /img/optimized/sqlshowdown-768.webp 768w, /img/optimized/sqlshowdown-480.webp 480w">
-                            <img src="Event/image/sqlshowdown.png" alt="SQL Showdown" loading="lazy" decoding="async"
+                            <img src="/Event/image/sqlshowdown.png" alt="SQL Showdown" loading="lazy" decoding="async"
                                 width="600" height="400">
                         </picture>
                     </div>
@@ -201,7 +202,7 @@
                                 sizes="(max-width:600px) 100vw, 600px">
                             <source type="image/webp"
                                 srcset="/img/optimized/dataanalysis-1200.webp 1200w, /img/optimized/dataanalysis-768.webp 768w, /img/optimized/dataanalysis-480.webp 480w">
-                            <img src="Event/image/dataanalysis.png" alt="Data Analysis" loading="lazy" decoding="async"
+                            <img src="/Event/image/dataanalysis.png" alt="Data Analysis" loading="lazy" decoding="async"
                                 width="600" height="400">
                         </picture>
                     </div>
@@ -228,7 +229,7 @@
                                 sizes="(max-width:600px) 100vw, 600px">
                             <source type="image/webp"
                                 srcset="/img/optimized/gamedev-1200.webp 1200w, /img/optimized/gamedev-768.webp 768w, /img/optimized/gamedev-480.webp 480w">
-                            <img src="Event/image/gamedev.png" alt="Game Development" loading="lazy" decoding="async"
+                            <img src="/Event/image/gamedev.png" alt="Game Development" loading="lazy" decoding="async"
                                 width="600" height="400">
                         </picture>
                     </div>
@@ -589,7 +590,7 @@
 
         <!-- Scripts -->
         <script src="/Shared/navbar.js" defer></script>
-        <script src="Shared/footer.js" defer></script>
+        <script src="/Shared/footer.js" defer></script>
         <script src="/Home/Home.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js" defer></script>

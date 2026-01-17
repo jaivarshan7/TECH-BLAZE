@@ -109,3 +109,4 @@ function switchDay(dayId) {
     if (dayId === 'day1') btns[0].classList.add('active');
     else btns[1].classList.add('active');
 }
+// Firebase Analytics moved to Shared/analytics.js
