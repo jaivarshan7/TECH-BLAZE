@@ -39,7 +39,7 @@ function loadNavbar() {
             </div>
         </div>
         <div class="menus">
-            <li><a href="/index.html" class="nav-link" data-page="home">Home</a></li>
+            <li><a href="/Home/index.html" class="nav-link" data-page="home">Home</a></li>
             
             <li class="dropdown-trigger">
                 <a href="#" class="nav-link" data-page="about">About <i class="fa-solid fa-chevron-down" style="font-size: 0.8em;"></i></a>
@@ -77,7 +77,7 @@ function loadNavbar() {
             </div>
 
             <ul>
-                <li><a href="/index.html">Home</a></li>
+                <li><a href="/Home/index.html">Home</a></li>
                 <li class="mobile-dropdown">
                     <a href="#" onclick="toggleMobileAbout(event)">About <i class="fa-solid fa-chevron-down"></i></a>
                     <ul id="mobile-about-submenu">
