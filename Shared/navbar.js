@@ -58,7 +58,7 @@ function loadNavbar() {
         
         <div class="contact-detail">
             <div class="Contact">
-                <li><a href="https://techblaze26.netlify.app/" target="_blank" class="login" id="register-btn">REGISTER</a></li>
+                <li><a href="https://techblaze.in/" target="_blank" class="login" id="register-btn">REGISTER</a></li>
             </div>
             <div class="Contact">
                 <li><a href="https://chat.whatsapp.com/CcAG6FlCDkIKmUUW7NphKx" target="_blank" class="whatsapp-link" id="contact"><i class="fa-brands fa-whatsapp"></i></a></li>
@@ -91,7 +91,7 @@ function loadNavbar() {
                 <li><a href="/Event/event.html">Events</a></li>
                 <li><a href="#">Sponsors</a></li>
                 <li><a href="/Gallery/gallery.html">Gallery</a></li>
-                <li><a href="https://techblaze26.netlify.app/" target="_blank">Register</a></li>
+                <li><a href="https://techblaze.in/" target="_blank">Register</a></li>
                 <li style="display: flex; justify-content: center; margin-top: 20px;"><a href="https://chat.whatsapp.com/CcAG6FlCDkIKmUUW7NphKx" class="mobile-whatsapp"><i class="fa-brands fa-whatsapp" style="font-size: 2.5rem; color: #25D366;"></i></a></li>
             </ul>
         </div>

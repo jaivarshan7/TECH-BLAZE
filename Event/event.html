@@ -12,28 +12,42 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://techblaze26.web.app/Event/event.html">
+    <meta property="og:url" content="https://techblaze.in/Event/event.html">
     <meta property="og:title" content="Events - Tech Blaze '26 | Technical Symposium HITS">
     <meta property="og:description"
         content="Explore and register for exciting events at Tech Blaze '26. Win big prizes!">
-    <meta property="og:image" content="https://techblaze26.web.app/img/all/tb-logo.png">
-    <link rel="canonical" href="https://techblaze26.web.app/Event/event.html">
+    <meta property="og:image" content="https://techblaze.in/img/all/tb-logo.png">
+    <link rel="canonical" href="https://techblaze.in/Event/event.html">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://techblaze26.web.app/Event/event.html">
+    <meta property="twitter:url" content="https://techblaze.in/Event/event.html">
     <meta property="twitter:title" content="Events - Tech Blaze '26 | Technical Symposium HITS">
     <meta property="twitter:description"
         content="Explore and register for exciting events at Tech Blaze '26. Win big prizes!">
-    <meta property="twitter:image" content="https://techblaze26.web.app/img/all/tb-logo.png">
+    <meta property="twitter:image" content="https://techblaze.in/img/all/tb-logo.png">
     <link rel="icon" href="/img/all/tb-logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="../Shared/navbar.css">
     <link rel="stylesheet" href="event.css">
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-P3JJG6WC');</script>
+    <!-- End Google Tag Manager -->
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P3JJG6WC" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <div class="video-background">
         <video autoplay muted loop playsinline id="bg-video" preload="metadata">
@@ -635,12 +649,12 @@
                     "@type": "Event",
                     "name": ev.title,
                     "description": ev.description,
-                    "image": "https://techblaze26.netlify.app/Event/" + ev.image,
+                    "image": "https://techblaze.in/Event/" + ev.image,
                     "location": {
                         "@type": "Place",
                         "name": ev.location || "Online"
                     },
-                    "url": "https://techblaze26.netlify.app/Event/" + (ev.title.replace(/\s+/g, '-').toLowerCase() + '.html')
+                    "url": "https://techblaze.in/Event/" + (ev.title.replace(/\s+/g, '-').toLowerCase() + '.html')
                 }))
             };
             const s = document.createElement('script');
