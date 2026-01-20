@@ -79,9 +79,7 @@ window.loadFooter = function () {
                     <h2 class="brand-name">TECH<span class="highlight">BLAZE</span></h2>
                     <p class="tagline">Igniting Innovation, <br>Inspiring Future.</p>
                     <div class="social-links">
-                        <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/techblaze2026/" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
                     </div>
                 </div>
 
