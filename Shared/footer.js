@@ -99,15 +99,15 @@ window.loadFooter = function () {
                             <li><a href="${rootPath}Event/event.html">All Events</a></li>
                         </ul>
                     </div>
-                    <div class="footer-column contact-column">
+                </div>
+                <div class="contact-column">
                         <h3>Contact Us</h3>
                         <ul>
                             <li><i class="fa-solid fa-location-dot"></i> Rajiv Gandhi Salai (OMR), Padur, Chennai - 603 103</li>
                             <li><a href="mailto:techsympca@hindustanuniv.ac.in" target="_blank"><i class="fa-solid fa-envelope"></i> TechSympca@hindustanuniv.ac.in</a></li>
-                            <li><i class="fa-solid fa-phone"></i> +91 7339028707, +91 9087895642, +91 9342232955, +91 9003409417</li>
+                            <li><i class="fa-solid fa-phone"></i><p>+91 7339028707, +91 9087895642, +91 9342232955, +91 9003409417</p></li>
                         </ul>
                     </div>
-                </div>
             </div>
             <div class="footer-bottom">
                 <div class="copyright">
