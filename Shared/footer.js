@@ -104,6 +104,7 @@ window.loadFooter = function () {
                         <ul>
                             <li><i class="fa-solid fa-location-dot"></i> Rajiv Gandhi Salai (OMR), Padur, Chennai - 603 103</li>
                             <li><a href="mailto:techsympca@hindustanuniv.ac.in" target="_blank"><i class="fa-solid fa-envelope"></i> TechSympca@hindustanuniv.ac.in</a></li>
+                            <li><i class="fa-solid fa-phone"></i> +91 7339028707, +91 9087895642, +91 9342232955, +91 9003409417</li>
                         </ul>
                     </div>
                 </div>
