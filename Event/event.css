@@ -456,30 +456,9 @@ p.subtitle {
     text-align: center;
 }
 
-.download-btn {
-    display: inline-block;
-    padding: 12px 30px;
-    background: linear-gradient(45deg, #7A38FC, #FF2E63);
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: 600;
-    transition: 0.3s ease;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 5px 15px rgba(122, 56, 252, 0.4);
+.register-btn {
+    margin-top: 10px;
 }
-
-.download-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(122, 56, 252, 0.6);
-}
-
-/* @media (min-width: 768px) {
-    .modal-body-content {
-         flex-direction: column; 
-    }
-} */
 
 /* --- EVENT TIMELINE STYLES --- */
 .timeline-toggle-area {
@@ -824,7 +803,7 @@ p.subtitle {
 
 .event-details-content .details-list li strong {
     color: #7A38FC;
-    width: 180px;
+    width: 150px;
     display: inline-block;
     flex-shrink: 0;
 }
@@ -843,14 +822,4 @@ p.subtitle {
     margin-bottom: 10px;
     color: #FF2E63;
     font-weight: 700;
-}
-
-.event-details-content .disclaimer {
-    text-align: center;
-    font-style: italic;
-    color: #aaa;
-    margin-top: 30px;
-    padding: 15px;
-    border: 1px dashed rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
 }
