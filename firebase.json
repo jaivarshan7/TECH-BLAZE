@@ -5,7 +5,15 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**",
-      "public/**"
+      "public/**",
+      ".git",
+      ".git/**",
+      "node_modules",
+      "package.json",
+      "package-lock.json",
+      "README.md",
+      "dist/**",
+      "**/*.bat"
     ],
     "rewrites": [
       {
