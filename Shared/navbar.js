@@ -61,7 +61,7 @@ function loadNavbar() {
                 <li><a href="https://techblaze26.netlify.app/" target="_blank" class="login" id="register-btn">REGISTER</a></li>
             </div>
             <div class="Contact">
-                <li><a href="https://chat.whatsapp.com/CcAG6FlCDkIKmUUW7NphKx" target="_blank" class="whatsapp-link" id="contact"><i class="fa-brands fa-whatsapp"></i></a></li>
+                <li><a href="https://chat.whatsapp.com/BwFxXhAK4U8AK3LQody1i3" target="_blank" class="whatsapp-link" id="contact"><i class="fa-brands fa-whatsapp"></i></a></li>
             </div>
             <div class="hambuger">
                 <button id="hambugericon"><i class="fa-solid fa-bars"></i></button>
@@ -92,7 +92,7 @@ function loadNavbar() {
                 <li><a href="/Sponsors/">Sponsors</a></li>
                 <li><a href="/Gallery/gallery.html">Gallery</a></li>
                 <li><a href="https://techblaze26.netlify.app/" target="_blank">Register</a></li>
-                <li style="display: flex; justify-content: center; margin-top: 20px;"><a href="https://chat.whatsapp.com/CcAG6FlCDkIKmUUW7NphKx" class="mobile-whatsapp"><i class="fa-brands fa-whatsapp" style="font-size: 2.5rem; color: #25D366;"></i></a></li>
+                <li style="display: flex; justify-content: center; margin-top: 20px;"><a href="https://chat.whatsapp.com/BwFxXhAK4U8AK3LQody1i3" class="mobile-whatsapp"><i class="fa-brands fa-whatsapp" style="font-size: 2.5rem; color: #25D366;"></i></a></li>
             </ul>
         </div>
     `;
