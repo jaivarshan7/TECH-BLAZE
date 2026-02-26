@@ -2,7 +2,8 @@
   "projects": {
     "default": "symposium-9d099",
     "techblaze": "symposium-9d099",
-    "techblaze26": "techblaze26"
+    "techblaze26": "techblaze26",
+    "techalt": "techblazealt"
   },
   "targets": {},
   "etags": {}
